@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             title = new Label();
+            menuStrip1 = new MenuStrip();
+            navMain = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // title
@@ -42,14 +45,34 @@
             title.TabIndex = 0;
             title.Text = "ỨNG DỤNG QUẢN LÝ SINH VIÊN";
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Dock = DockStyle.Left;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { navMain });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(126, 450);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // navMain
+            // 
+            navMain.Name = "navMain";
+            navMain.Size = new Size(113, 19);
+            navMain.Text = "Trang Chủ";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(title);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Main";
             Text = "Form1";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -57,5 +80,7 @@
         #endregion
 
         private Label title;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem navMain;
     }
 }
