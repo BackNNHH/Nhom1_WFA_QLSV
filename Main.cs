@@ -6,5 +6,6 @@ namespace Nhom1_WFA_QLSV
         {
             InitializeComponent();
         }
+
     }
 }

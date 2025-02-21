@@ -25,7 +25,7 @@ namespace Nhom1_WFA_QLSV
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine(txtUserName.Text + txtPass);
+            Console.WriteLine(txtUserName.Text + txtPass);
         }
     }
 }
