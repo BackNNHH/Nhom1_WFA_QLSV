@@ -29,41 +29,70 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            title = new Label();
-            labelTen = new Label();
-            txtUserName = new TextBox();
-            labelPass = new Label();
-            textBox1 = new TextBox();
             button1 = new Button();
+            txtPass = new TextBox();
+            labelPass = new Label();
+            txtUserName = new TextBox();
+            labelTen = new Label();
+            title = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Anchor = AnchorStyles.None;
             panel1.AutoSize = true;
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtPass);
             panel1.Controls.Add(labelPass);
             panel1.Controls.Add(txtUserName);
             panel1.Controls.Add(labelTen);
             panel1.Controls.Add(title);
-            panel1.Location = new Point(163, 70);
+            panel1.Location = new Point(163, 91);
             panel1.Name = "panel1";
-            panel1.Size = new Size(476, 319);
+            panel1.Size = new Size(476, 275);
             panel1.TabIndex = 0;
             // 
-            // title
+            // button1
             // 
-            title.AutoSize = true;
-            title.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            title.ForeColor = SystemColors.HotTrack;
-            title.Location = new Point(171, 51);
-            title.Name = "title";
-            title.Size = new Size(134, 28);
-            title.TabIndex = 0;
-            title.Text = "ĐĂNG NHẬP";
-            title.TextAlign = ContentAlignment.MiddleCenter;
+            button1.AllowDrop = true;
+            button1.Anchor = AnchorStyles.Bottom;
+            button1.AutoSize = true;
+            button1.BackColor = SystemColors.GradientActiveCaption;
+            button1.ForeColor = SystemColors.ControlText;
+            button1.Location = new Point(103, 213);
+            button1.Name = "button1";
+            button1.Size = new Size(271, 39);
+            button1.TabIndex = 3;
+            button1.Text = "Đăng nhập";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // txtPass
+            // 
+            txtPass.BorderStyle = BorderStyle.FixedSingle;
+            txtPass.Location = new Point(136, 152);
+            txtPass.Name = "txtPass";
+            txtPass.Size = new Size(281, 23);
+            txtPass.TabIndex = 2;
+            // 
+            // labelPass
+            // 
+            labelPass.AutoSize = true;
+            labelPass.Font = new Font("Segoe UI", 10F);
+            labelPass.Location = new Point(50, 152);
+            labelPass.Name = "labelPass";
+            labelPass.Size = new Size(70, 19);
+            labelPass.TabIndex = 1;
+            labelPass.Text = "Password:";
+            // 
+            // txtUserName
+            // 
+            txtUserName.BorderStyle = BorderStyle.FixedSingle;
+            txtUserName.Location = new Point(136, 123);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(281, 23);
+            txtUserName.TabIndex = 2;
             // 
             // labelTen
             // 
@@ -75,44 +104,18 @@
             labelTen.TabIndex = 1;
             labelTen.Text = "User Name:";
             // 
-            // txtUserName
+            // title
             // 
-            txtUserName.BorderStyle = BorderStyle.FixedSingle;
-            txtUserName.Location = new Point(136, 123);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(281, 23);
-            txtUserName.TabIndex = 2;
-            // 
-            // labelPass
-            // 
-            labelPass.AutoSize = true;
-            labelPass.Font = new Font("Segoe UI", 10F);
-            labelPass.Location = new Point(50, 171);
-            labelPass.Name = "labelPass";
-            labelPass.Size = new Size(70, 19);
-            labelPass.TabIndex = 1;
-            labelPass.Text = "Password:";
-            // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(136, 171);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(281, 23);
-            textBox1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Bottom;
-            button1.AutoSize = true;
-            button1.BackColor = SystemColors.GradientActiveCaption;
-            button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(100, 253);
-            button1.Name = "button1";
-            button1.Size = new Size(271, 39);
-            button1.TabIndex = 3;
-            button1.Text = "Đăng nhập";
-            button1.UseVisualStyleBackColor = false;
+            title.Anchor = AnchorStyles.Top;
+            title.AutoSize = true;
+            title.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            title.ForeColor = SystemColors.HotTrack;
+            title.Location = new Point(159, 49);
+            title.Name = "title";
+            title.Size = new Size(161, 32);
+            title.TabIndex = 0;
+            title.Text = "ĐĂNG NHẬP";
+            title.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SignIn
             // 
@@ -136,7 +139,7 @@
 
         private Panel panel1;
         private Label title;
-        private TextBox textBox1;
+        private TextBox txtPass;
         private Label labelPass;
         private TextBox txtUserName;
         private Label labelTen;

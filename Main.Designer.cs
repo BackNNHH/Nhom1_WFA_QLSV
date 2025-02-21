@@ -31,6 +31,7 @@
             title = new Label();
             menuStrip1 = new MenuStrip();
             navMain = new ToolStripMenuItem();
+            quảnLýSinhVênToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // menuStrip1
             // 
             menuStrip1.Dock = DockStyle.Left;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { navMain });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { navMain, quảnLýSinhVênToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(126, 450);
@@ -60,6 +61,12 @@
             navMain.Name = "navMain";
             navMain.Size = new Size(113, 19);
             navMain.Text = "Trang Chủ";
+            // 
+            // quảnLýSinhVênToolStripMenuItem
+            // 
+            quảnLýSinhVênToolStripMenuItem.Name = "quảnLýSinhVênToolStripMenuItem";
+            quảnLýSinhVênToolStripMenuItem.Size = new Size(113, 19);
+            quảnLýSinhVênToolStripMenuItem.Text = "Quản Lý sinh viên";
             // 
             // Main
             // 
@@ -82,5 +89,6 @@
         private Label title;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem navMain;
+        private ToolStripMenuItem quảnLýSinhVênToolStripMenuItem;
     }
 }
