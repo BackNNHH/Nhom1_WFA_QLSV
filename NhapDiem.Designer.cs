@@ -91,6 +91,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(311, 23);
             comboBox2.TabIndex = 5;
+            comboBox2.MouseClick += comboBox2_MouseClick;
             // 
             // textBox2
             // 

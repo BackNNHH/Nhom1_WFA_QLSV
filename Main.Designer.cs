@@ -153,6 +153,7 @@
             Controls.Add(title);
             Name = "Main";
             Text = "Trang Chủ";
+            Load += Main_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             nav.ResumeLayout(false);

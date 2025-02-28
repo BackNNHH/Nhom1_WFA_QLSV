@@ -10,6 +10,8 @@ namespace Nhom1_WFA_QLSV
 {
     class DataBase
     {
+        public string username = "";
+        public string password = "";
 
         public static string DbStr
         {
@@ -27,12 +29,11 @@ namespace Nhom1_WFA_QLSV
             dataAdapter.Fill(dt);
             return dt;
         }
-        public static DataTable UserLogTest(string user,string pass)
+        public static DataTable UserLogTest(string user, string pass)
         {
             DataTable dt = new();
-            SqlConnection connection = new(DbStr);
-
-            SqlDataAdapter adapter = new($"SELECT * FROM NhanVien WHERE MaDN={user} AND MatKhau = {pass}", connection);
+            //SqlConnection connection = new(DbStr);
+            SqlDataAdapter adapter = new($"SELECT * FROM Users WHERE username='{user}' AND password = '{pass}'", new SqlConnection(DbStr));
             adapter.Fill(dt);
             return dt;
         }

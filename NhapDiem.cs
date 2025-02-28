@@ -21,5 +21,10 @@ namespace Nhom1_WFA_QLSV
         {
 
         }
+
+        private void comboBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

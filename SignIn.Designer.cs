@@ -35,6 +35,7 @@
             txtUserName = new TextBox();
             labelTen = new Label();
             title = new Label();
+            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,9 +49,9 @@
             panel1.Controls.Add(txtUserName);
             panel1.Controls.Add(labelTen);
             panel1.Controls.Add(title);
-            panel1.Location = new Point(163, 91);
+            panel1.Location = new Point(190, 84);
             panel1.Name = "panel1";
-            panel1.Size = new Size(476, 275);
+            panel1.Size = new Size(422, 282);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -60,18 +61,18 @@
             button1.AutoSize = true;
             button1.BackColor = SystemColors.GradientActiveCaption;
             button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(103, 213);
+            button1.Location = new Point(76, 220);
             button1.Name = "button1";
             button1.Size = new Size(271, 39);
             button1.TabIndex = 3;
             button1.Text = "Đăng nhập";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button1.Click += btnSign_Click;
             // 
             // txtPass
             // 
             txtPass.BorderStyle = BorderStyle.FixedSingle;
-            txtPass.Location = new Point(136, 152);
+            txtPass.Location = new Point(113, 164);
             txtPass.Name = "txtPass";
             txtPass.Size = new Size(281, 23);
             txtPass.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             labelPass.AutoSize = true;
             labelPass.Font = new Font("Segoe UI", 10F);
-            labelPass.Location = new Point(50, 152);
+            labelPass.Location = new Point(27, 164);
             labelPass.Name = "labelPass";
             labelPass.Size = new Size(70, 19);
             labelPass.TabIndex = 1;
@@ -89,7 +90,7 @@
             // txtUserName
             // 
             txtUserName.BorderStyle = BorderStyle.FixedSingle;
-            txtUserName.Location = new Point(136, 123);
+            txtUserName.Location = new Point(113, 123);
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(281, 23);
             txtUserName.TabIndex = 2;
@@ -98,7 +99,7 @@
             // 
             labelTen.AutoSize = true;
             labelTen.Font = new Font("Segoe UI", 10F);
-            labelTen.Location = new Point(50, 123);
+            labelTen.Location = new Point(27, 123);
             labelTen.Name = "labelTen";
             labelTen.Size = new Size(80, 19);
             labelTen.TabIndex = 1;
@@ -110,12 +111,27 @@
             title.AutoSize = true;
             title.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             title.ForeColor = SystemColors.HotTrack;
-            title.Location = new Point(159, 49);
+            title.Location = new Point(132, 49);
             title.Name = "title";
             title.Size = new Size(161, 32);
             title.TabIndex = 0;
             title.Text = "ĐĂNG NHẬP";
             title.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            button2.AllowDrop = true;
+            button2.Anchor = AnchorStyles.Bottom;
+            button2.AutoSize = true;
+            button2.BackColor = Color.Pink;
+            button2.ForeColor = SystemColors.ControlText;
+            button2.Location = new Point(724, 399);
+            button2.Name = "button2";
+            button2.Size = new Size(72, 39);
+            button2.TabIndex = 3;
+            button2.Text = "don't click";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += btnPuchClick;
             // 
             // SignIn
             // 
@@ -125,6 +141,7 @@
             BackgroundImage = Properties.Resources.MC_XP;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(panel1);
             Name = "SignIn";
             Text = "SignIn";
@@ -144,5 +161,6 @@
         private TextBox txtUserName;
         private Label labelTen;
         private Button button1;
+        private Button button2;
     }
 }
