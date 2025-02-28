@@ -69,5 +69,36 @@ namespace Nhom1_WFA_QLSV.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registration {
+            get {
+                object obj = ResourceManager.GetObject("registration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registration_page_name_and_password_field_fill_in_form_menu_bar_corporate_website_create_account_user_information_flat_design_modern_illustration_vector {
+            get {
+                object obj = ResourceManager.GetObject("registration-page-name-and-password-field-fill-in-form-menu-bar-corporate-website" +
+                        "-create-account-user-information-flat-design-modern-illustration-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_gradient_background_o0tqqpgs66oz4rfr {
+            get {
+                object obj = ResourceManager.GetObject("white-gradient-background-o0tqqpgs66oz4rfr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -11,7 +11,11 @@ namespace Nhom1_WFA_QLSV
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+<<<<<<< HEAD
             Application.Run(new SignIn());
+=======
+            Application.Run(new Register());
+>>>>>>> dung
         }
     }
 }
