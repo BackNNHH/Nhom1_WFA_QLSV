@@ -11,6 +11,11 @@ namespace Nhom1_WFA_QLSV
 
         private void Main_Load(object sender, EventArgs e)
         {
+            txtKhoa.Text = DataBase.SlKhoa.ToString();
+            txtLop.Text = DataBase.SlLop.ToString();
+            txtSLSV.Text = DataBase.SlSV.ToString();
+
+
             Debug.WriteLine("NAS");
         }
     }

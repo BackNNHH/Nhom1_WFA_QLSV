@@ -39,6 +39,8 @@
             textBox1 = new TextBox();
             texLop = new Label();
             txtLop = new TextBox();
+            texKhoa = new Label();
+            txtKhoa = new TextBox();
             panel1.SuspendLayout();
             nav.SuspendLayout();
             SuspendLayout();
@@ -138,6 +140,24 @@
             txtLop.TabIndex = 4;
             txtLop.Text = "N/A";
             // 
+            // texKhoa
+            // 
+            texKhoa.AutoSize = true;
+            texKhoa.Location = new Point(493, 173);
+            texKhoa.Name = "texKhoa";
+            texKhoa.Size = new Size(87, 15);
+            texKhoa.TabIndex = 3;
+            texKhoa.Text = "Số Lượng Khoa";
+            // 
+            // txtKhoa
+            // 
+            txtKhoa.Location = new Point(608, 170);
+            txtKhoa.Name = "txtKhoa";
+            txtKhoa.ReadOnly = true;
+            txtKhoa.Size = new Size(100, 23);
+            txtKhoa.TabIndex = 4;
+            txtKhoa.Text = "N/A";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -145,6 +165,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(textBox1);
             Controls.Add(texMVP);
+            Controls.Add(txtKhoa);
+            Controls.Add(texKhoa);
             Controls.Add(txtLop);
             Controls.Add(texLop);
             Controls.Add(txtSLSV);
@@ -175,5 +197,7 @@
         private TextBox textBox1;
         private Label texLop;
         private TextBox txtLop;
+        private Label texKhoa;
+        private TextBox txtKhoa;
     }
 }

@@ -31,6 +31,7 @@
             panel1 = new Panel();
             button1 = new Button();
             txtPass = new TextBox();
+            texWarm = new Label();
             labelPass = new Label();
             txtUserName = new TextBox();
             labelTen = new Label();
@@ -45,6 +46,7 @@
             panel1.AutoSize = true;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(txtPass);
+            panel1.Controls.Add(texWarm);
             panel1.Controls.Add(labelPass);
             panel1.Controls.Add(txtUserName);
             panel1.Controls.Add(labelTen);
@@ -72,16 +74,27 @@
             // txtPass
             // 
             txtPass.BorderStyle = BorderStyle.FixedSingle;
-            txtPass.Location = new Point(113, 164);
+            txtPass.Location = new Point(86, 163);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(281, 23);
+            txtPass.Size = new Size(274, 23);
             txtPass.TabIndex = 2;
+            // 
+            // texWarm
+            // 
+            texWarm.AutoSize = true;
+            texWarm.Font = new Font("Segoe UI", 10F);
+            texWarm.ForeColor = Color.Red;
+            texWarm.Location = new Point(31, 198);
+            texWarm.Name = "texWarm";
+            texWarm.Size = new Size(156, 19);
+            texWarm.TabIndex = 1;
+            texWarm.Text = "Vui lòng nhập thông tin";
             // 
             // labelPass
             // 
             labelPass.AutoSize = true;
             labelPass.Font = new Font("Segoe UI", 10F);
-            labelPass.Location = new Point(27, 164);
+            labelPass.Location = new Point(48, 141);
             labelPass.Name = "labelPass";
             labelPass.Size = new Size(70, 19);
             labelPass.TabIndex = 1;
@@ -90,16 +103,16 @@
             // txtUserName
             // 
             txtUserName.BorderStyle = BorderStyle.FixedSingle;
-            txtUserName.Location = new Point(113, 123);
+            txtUserName.Location = new Point(86, 106);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(281, 23);
+            txtUserName.Size = new Size(274, 23);
             txtUserName.TabIndex = 2;
             // 
             // labelTen
             // 
             labelTen.AutoSize = true;
             labelTen.Font = new Font("Segoe UI", 10F);
-            labelTen.Location = new Point(27, 123);
+            labelTen.Location = new Point(48, 84);
             labelTen.Name = "labelTen";
             labelTen.Size = new Size(80, 19);
             labelTen.TabIndex = 1;
@@ -111,7 +124,7 @@
             title.AutoSize = true;
             title.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             title.ForeColor = SystemColors.HotTrack;
-            title.Location = new Point(132, 49);
+            title.Location = new Point(130, 39);
             title.Name = "title";
             title.Size = new Size(161, 32);
             title.TabIndex = 0;
@@ -125,7 +138,7 @@
             button2.AutoSize = true;
             button2.BackColor = Color.Pink;
             button2.ForeColor = SystemColors.ControlText;
-            button2.Location = new Point(724, 399);
+            button2.Location = new Point(716, 399);
             button2.Name = "button2";
             button2.Size = new Size(72, 39);
             button2.TabIndex = 3;
@@ -145,7 +158,6 @@
             Controls.Add(panel1);
             Name = "SignIn";
             Text = "SignIn";
-            Load += SignIn_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -162,5 +174,6 @@
         private Label labelTen;
         private Button button1;
         private Button button2;
+        private Label texWarm;
     }
 }
