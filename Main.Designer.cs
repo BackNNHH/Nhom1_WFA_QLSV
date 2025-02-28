@@ -48,7 +48,7 @@
             title.AutoSize = true;
             title.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             title.ForeColor = SystemColors.HotTrack;
-            title.Location = new Point(223, 9);
+            title.Location = new Point(232, 24);
             title.Name = "title";
             title.Size = new Size(430, 37);
             title.TabIndex = 0;
@@ -152,7 +152,7 @@
             Controls.Add(panel1);
             Controls.Add(title);
             Name = "Main";
-            Text = "Form1";
+            Text = "Trang Chủ";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             nav.ResumeLayout(false);

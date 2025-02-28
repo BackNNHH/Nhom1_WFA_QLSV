@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,7 @@ namespace Nhom1_WFA_QLSV
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Console.WriteLine(txtUserName.Text + txtPass);
         }
     }
