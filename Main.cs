@@ -18,5 +18,11 @@ namespace Nhom1_WFA_QLSV
 
             Debug.WriteLine("NAS");
         }
+
+        private void navQLSV_Click(object sender, EventArgs e)
+        {
+            QuanLySinhVien f = new();
+            f.Show();
+        }
     }
 }

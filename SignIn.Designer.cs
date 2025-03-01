@@ -31,6 +31,7 @@
             panel1 = new Panel();
             button1 = new Button();
             txtPass = new TextBox();
+            label1 = new Label();
             texWarm = new Label();
             labelPass = new Label();
             txtUserName = new TextBox();
@@ -46,14 +47,15 @@
             panel1.AutoSize = true;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(txtPass);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(texWarm);
             panel1.Controls.Add(labelPass);
             panel1.Controls.Add(txtUserName);
             panel1.Controls.Add(labelTen);
             panel1.Controls.Add(title);
-            panel1.Location = new Point(190, 84);
+            panel1.Location = new Point(191, 71);
             panel1.Name = "panel1";
-            panel1.Size = new Size(422, 282);
+            panel1.Size = new Size(422, 286);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -63,7 +65,7 @@
             button1.AutoSize = true;
             button1.BackColor = SystemColors.GradientActiveCaption;
             button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(76, 220);
+            button1.Location = new Point(77, 233);
             button1.Name = "button1";
             button1.Size = new Size(271, 39);
             button1.TabIndex = 3;
@@ -79,12 +81,24 @@
             txtPass.Size = new Size(274, 23);
             txtPass.TabIndex = 2;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.ForeColor = SystemColors.MenuHighlight;
+            label1.Location = new Point(255, 211);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 19);
+            label1.TabIndex = 1;
+            label1.Text = "Quên mật khẩu";
+            label1.Click += label1_Click;
+            // 
             // texWarm
             // 
             texWarm.AutoSize = true;
             texWarm.Font = new Font("Segoe UI", 10F);
             texWarm.ForeColor = Color.Red;
-            texWarm.Location = new Point(31, 198);
+            texWarm.Location = new Point(26, 199);
             texWarm.Name = "texWarm";
             texWarm.Size = new Size(156, 19);
             texWarm.TabIndex = 1;
@@ -175,5 +189,6 @@
         private Button button1;
         private Button button2;
         private Label texWarm;
+        private Label label1;
     }
 }

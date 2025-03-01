@@ -37,11 +37,22 @@ namespace Nhom1_WFA_QLSV
         }
         public static void UpateData()
         {
-            SlKhoa = GetData("SELECT MaKhoa FROM Khoa").Rows.Count;
-            SlLop = GetData("SELECT MaLop FROM LopHoc").Rows.Count;
-            SlSV = GetData("SELECT MaSV FROM SinhVien").Rows.Count;
-
-            //Debug.WriteLine(dt.Rows.Count);
+            var connection = new SqlConnection(DbStr);
+            connection.Open();
+            try
+            {
+                SlKhoa = Convert.ToInt32(new SqlCommand("SELECT COUNT(*) FROM Khoa", connection).ExecuteScalar());
+                SlLop = Convert.ToInt32(new SqlCommand("SELECT COUNT(*) FROM LopHoc", connection).ExecuteScalar());
+                SlSV = Convert.ToInt32(new SqlCommand("SELECT COUNT(*) FROM SinhVien", connection).ExecuteScalar());
+            }
+            catch
+            {
+                SlKhoa = GetData("SELECT MaKhoa FROM Khoa").Rows.Count;
+                SlLop = GetData("SELECT MaLop FROM LopHoc").Rows.Count;
+                SlSV = GetData("SELECT MaSV FROM SinhVien").Rows.Count;
+            }
+            connection.Close();
+            //Debug.WriteLine(result);
             //Debug.WriteLine(dataAdapter);
         }
         public static DataTable GetData(string sql)
@@ -52,18 +63,48 @@ namespace Nhom1_WFA_QLSV
             dataAdapter.Fill(dt);
             return dt;
         }
-        public static DataTable UserLogTest(string user, string pass)
+        public static bool SetData(string sql)
         {
+            try
+            {
+                var connection = new SqlConnection(DbStr);
+                var command = new SqlCommand(sql, connection);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
+        }
+        public static DataTable UserLogTest(string user, string pass, string token = "")
+        {
+            bool TOKENburh = string.IsNullOrEmpty(token);
             DataTable dt = new();
             //SqlConnection connection = new(DbStr);
-            SqlDataAdapter adapter = new($"SELECT * FROM Users WHERE username='{user}' AND password = '{pass}'", new SqlConnection(DbStr));
+            string data;
+
+            if (TOKENburh) data = $"SELECT * FROM Users WHERE username='{user}' AND password = '{pass}'";
+            else data = $"SELECT * FROM Users WHERE username='{user}' AND keyword = '{token}'";
+
+            SqlDataAdapter adapter = new(data, new SqlConnection(DbStr));
             adapter.Fill(dt);
+
             if (dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
 #pragma warning disable CS8601
                 username = row["username"].ToString();
-                password = row["password"].ToString();
+                if (TOKENburh)
+                {
+                    SetData($"UPDATE Users SET password = '{pass}' WHERE id = '{row["id"]}'");
+                    password = pass;
+                }
+                else
+                    password = row["password"].ToString();
 #pragma warning restore CS8601
             }
             return dt;

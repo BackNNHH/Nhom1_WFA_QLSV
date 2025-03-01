@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -52,10 +53,19 @@ namespace Nhom1_WFA_QLSV
         {
             Debug.WriteLine("+------------------------------------------------------------------------------------+");
             //DataBase.UpateData();
-
+            txtUserName.Text = "DungCT";
+            txtPass.Text = "capi";
 
 
             Debug.WriteLine("⠀⠀⠀⠀⠀⠀⢀⣤⣀⣀⣀⠀⠈⠻⣷⣄\n⠀⠀⠀⠀⢀⣴⣿⣿⣿⡿⠋⠀⠀⠀⠹⣿⣦⡀\n⠀⠀⢀⣴⣿⣿⣿⣿⣏⠀⠀⠀⠀⠀⠀⢹⣿⣧\n⠀⠀⠙⢿⣿⡿⠋⠻⣿⣿⣦⡀⠀⠀⠀⢸⣿⣿⡆\n⠀⠀⠀⠀⠉⠀⠀⠀⠈⠻⣿⣿⣦⡀⠀⢸⣿⣿⡇\n⠀⠀⠀⠀⢀⣀⣄⡀⠀⠀⠈⠻⣿⣿⣶⣿⣿⣿⠁\n⠀⠀⠀⣠⣿⣿⢿⣿⣶⣶⣶⣶⣾⣿⣿⣿⣿⡁\n⢠⣶⣿⣿⠋⠀⠉⠛⠿⠿⠿⠿⠿⠛⠻⣿⣿⣦⡀\n⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⡿");
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            QuenMatkhau f = new();
+            f.UserNCache = string.IsNullOrEmpty(txtUserName.Text) ? "" : txtUserName.Text;
+            f.Show();
+        }
+
     }
 }
