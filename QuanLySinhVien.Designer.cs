@@ -43,6 +43,10 @@
             BtnXoa = new Button();
             BtnTaiLai = new Button();
             DgvKhachHang = new DataGridView();
+            label4 = new Label();
+            label6 = new Label();
+            TxtEmail = new TextBox();
+            TxtNgaySinh = new DateTimePicker();
             MaSV = new DataGridViewTextBoxColumn();
             HoTen = new DataGridViewTextBoxColumn();
             NgaySinh = new DataGridViewTextBoxColumn();
@@ -51,10 +55,6 @@
             Email = new DataGridViewTextBoxColumn();
             SoDienThoai = new DataGridViewTextBoxColumn();
             MaLop = new DataGridViewTextBoxColumn();
-            label4 = new Label();
-            label6 = new Label();
-            TxtEmail = new TextBox();
-            TxtNgaySinh = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)DgvKhachHang).BeginInit();
             SuspendLayout();
             // 
@@ -195,63 +195,6 @@
             DgvKhachHang.TabIndex = 4;
             DgvKhachHang.CellContentClick += DgvKhachHang_CellContentClick;
             // 
-            // MaSV
-            // 
-            MaSV.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            MaSV.DataPropertyName = "MaSV";
-            MaSV.HeaderText = "MÃ SV";
-            MaSV.Name = "MaSV";
-            MaSV.ReadOnly = true;
-            // 
-            // HoTen
-            // 
-            HoTen.DataPropertyName = "HoTen";
-            HoTen.HeaderText = "Họ Tên";
-            HoTen.Name = "HoTen";
-            HoTen.ReadOnly = true;
-            // 
-            // NgaySinh
-            // 
-            NgaySinh.DataPropertyName = "NgaySinh";
-            NgaySinh.HeaderText = "Ngày Sinh";
-            NgaySinh.Name = "NgaySinh";
-            NgaySinh.ReadOnly = true;
-            // 
-            // GioiTInh
-            // 
-            GioiTInh.DataPropertyName = "GioiTInh";
-            GioiTInh.HeaderText = "Giới Tính";
-            GioiTInh.Name = "GioiTInh";
-            GioiTInh.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            DiaChi.DataPropertyName = "DiaChi";
-            DiaChi.HeaderText = "Địa Chỉ";
-            DiaChi.Name = "DiaChi";
-            DiaChi.ReadOnly = true;
-            // 
-            // Email
-            // 
-            Email.DataPropertyName = "Email";
-            Email.HeaderText = "Email";
-            Email.Name = "Email";
-            Email.ReadOnly = true;
-            // 
-            // SoDienThoai
-            // 
-            SoDienThoai.DataPropertyName = "SoDienThoai";
-            SoDienThoai.HeaderText = "Số Điện Thoại";
-            SoDienThoai.Name = "SoDienThoai";
-            SoDienThoai.ReadOnly = true;
-            // 
-            // MaLop
-            // 
-            MaLop.DataPropertyName = "MaLop";
-            MaLop.HeaderText = "Mã Lớp";
-            MaLop.Name = "MaLop";
-            MaLop.ReadOnly = true;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -283,6 +226,73 @@
             TxtNgaySinh.Name = "TxtNgaySinh";
             TxtNgaySinh.Size = new Size(225, 23);
             TxtNgaySinh.TabIndex = 5;
+            // 
+            // MaSV
+            // 
+            MaSV.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            MaSV.DataPropertyName = "MaSV";
+            MaSV.HeaderText = "MÃ SV";
+            MaSV.Name = "MaSV";
+            MaSV.ReadOnly = true;
+            MaSV.Width = 67;
+            // 
+            // HoTen
+            // 
+            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HoTen.DataPropertyName = "HoTen";
+            HoTen.HeaderText = "Họ Tên";
+            HoTen.Name = "HoTen";
+            HoTen.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            NgaySinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            NgaySinh.DataPropertyName = "NgaySinh";
+            NgaySinh.HeaderText = "Ngày Sinh";
+            NgaySinh.Name = "NgaySinh";
+            NgaySinh.ReadOnly = true;
+            // 
+            // GioiTInh
+            // 
+            GioiTInh.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            GioiTInh.DataPropertyName = "GioiTInh";
+            GioiTInh.HeaderText = "Giới Tính";
+            GioiTInh.Name = "GioiTInh";
+            GioiTInh.ReadOnly = true;
+            GioiTInh.Width = 79;
+            // 
+            // DiaChi
+            // 
+            DiaChi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DiaChi.DataPropertyName = "DiaChi";
+            DiaChi.HeaderText = "Địa Chỉ";
+            DiaChi.Name = "DiaChi";
+            DiaChi.ReadOnly = true;
+            // 
+            // Email
+            // 
+            Email.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Email.DataPropertyName = "Email";
+            Email.HeaderText = "Email";
+            Email.Name = "Email";
+            Email.ReadOnly = true;
+            // 
+            // SoDienThoai
+            // 
+            SoDienThoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            SoDienThoai.DataPropertyName = "SoDienThoai";
+            SoDienThoai.HeaderText = "Số Điện Thoại";
+            SoDienThoai.Name = "SoDienThoai";
+            SoDienThoai.ReadOnly = true;
+            // 
+            // MaLop
+            // 
+            MaLop.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            MaLop.DataPropertyName = "MaLop";
+            MaLop.HeaderText = "Mã Lớp";
+            MaLop.Name = "MaLop";
+            MaLop.ReadOnly = true;
+            MaLop.Width = 72;
             // 
             // QuanLySinhVien
             // 
@@ -333,6 +343,10 @@
         private Button BtnXoa;
         private Button BtnTaiLai;
         private DataGridView DgvKhachHang;
+        private Label label4;
+        private Label label6;
+        private TextBox TxtEmail;
+        private DateTimePicker TxtNgaySinh;
         private DataGridViewTextBoxColumn MaSV;
         private DataGridViewTextBoxColumn HoTen;
         private DataGridViewTextBoxColumn NgaySinh;
@@ -341,9 +355,5 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn SoDienThoai;
         private DataGridViewTextBoxColumn MaLop;
-        private Label label4;
-        private Label label6;
-        private TextBox TxtEmail;
-        private DateTimePicker TxtNgaySinh;
     }
 }
