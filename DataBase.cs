@@ -55,6 +55,25 @@ namespace Nhom1_WFA_QLSV
             //Debug.WriteLine(result);
             //Debug.WriteLine(dataAdapter);
         }
+        public static bool UniqueCheck(TextBox source, string where, string from = "SinhVien")
+        {
+            var connection = new SqlConnection(DbStr);
+            connection.Open();
+            int co = (int)new SqlCommand($"SELECT COUNT(*) FROM {from} WHERE {where} = '{source.Text}'", connection).ExecuteScalar();
+            connection.Close();
+            return co == 0;
+        }
+        public static bool SVCheckSelf(TextBox MaSV, TextBox data,string where)
+        {
+            var dt = GetData($"SELECT * FROM SinhVien WHERE {where} = '{data.Text}'");
+
+            if (dt.Rows.Count == 1)
+            {
+                if (MaSV.Text == dt.Rows[0]["MaSV"].ToString())
+                    return true;
+            }
+            return false;
+        }
         public static DataTable GetData(string sql)
         {
             DataTable dt = new DataTable();

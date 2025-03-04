@@ -70,20 +70,20 @@
             nav.Items.AddRange(new ToolStripItem[] { navMain, navQLSV });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
-            nav.Size = new Size(126, 379);
+            nav.Size = new Size(118, 379);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
             // navMain
             // 
             navMain.Name = "navMain";
-            navMain.Size = new Size(113, 19);
+            navMain.Size = new Size(105, 19);
             navMain.Text = "Trang Chủ";
             // 
             // navQLSV
             // 
             navQLSV.Name = "navQLSV";
-            navQLSV.Size = new Size(113, 19);
+            navQLSV.Size = new Size(105, 19);
             navQLSV.Text = "Quản Lý sinh viên";
             navQLSV.Click += navQLSV_Click;
             // 
@@ -175,6 +175,7 @@
             Controls.Add(panel1);
             Controls.Add(title);
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Trang Chủ";
             Load += Main_Load;
             panel1.ResumeLayout(false);
