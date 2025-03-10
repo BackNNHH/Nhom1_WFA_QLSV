@@ -18,34 +18,15 @@ namespace Nhom1_WFA_QLSV
         public static int SlLop = 0;
         public static int SlKhoa = 0;
 
-
-
-
-
-
-
-
-
-
-        public static string ChuoiKetNoi
-        {
-            get
-            {
-                // Tuan Dung
-                return
-                @"Data Source=Dung;
-                  Initial Catalog=QLSINHVIEN;
-                  Integrated Security=True;
-                  Trust Server Certificate=True";
-            }
-        }
-
         public static string DbStr
         {
             get
             {
                 return//CHIDAI
-                @"Data Source = CHIDAI;Integrated Security = True;Initial Catalog = QLSinhVien;Trust Server Certificate=True";
+                   @"Data Source=Dung;
+                  Initial Catalog=QLSINHVIEN;
+                  Integrated Security=True;
+                  Trust Server Certificate=True";
             }
         }
         public static void UpateData()

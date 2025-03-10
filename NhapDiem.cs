@@ -42,7 +42,7 @@ namespace Nhom1_WFA_QLSV
             }
 
             // Lưu dữ liệu vào CSDL (Ví dụ: SQL Server)
-            string connectionString = DataBase.ChuoiKetNoi;
+            string connectionString = DataBase.DbStr;
             SqlConnection conn = new SqlConnection(connectionString);
 
             conn.Open();
@@ -62,16 +62,23 @@ namespace Nhom1_WFA_QLSV
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex);
+            }
         }
 
- 
+
 
         private void LoadMonHocTheoSinhVien(string mssv)
         {
             try
             {
-                SqlConnection conn = new SqlConnection(DataBase.ChuoiKetNoi);
+                SqlConnection conn = new SqlConnection(DataBase.DbStr);
 
                 conn.Open();
                 string query = @"
@@ -115,6 +122,11 @@ namespace Nhom1_WFA_QLSV
         private void comboBox2_MouseClick(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

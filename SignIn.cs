@@ -14,7 +14,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Nhom1_WFA_QLSV
 {
     public partial class SignIn : Form
-    {
+    { 
         public SignIn()
         {
             InitializeComponent();
