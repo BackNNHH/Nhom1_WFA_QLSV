@@ -31,10 +31,13 @@
             panel1 = new Panel();
             button1 = new Button();
             txtPass = new TextBox();
+            label1 = new Label();
+            texWarm = new Label();
             labelPass = new Label();
             txtUserName = new TextBox();
             labelTen = new Label();
             title = new Label();
+            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -44,13 +47,15 @@
             panel1.AutoSize = true;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(txtPass);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(texWarm);
             panel1.Controls.Add(labelPass);
             panel1.Controls.Add(txtUserName);
             panel1.Controls.Add(labelTen);
             panel1.Controls.Add(title);
-            panel1.Location = new Point(163, 91);
+            panel1.Location = new Point(191, 71);
             panel1.Name = "panel1";
-            panel1.Size = new Size(476, 275);
+            panel1.Size = new Size(422, 286);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -60,27 +65,50 @@
             button1.AutoSize = true;
             button1.BackColor = SystemColors.GradientActiveCaption;
             button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(103, 213);
+            button1.Location = new Point(77, 233);
             button1.Name = "button1";
             button1.Size = new Size(271, 39);
             button1.TabIndex = 3;
             button1.Text = "Đăng nhập";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button1.Click += btnSign_Click;
             // 
             // txtPass
             // 
             txtPass.BorderStyle = BorderStyle.FixedSingle;
-            txtPass.Location = new Point(136, 152);
+            txtPass.Location = new Point(86, 163);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(281, 23);
+            txtPass.Size = new Size(274, 23);
             txtPass.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.ForeColor = SystemColors.MenuHighlight;
+            label1.Location = new Point(255, 211);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 19);
+            label1.TabIndex = 1;
+            label1.Text = "Quên mật khẩu";
+            label1.Click += label1_Click;
+            // 
+            // texWarm
+            // 
+            texWarm.AutoSize = true;
+            texWarm.Font = new Font("Segoe UI", 10F);
+            texWarm.ForeColor = Color.Red;
+            texWarm.Location = new Point(26, 199);
+            texWarm.Name = "texWarm";
+            texWarm.Size = new Size(156, 19);
+            texWarm.TabIndex = 1;
+            texWarm.Text = "Vui lòng nhập thông tin";
             // 
             // labelPass
             // 
             labelPass.AutoSize = true;
             labelPass.Font = new Font("Segoe UI", 10F);
-            labelPass.Location = new Point(50, 152);
+            labelPass.Location = new Point(48, 141);
             labelPass.Name = "labelPass";
             labelPass.Size = new Size(70, 19);
             labelPass.TabIndex = 1;
@@ -89,16 +117,16 @@
             // txtUserName
             // 
             txtUserName.BorderStyle = BorderStyle.FixedSingle;
-            txtUserName.Location = new Point(136, 123);
+            txtUserName.Location = new Point(86, 106);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(281, 23);
+            txtUserName.Size = new Size(274, 23);
             txtUserName.TabIndex = 2;
             // 
             // labelTen
             // 
             labelTen.AutoSize = true;
             labelTen.Font = new Font("Segoe UI", 10F);
-            labelTen.Location = new Point(50, 123);
+            labelTen.Location = new Point(48, 84);
             labelTen.Name = "labelTen";
             labelTen.Size = new Size(80, 19);
             labelTen.TabIndex = 1;
@@ -110,12 +138,27 @@
             title.AutoSize = true;
             title.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             title.ForeColor = SystemColors.HotTrack;
-            title.Location = new Point(159, 49);
+            title.Location = new Point(130, 39);
             title.Name = "title";
             title.Size = new Size(161, 32);
             title.TabIndex = 0;
             title.Text = "ĐĂNG NHẬP";
             title.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            button2.AllowDrop = true;
+            button2.Anchor = AnchorStyles.Bottom;
+            button2.AutoSize = true;
+            button2.BackColor = Color.Pink;
+            button2.ForeColor = SystemColors.ControlText;
+            button2.Location = new Point(716, 399);
+            button2.Name = "button2";
+            button2.Size = new Size(72, 39);
+            button2.TabIndex = 3;
+            button2.Text = "don't click";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += btnPuchClick;
             // 
             // SignIn
             // 
@@ -125,10 +168,10 @@
             BackgroundImage = Properties.Resources.MC_XP;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(panel1);
             Name = "SignIn";
             Text = "SignIn";
-            Load += SignIn_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -144,5 +187,8 @@
         private TextBox txtUserName;
         private Label labelTen;
         private Button button1;
+        private Button button2;
+        private Label texWarm;
+        private Label label1;
     }
 }

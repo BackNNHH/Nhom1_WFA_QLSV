@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            txtDiemTX = new TextBox();
+            textBox1 = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            cbMonHoc = new ComboBox();
-            txtMSSV = new TextBox();
+            comboBox2 = new ComboBox();
+            textBox2 = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            txtDiemGK = new TextBox();
+            textBox3 = new TextBox();
             label6 = new Label();
             textBox4 = new TextBox();
-            btnLuu = new Button();
-            btnThoat = new Button();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -49,26 +49,27 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Variable Text Semibold", 20F, FontStyle.Bold);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(288, 19);
+            label1.Location = new Point(252, 14);
             label1.Name = "label1";
-            label1.Size = new Size(194, 46);
+            label1.Size = new Size(153, 36);
             label1.TabIndex = 0;
             label1.Text = "Nhập Điểm";
             // 
-            // txtDiemTX
+            // textBox1
             // 
-            txtDiemTX.Location = new Point(201, 176);
-            txtDiemTX.Name = "txtDiemTX";
-            txtDiemTX.Size = new Size(355, 27);
-            txtDiemTX.TabIndex = 2;
+            textBox1.Location = new Point(176, 132);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(311, 23);
+            textBox1.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(109, 88);
+            label2.Location = new Point(95, 66);
             label2.Name = "label2";
-            label2.Size = new Size(47, 20);
+            label2.Size = new Size(37, 15);
             label2.TabIndex = 3;
             label2.Text = "MSSV";
             // 
@@ -76,35 +77,38 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Location = new Point(117, 132);
+            label3.Location = new Point(102, 99);
             label3.Name = "label3";
-            label3.Size = new Size(39, 20);
+            label3.Size = new Size(32, 15);
             label3.TabIndex = 4;
             label3.Text = "Môn";
             // 
-            // cbMonHoc
+            // comboBox2
             // 
-            cbMonHoc.FormattingEnabled = true;
-            cbMonHoc.Location = new Point(201, 129);
-            cbMonHoc.Name = "cbMonHoc";
-            cbMonHoc.Size = new Size(355, 28);
-            cbMonHoc.TabIndex = 5;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(176, 97);
+            comboBox2.Margin = new Padding(3, 2, 3, 2);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(311, 23);
+            comboBox2.TabIndex = 5;
+            comboBox2.MouseClick += comboBox2_MouseClick;
             // 
-            // txtMSSV
+            // textBox2
             // 
-            txtMSSV.Location = new Point(201, 85);
-            txtMSSV.Name = "txtMSSV";
-            txtMSSV.Size = new Size(355, 27);
-            txtMSSV.TabIndex = 6;
-            txtMSSV.TextChanged += txtMSSV_TextChanged;
+            textBox2.Location = new Point(176, 64);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(311, 23);
+            textBox2.TabIndex = 6;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Location = new Point(11, 179);
+            label4.Location = new Point(10, 134);
             label4.Name = "label4";
-            label4.Size = new Size(144, 20);
+            label4.Size = new Size(115, 15);
             label4.TabIndex = 7;
             label4.Text = "Điểm Thường Xuyên";
             // 
@@ -112,74 +116,77 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(59, 227);
+            label5.Location = new Point(52, 170);
             label5.Name = "label5";
-            label5.Size = new Size(97, 20);
+            label5.Size = new Size(75, 15);
             label5.TabIndex = 8;
             label5.Text = "Điểm Giữa Kì";
             // 
-            // txtDiemGK
+            // textBox3
             // 
-            txtDiemGK.Location = new Point(201, 219);
-            txtDiemGK.Name = "txtDiemGK";
-            txtDiemGK.Size = new Size(355, 27);
-            txtDiemGK.TabIndex = 9;
+            textBox3.Location = new Point(176, 164);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(311, 23);
+            textBox3.TabIndex = 9;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Location = new Point(59, 275);
+            label6.Location = new Point(52, 206);
             label6.Name = "label6";
-            label6.Size = new Size(94, 20);
+            label6.Size = new Size(75, 15);
             label6.TabIndex = 10;
             label6.Text = "Điểm Cuối kì";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(201, 272);
+            textBox4.Location = new Point(176, 204);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(355, 27);
+            textBox4.Size = new Size(311, 23);
             textBox4.TabIndex = 11;
             // 
-            // btnLuu
+            // button1
             // 
-            btnLuu.Location = new Point(241, 336);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(94, 29);
-            btnLuu.TabIndex = 12;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
-            btnLuu.Click += btnLuu_Click;
+            button1.Location = new Point(211, 252);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 12;
+            button1.Text = "Lưu";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // btnThoat
+            // button2
             // 
-            btnThoat.Location = new Point(423, 336);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(94, 29);
-            btnThoat.TabIndex = 13;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = true;
-            btnThoat.Click += btnThoat_Click;
+            button2.Location = new Point(370, 252);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(82, 22);
+            button2.TabIndex = 13;
+            button2.Text = "Thoát";
+            button2.UseVisualStyleBackColor = true;
             // 
             // NhapDiem
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 451);
-            Controls.Add(btnThoat);
-            Controls.Add(btnLuu);
+            ClientSize = new Size(700, 338);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(textBox4);
             Controls.Add(label6);
-            Controls.Add(txtDiemGK);
+            Controls.Add(textBox3);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(txtMSSV);
-            Controls.Add(cbMonHoc);
+            Controls.Add(textBox2);
+            Controls.Add(comboBox2);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(txtDiemTX);
+            Controls.Add(textBox1);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "NhapDiem";
             Text = "Form1";
             ResumeLayout(false);
@@ -189,17 +196,17 @@
         #endregion
 
         private Label label1;
-        private TextBox txtDiemTX;
+        private TextBox textBox1;
         private Label label2;
         private Label label3;
-        private ComboBox cbMonHoc;
-        private TextBox txtMSSV;
+        private ComboBox comboBox2;
+        private TextBox textBox2;
         private Label label4;
         private Label label5;
-        private TextBox txtDiemGK;
+        private TextBox textBox3;
         private Label label6;
         private TextBox textBox4;
-        private Button btnLuu;
-        private Button btnThoat;
+        private Button button1;
+        private Button button2;
     }
 }

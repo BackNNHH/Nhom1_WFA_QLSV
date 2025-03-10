@@ -111,6 +111,11 @@ namespace Nhom1_WFA_QLSV
                 MessageBox.Show("Hãy nhập mã sinh viên trước khi chọn môn!");
             }
         }
+
+        private void comboBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 
 
