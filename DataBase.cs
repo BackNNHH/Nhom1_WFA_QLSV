@@ -11,6 +11,19 @@ namespace Nhom1_WFA_QLSV
     class DataBase
     {
 
+        public static string ChuoiKetNoi
+        {
+            get
+            {
+                // Tuan Dung
+                return
+                @"Data Source=Dung;
+                  Initial Catalog=QLSINHVIEN;
+                  Integrated Security=True;
+                  Trust Server Certificate=True";
+            }
+        }
+
         public static string DbStr
         {
             get
