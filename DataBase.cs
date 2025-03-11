@@ -1,11 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -23,10 +18,7 @@ namespace Nhom1_WFA_QLSV
             get
             {
                 return//CHIDAI
-                   @"Data Source=Dung;
-                  Initial Catalog=QLSINHVIEN;
-                  Integrated Security=True;
-                  Trust Server Certificate=True";
+                  File.ReadAllText("config.txt") ?? @"Data Source=CHIDAI;Initial Catalog=QLSINHVIEN;Integrated Security=True;Trust Server Certificate=True";
             }
         }
         public static void UpateData()
@@ -57,7 +49,7 @@ namespace Nhom1_WFA_QLSV
             connection.Close();
             return co == 0;
         }
-        public static bool SVCheckSelf(TextBox MaSV, TextBox data,string where)
+        public static bool SVCheckSelf(TextBox MaSV, TextBox data, string where)
         {
             var dt = GetData($"SELECT * FROM SinhVien WHERE {where} = '{data.Text}'");
 

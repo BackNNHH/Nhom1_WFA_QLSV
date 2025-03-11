@@ -1,14 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -18,6 +8,7 @@ namespace Nhom1_WFA_QLSV
         public QuanLySinhVien()
         {
             InitializeComponent();
+            CauHinhSystem.LoadMeme(this);
         }
 
         private void QuanLySinhVien_Load(object sender, EventArgs e)

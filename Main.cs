@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -14,10 +14,13 @@ namespace Nhom1_WFA_QLSV
         public Main()
         {
             InitializeComponent();
+            CauHinhSystem.LoadMeme(this);
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
+
+            DataBase.UpateData();
             txtKhoa.Text = DataBase.SlKhoa.ToString();
             txtLop.Text = DataBase.SlLop.ToString();
             txtSLSV.Text = DataBase.SlSV.ToString();
@@ -51,7 +54,13 @@ namespace Nhom1_WFA_QLSV
             var f = new SignIn();
             f.Show();
             this.Hide();
-            
+
+        }
+
+        private void cấuHìnhHệThôgsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new CauHinhSystem();
+            f.Show();
         }
     }
 }

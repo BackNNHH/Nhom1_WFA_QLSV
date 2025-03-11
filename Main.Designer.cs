@@ -58,19 +58,18 @@
             title.AutoSize = true;
             title.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             title.ForeColor = SystemColors.HotTrack;
-            title.Location = new Point(265, 32);
+            title.Location = new Point(232, 24);
             title.Name = "title";
-            title.Size = new Size(544, 46);
+            title.Size = new Size(430, 37);
             title.TabIndex = 0;
             title.Text = "ỨNG DỤNG QUẢN LÝ SINH VIÊN";
             // 
             // panel1
             // 
             panel1.Controls.Add(nav);
-            panel1.Location = new Point(0, 95);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(0, 71);
             panel1.Name = "panel1";
-            panel1.Size = new Size(162, 505);
+            panel1.Size = new Size(142, 379);
             panel1.TabIndex = 2;
             // 
             // nav
@@ -80,28 +79,27 @@
             nav.Items.AddRange(new ToolStripItem[] { navMain, navQLSV, nhaToolStripMenuItem, đăngNhậpToolStripMenuItem });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
-            nav.Padding = new Padding(7, 3, 0, 3);
-            nav.Size = new Size(157, 505);
+            nav.Size = new Size(126, 379);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
             // navMain
             // 
             navMain.Name = "navMain";
-            navMain.Size = new Size(142, 24);
+            navMain.Size = new Size(113, 19);
             navMain.Text = "Trang Chủ";
             // 
             // navQLSV
             // 
             navQLSV.Name = "navQLSV";
-            navQLSV.Size = new Size(142, 24);
+            navQLSV.Size = new Size(113, 19);
             navQLSV.Text = "Quản Lý sinh viên";
             navQLSV.Click += navQLSV_Click;
             // 
             // nhaToolStripMenuItem
             // 
             nhaToolStripMenuItem.Name = "nhaToolStripMenuItem";
-            nhaToolStripMenuItem.Size = new Size(142, 24);
+            nhaToolStripMenuItem.Size = new Size(113, 19);
             nhaToolStripMenuItem.Text = "Nhập điểm ";
             nhaToolStripMenuItem.Click += nhaToolStripMenuItem_Click;
             // 
@@ -109,111 +107,108 @@
             // 
             đăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cấuHìnhHệThôgsToolStripMenuItem, toolStripSeparator1, MnuDangXuat, toolStripSeparator2, thoátToolStripMenuItem });
             đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            đăngNhậpToolStripMenuItem.Size = new Size(142, 24);
+            đăngNhậpToolStripMenuItem.Size = new Size(113, 19);
             đăngNhậpToolStripMenuItem.Text = "Hệ Thống";
             // 
             // cấuHìnhHệThôgsToolStripMenuItem
             // 
             cấuHìnhHệThôgsToolStripMenuItem.Name = "cấuHìnhHệThôgsToolStripMenuItem";
-            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(224, 26);
+            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(180, 22);
             cấuHìnhHệThôgsToolStripMenuItem.Text = "Cấu hình hệ thống";
+            cấuHìnhHệThôgsToolStripMenuItem.Click += cấuHìnhHệThôgsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(221, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // MnuDangXuat
             // 
             MnuDangXuat.Name = "MnuDangXuat";
-            MnuDangXuat.Size = new Size(224, 26);
+            MnuDangXuat.Size = new Size(180, 22);
             MnuDangXuat.Text = "Đăng xuất";
             MnuDangXuat.Click += MnuDangXuat_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(221, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(224, 26);
+            thoátToolStripMenuItem.Size = new Size(180, 22);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // texSLSV
             // 
             texSLSV.AutoSize = true;
-            texSLSV.Location = new Point(265, 188);
+            texSLSV.Location = new Point(232, 141);
             texSLSV.Name = "texSLSV";
-            texSLSV.Size = new Size(137, 20);
+            texSLSV.Size = new Size(109, 15);
             texSLSV.TabIndex = 3;
             texSLSV.Text = "Số Lượng Sinh Viên";
             // 
             // txtSLSV
             // 
-            txtSLSV.Location = new Point(397, 184);
-            txtSLSV.Margin = new Padding(3, 4, 3, 4);
+            txtSLSV.Location = new Point(347, 138);
             txtSLSV.Name = "txtSLSV";
             txtSLSV.ReadOnly = true;
-            txtSLSV.Size = new Size(114, 27);
+            txtSLSV.Size = new Size(100, 23);
             txtSLSV.TabIndex = 4;
             txtSLSV.Text = "N/A";
             // 
             // texMVP
             // 
             texMVP.AutoSize = true;
-            texMVP.Location = new Point(265, 227);
+            texMVP.Location = new Point(232, 170);
             texMVP.Name = "texMVP";
-            texMVP.Size = new Size(104, 20);
+            texMVP.Size = new Size(84, 15);
             texMVP.TabIndex = 3;
             texMVP.Text = "Sinh Viên MVP";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(397, 223);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Location = new Point(347, 167);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(114, 27);
+            textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 4;
             textBox1.Text = "N/A";
             // 
             // texLop
             // 
             texLop.AutoSize = true;
-            texLop.Location = new Point(563, 188);
+            texLop.Location = new Point(493, 141);
             texLop.Name = "texLop";
-            texLop.Size = new Size(101, 20);
+            texLop.Size = new Size(80, 15);
             texLop.TabIndex = 3;
             texLop.Text = "Số Lượng Lớp";
             // 
             // txtLop
             // 
-            txtLop.Location = new Point(695, 184);
-            txtLop.Margin = new Padding(3, 4, 3, 4);
+            txtLop.Location = new Point(608, 138);
             txtLop.Name = "txtLop";
             txtLop.ReadOnly = true;
-            txtLop.Size = new Size(114, 27);
+            txtLop.Size = new Size(100, 23);
             txtLop.TabIndex = 4;
             txtLop.Text = "N/A";
             // 
             // texKhoa
             // 
             texKhoa.AutoSize = true;
-            texKhoa.Location = new Point(563, 231);
+            texKhoa.Location = new Point(493, 173);
             texKhoa.Name = "texKhoa";
-            texKhoa.Size = new Size(110, 20);
+            texKhoa.Size = new Size(87, 15);
             texKhoa.TabIndex = 3;
             texKhoa.Text = "Số Lượng Khoa";
             // 
             // txtKhoa
             // 
-            txtKhoa.Location = new Point(695, 227);
-            txtKhoa.Margin = new Padding(3, 4, 3, 4);
+            txtKhoa.Location = new Point(608, 170);
             txtKhoa.Name = "txtKhoa";
             txtKhoa.ReadOnly = true;
-            txtKhoa.Size = new Size(114, 27);
+            txtKhoa.Size = new Size(100, 23);
             txtKhoa.TabIndex = 4;
             txtKhoa.Text = "N/A";
             // 
@@ -221,16 +216,16 @@
             // 
             LblUserName.AutoSize = true;
             LblUserName.Font = new Font("Segoe UI", 20F);
-            LblUserName.Location = new Point(21, 9);
+            LblUserName.Location = new Point(18, 7);
             LblUserName.Name = "LblUserName";
-            LblUserName.Size = new Size(0, 46);
+            LblUserName.Size = new Size(0, 37);
             LblUserName.TabIndex = 5;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(LblUserName);
             Controls.Add(textBox1);
             Controls.Add(texMVP);
@@ -242,7 +237,6 @@
             Controls.Add(texSLSV);
             Controls.Add(panel1);
             Controls.Add(title);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Trang Chủ";
