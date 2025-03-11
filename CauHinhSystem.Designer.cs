@@ -29,32 +29,23 @@
         private void InitializeComponent()
         {
             coloDiag = new ColorDialog();
-            label1 = new Label();
             btnBgC = new Button();
-            label2 = new Label();
             fontDiag = new FontDialog();
             cboFont = new ComboBox();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            groupBox1 = new GroupBox();
+            label1 = new Label();
+            groupBox2 = new GroupBox();
+            label2 = new Label();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(242, 242, 242);
-            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(49, 97);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 17);
-            label1.TabIndex = 0;
-            label1.Text = "Theme";
             // 
             // btnBgC
             // 
             btnBgC.BackColor = Color.FromArgb(242, 242, 242);
             btnBgC.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             btnBgC.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            btnBgC.Location = new Point(148, 91);
+            btnBgC.Location = new Point(499, 23);
             btnBgC.Name = "btnBgC";
             btnBgC.Size = new Size(201, 23);
             btnBgC.TabIndex = 1;
@@ -62,77 +53,97 @@
             btnBgC.UseVisualStyleBackColor = false;
             btnBgC.Click += btnBgC_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(242, 242, 242);
-            label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(49, 127);
-            label2.Name = "label2";
-            label2.Size = new Size(37, 17);
-            label2.TabIndex = 0;
-            label2.Text = "Font";
-            // 
             // cboFont
             // 
             cboFont.BackColor = Color.FromArgb(242, 242, 242);
             cboFont.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             cboFont.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cboFont.FormattingEnabled = true;
-            cboFont.Location = new Point(148, 127);
+            cboFont.Location = new Point(499, 22);
             cboFont.Name = "cboFont";
             cboFont.Size = new Size(201, 25);
             cboFont.TabIndex = 2;
             cboFont.SelectedIndexChanged += cboFont_SelectedIndexChanged;
             // 
-            // materialButton1
+            // groupBox1
             // 
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.BackColor = Color.FromArgb(242, 242, 242);
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(343, 202);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(158, 36);
-            materialButton1.TabIndex = 3;
-            materialButton1.Text = "materialButton1";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = false;
+            groupBox1.BackColor = Color.FromArgb(242, 242, 242);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(cboFont);
+            groupBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            groupBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            groupBox1.Location = new Point(49, 167);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(706, 61);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Font";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(242, 242, 242);
+            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            label1.Location = new Point(6, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(242, 17);
+            label1.TabIndex = 3;
+            label1.Text = "Font được sửa dụng hầu hết các form\r\n";
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = Color.FromArgb(242, 242, 242);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(btnBgC);
+            groupBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            groupBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            groupBox2.Location = new Point(49, 90);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(706, 71);
+            groupBox2.TabIndex = 4;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Theme";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(242, 242, 242);
+            label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            label2.Location = new Point(6, 23);
+            label2.Name = "label2";
+            label2.Size = new Size(261, 34);
+            label2.TabIndex = 3;
+            label2.Text = "Loại chủ đề đang sửa dụng\r\ncó 2 loại gồm chủ đề sáng và chủ đề tối...\r\n";
             // 
             // CauHinhSystem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(materialButton1);
-            Controls.Add(cboFont);
-            Controls.Add(btnBgC);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Name = "CauHinhSystem";
             ShowIcon = false;
-            Text = "CauHinhSystem";
+            Text = "Cấu Hình Hệ Thống";
             Load += CauHinhSystem_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private ColorDialog coloDiag;
-        private Label label1;
         private Button btnBgC;
-        private Label label2;
         private FontDialog fontDiag;
         private ComboBox cboFont;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private Label label1;
+        private Label label2;
     }
 }
