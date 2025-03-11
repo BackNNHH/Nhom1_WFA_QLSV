@@ -94,38 +94,42 @@
             // đăngNhậpToolStripMenuItem
             // 
             đăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cấuHìnhHệThôgsToolStripMenuItem, toolStripSeparator1, MnuDangXuat, toolStripSeparator2, thoátToolStripMenuItem });
+            đăngNhậpToolStripMenuItem.Image = Properties.Resources.system;
             đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            đăngNhậpToolStripMenuItem.Size = new Size(121, 21);
+            đăngNhậpToolStripMenuItem.Size = new Size(121, 24);
             đăngNhậpToolStripMenuItem.Text = "Hệ Thống";
             // 
             // cấuHìnhHệThôgsToolStripMenuItem
             // 
+            cấuHìnhHệThôgsToolStripMenuItem.Image = Properties.Resources.setting;
             cấuHìnhHệThôgsToolStripMenuItem.Name = "cấuHìnhHệThôgsToolStripMenuItem";
-            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(192, 22);
+            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(196, 26);
             cấuHìnhHệThôgsToolStripMenuItem.Text = "Cấu hình hệ thống";
             cấuHìnhHệThôgsToolStripMenuItem.Click += cấuHìnhHệThôgsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(189, 6);
+            toolStripSeparator1.Size = new Size(193, 6);
             // 
             // MnuDangXuat
             // 
+            MnuDangXuat.Image = Properties.Resources.signout;
             MnuDangXuat.Name = "MnuDangXuat";
-            MnuDangXuat.Size = new Size(192, 22);
+            MnuDangXuat.Size = new Size(196, 26);
             MnuDangXuat.Text = "Đăng xuất";
             MnuDangXuat.Click += MnuDangXuat_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(189, 6);
+            toolStripSeparator2.Size = new Size(193, 6);
             // 
             // thoátToolStripMenuItem
             // 
+            thoátToolStripMenuItem.Image = Properties.Resources.exit;
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(192, 22);
+            thoátToolStripMenuItem.Size = new Size(196, 26);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // texSLSV

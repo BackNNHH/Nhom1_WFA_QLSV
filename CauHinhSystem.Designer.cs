@@ -33,11 +33,15 @@
             fontDiag = new FontDialog();
             cboFont = new ComboBox();
             groupBox1 = new GroupBox();
+            pictureBox2 = new PictureBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            pictureBox1 = new PictureBox();
             label2 = new Label();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnBgC
@@ -45,9 +49,9 @@
             btnBgC.BackColor = Color.FromArgb(242, 242, 242);
             btnBgC.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             btnBgC.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            btnBgC.Location = new Point(499, 23);
+            btnBgC.Location = new Point(487, 23);
             btnBgC.Name = "btnBgC";
-            btnBgC.Size = new Size(201, 23);
+            btnBgC.Size = new Size(201, 37);
             btnBgC.TabIndex = 1;
             btnBgC.Text = "Đổi";
             btnBgC.UseVisualStyleBackColor = false;
@@ -59,7 +63,8 @@
             cboFont.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             cboFont.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cboFont.FormattingEnabled = true;
-            cboFont.Location = new Point(499, 22);
+            cboFont.ItemHeight = 17;
+            cboFont.Location = new Point(487, 33);
             cboFont.Name = "cboFont";
             cboFont.Size = new Size(201, 25);
             cboFont.TabIndex = 2;
@@ -68,16 +73,30 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(242, 242, 242);
+            groupBox1.Controls.Add(pictureBox2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(cboFont);
-            groupBox1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            groupBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             groupBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            groupBox1.Location = new Point(49, 167);
+            groupBox1.Location = new Point(49, 177);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(706, 61);
+            groupBox1.Size = new Size(706, 81);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Font";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.FromArgb(242, 242, 242);
+            pictureBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            pictureBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            pictureBox2.Image = Properties.Resources.Font_Icon;
+            pictureBox2.Location = new Point(6, 18);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(61, 57);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -85,7 +104,7 @@
             label1.BackColor = Color.FromArgb(242, 242, 242);
             label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(6, 19);
+            label1.Location = new Point(88, 36);
             label1.Name = "label1";
             label1.Size = new Size(242, 17);
             label1.TabIndex = 3;
@@ -94,16 +113,30 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.FromArgb(242, 242, 242);
+            groupBox2.Controls.Add(pictureBox1);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(btnBgC);
-            groupBox2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            groupBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             groupBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             groupBox2.Location = new Point(49, 90);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(706, 71);
+            groupBox2.Size = new Size(706, 81);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Theme";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(242, 242, 242);
+            pictureBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            pictureBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            pictureBox1.Image = Properties.Resources.theme_10;
+            pictureBox1.Location = new Point(6, 18);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(61, 57);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -111,7 +144,7 @@
             label2.BackColor = Color.FromArgb(242, 242, 242);
             label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(6, 23);
+            label2.Location = new Point(88, 26);
             label2.Name = "label2";
             label2.Size = new Size(261, 34);
             label2.TabIndex = 3;
@@ -130,8 +163,10 @@
             Load += CauHinhSystem_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -145,5 +180,7 @@
         private GroupBox groupBox2;
         private Label label1;
         private Label label2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

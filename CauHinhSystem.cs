@@ -40,6 +40,10 @@ namespace Nhom1_WFA_QLSV
         private void btnBgC_Click(object sender, EventArgs e)
         {
             ThemeManager.ToggleTheme();
+            if (ThemeManager.IsDarkMode)
+            {
+                _cColor = SystemColors.WindowFrame;
+            }
         }
         public static void ApplyTTAF()
         {
@@ -89,7 +93,8 @@ namespace Nhom1_WFA_QLSV
         {
             cboFont.Text = CurrentFont.Name;
             FontFamily[] ff = FontFamily.Families;
-            foreach (FontFamily f in ff) {
+            foreach (FontFamily f in ff)
+            {
                 cboFont.Items.Add(f.Name);
             }
         }
