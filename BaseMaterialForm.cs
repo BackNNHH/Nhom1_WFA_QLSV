@@ -22,4 +22,9 @@ public class BaseMaterialForm : MaterialForm
     {
         materialSkinManager.Theme = ThemeManager.IsDarkMode ? MaterialSkinManager.Themes.DARK : MaterialSkinManager.Themes.LIGHT;
     }
+
+    private void sdasd()
+    {
+        MessageBox.Show("àdsadsads");
+    }
 }
