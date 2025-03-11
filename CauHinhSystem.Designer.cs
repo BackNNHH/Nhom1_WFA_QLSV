@@ -70,7 +70,7 @@
             groupBox1.BackColor = Color.FromArgb(242, 242, 242);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(cboFont);
-            groupBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            groupBox1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             groupBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             groupBox1.Location = new Point(49, 167);
             groupBox1.Name = "groupBox1";
@@ -96,7 +96,7 @@
             groupBox2.BackColor = Color.FromArgb(242, 242, 242);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(btnBgC);
-            groupBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            groupBox2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             groupBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             groupBox2.Location = new Point(49, 90);
             groupBox2.Name = "groupBox2";
