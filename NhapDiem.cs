@@ -3,12 +3,12 @@ using System.Data;
 
 namespace Nhom1_WFA_QLSV
 {
-    public partial class NhapDiem : Form
+    public partial class NhapDiem : BaseMaterialForm
     {
         public NhapDiem()
         {
             InitializeComponent();
-            CauHinhSystem.LoadMeme(this);
+            //CauHinhSystem.LoadMeme(this);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

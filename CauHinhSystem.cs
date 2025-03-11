@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Nhom1_WFA_QLSV
 {
-    public partial class CauHinhSystem : MaterialForm
+    public partial class CauHinhSystem : BaseMaterialForm
     {
         private static Color _cColor= Properties.Settings.Default.BackColor;
         private static Font _cFont = Properties.Settings.Default.Font;
@@ -39,18 +39,7 @@ namespace Nhom1_WFA_QLSV
 
         private void btnBgC_Click(object sender, EventArgs e)
         {
-            DialogResult result = coloDiag.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-
-                CurrentColor = coloDiag.Color;
-                //Color selectedColor = coloDiag.Color;
-                //this.BackColor = selectedColor;
-                Properties.Settings.Default.BackColor = CurrentColor;
-                this.BackColor = coloDiag.Color;
-                ApplyTTAF();
-
-            }
+            ThemeManager.ToggleTheme();
         }
         public static void ApplyTTAF()
         {

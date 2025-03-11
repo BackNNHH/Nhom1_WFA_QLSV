@@ -46,119 +46,150 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI Variable Text Semibold", 20F, FontStyle.Bold);
-            label1.ForeColor = Color.Red;
+            label1.BackColor = Color.FromArgb(242, 242, 242);
+            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label1.Location = new Point(288, 19);
             label1.Name = "label1";
-            label1.Size = new Size(194, 46);
+            label1.Size = new Size(82, 18);
             label1.TabIndex = 0;
             label1.Text = "Nhập Điểm";
             // 
             // txtDiemTX
             // 
+            txtDiemTX.BackColor = Color.FromArgb(242, 242, 242);
+            txtDiemTX.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtDiemTX.ForeColor = Color.FromArgb(222, 0, 0, 0);
             txtDiemTX.Location = new Point(201, 176);
             txtDiemTX.Name = "txtDiemTX";
-            txtDiemTX.Size = new Size(355, 27);
+            txtDiemTX.Size = new Size(355, 24);
             txtDiemTX.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
+            label2.BackColor = Color.FromArgb(242, 242, 242);
+            label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label2.Location = new Point(109, 88);
             label2.Name = "label2";
-            label2.Size = new Size(47, 20);
+            label2.Size = new Size(49, 18);
             label2.TabIndex = 3;
             label2.Text = "MSSV";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
+            label3.BackColor = Color.FromArgb(242, 242, 242);
+            label3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label3.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label3.Location = new Point(117, 132);
             label3.Name = "label3";
-            label3.Size = new Size(39, 20);
+            label3.Size = new Size(38, 18);
             label3.TabIndex = 4;
             label3.Text = "Môn";
             // 
             // cbMonHoc
             // 
+            cbMonHoc.BackColor = Color.FromArgb(242, 242, 242);
+            cbMonHoc.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cbMonHoc.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cbMonHoc.FormattingEnabled = true;
             cbMonHoc.Location = new Point(201, 129);
             cbMonHoc.Name = "cbMonHoc";
-            cbMonHoc.Size = new Size(355, 28);
+            cbMonHoc.Size = new Size(355, 25);
             cbMonHoc.TabIndex = 5;
             cbMonHoc.MouseClick += comboBox2_MouseClick;
             // 
             // txtMSSV
             // 
+            txtMSSV.BackColor = Color.FromArgb(242, 242, 242);
+            txtMSSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtMSSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
             txtMSSV.Location = new Point(201, 85);
             txtMSSV.Name = "txtMSSV";
-            txtMSSV.Size = new Size(355, 27);
+            txtMSSV.Size = new Size(355, 24);
             txtMSSV.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
+            label4.BackColor = Color.FromArgb(242, 242, 242);
+            label4.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label4.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label4.Location = new Point(11, 179);
             label4.Name = "label4";
-            label4.Size = new Size(144, 20);
+            label4.Size = new Size(142, 18);
             label4.TabIndex = 7;
             label4.Text = "Điểm Thường Xuyên";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
+            label5.BackColor = Color.FromArgb(242, 242, 242);
+            label5.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label5.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label5.Location = new Point(59, 227);
             label5.Name = "label5";
-            label5.Size = new Size(97, 20);
+            label5.Size = new Size(95, 18);
             label5.TabIndex = 8;
             label5.Text = "Điểm Giữa Kì";
             // 
             // txtDiemGK
             // 
+            txtDiemGK.BackColor = Color.FromArgb(242, 242, 242);
+            txtDiemGK.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtDiemGK.ForeColor = Color.FromArgb(222, 0, 0, 0);
             txtDiemGK.Location = new Point(201, 219);
             txtDiemGK.Name = "txtDiemGK";
-            txtDiemGK.Size = new Size(355, 27);
+            txtDiemGK.Size = new Size(355, 24);
             txtDiemGK.TabIndex = 9;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
+            label6.BackColor = Color.FromArgb(242, 242, 242);
+            label6.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label6.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label6.Location = new Point(59, 275);
             label6.Name = "label6";
-            label6.Size = new Size(94, 20);
+            label6.Size = new Size(94, 18);
             label6.TabIndex = 10;
             label6.Text = "Điểm Cuối kì";
             // 
             // txtDiemCK
             // 
+            txtDiemCK.BackColor = Color.FromArgb(242, 242, 242);
+            txtDiemCK.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtDiemCK.ForeColor = Color.FromArgb(222, 0, 0, 0);
             txtDiemCK.Location = new Point(201, 272);
             txtDiemCK.Name = "txtDiemCK";
-            txtDiemCK.Size = new Size(355, 27);
+            txtDiemCK.Size = new Size(355, 24);
             txtDiemCK.TabIndex = 11;
             // 
             // btnLuu
             // 
+            btnLuu.BackColor = Color.FromArgb(242, 242, 242);
+            btnLuu.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            btnLuu.ForeColor = Color.FromArgb(222, 0, 0, 0);
             btnLuu.Location = new Point(241, 336);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(94, 29);
             btnLuu.TabIndex = 12;
             btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
+            btnLuu.UseVisualStyleBackColor = false;
             // 
             // btnThoat
             // 
+            btnThoat.BackColor = Color.FromArgb(242, 242, 242);
+            btnThoat.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            btnThoat.ForeColor = Color.FromArgb(222, 0, 0, 0);
             btnThoat.Location = new Point(423, 336);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 13;
             btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click_1;
             // 
             // NhapDiem

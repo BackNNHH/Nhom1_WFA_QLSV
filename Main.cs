@@ -2,7 +2,7 @@
 
 namespace Nhom1_WFA_QLSV
 {
-    public partial class Main : Form
+    public partial class Main : BaseMaterialForm
     {
 
         //public bool DaDangNhap { get; set; } = false;
