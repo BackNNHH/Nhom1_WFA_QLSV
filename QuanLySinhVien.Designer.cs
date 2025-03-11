@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             label1 = new Label();
             TxtMaSV = new TextBox();
             label2 = new Label();
@@ -58,12 +57,10 @@
             TxtNgaySinh = new DateTimePicker();
             radNam = new RadioButton();
             radNu = new RadioButton();
-            dataBaseBindingSource = new BindingSource(components);
             label7 = new Label();
             CboLop = new ComboBox();
             label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)DgvKhachHang).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataBaseBindingSource).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -336,10 +333,6 @@
             radNu.Text = "Nữ";
             radNu.UseVisualStyleBackColor = true;
             // 
-            // dataBaseBindingSource
-            // 
-            dataBaseBindingSource.DataSource = typeof(DataBase);
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -396,11 +389,11 @@
             Controls.Add(TxtMaSV);
             Controls.Add(label1);
             Name = "QuanLySinhVien";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "QuanLySinhVien";
             Load += QuanLySinhVien_Load;
             ((System.ComponentModel.ISupportInitialize)DgvKhachHang).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataBaseBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -436,7 +429,6 @@
         private DataGridViewTextBoxColumn MaLop;
         private RadioButton radNam;
         private RadioButton radNu;
-        private BindingSource dataBaseBindingSource;
         private Label label7;
         private ComboBox CboLop;
         private Label label8;
