@@ -1,9 +1,10 @@
-﻿using System.Diagnostics;
+﻿using MaterialSkin.Controls;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Nhom1_WFA_QLSV
 {
-    public partial class CauHinhSystem : Form
+    public partial class CauHinhSystem : MaterialForm
     {
         private static Color _cColor= Properties.Settings.Default.BackColor;
         private static Font _cFont = Properties.Settings.Default.Font;

@@ -107,10 +107,11 @@
             // labelPass
             // 
             labelPass.AutoSize = true;
-            labelPass.Font = new Font("Segoe UI", 10F);
+            labelPass.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            labelPass.ForeColor = SystemColors.WindowFrame;
             labelPass.Location = new Point(48, 141);
             labelPass.Name = "labelPass";
-            labelPass.Size = new Size(70, 19);
+            labelPass.Size = new Size(77, 19);
             labelPass.TabIndex = 1;
             labelPass.Text = "Password:";
             // 
@@ -125,10 +126,11 @@
             // labelTen
             // 
             labelTen.AutoSize = true;
-            labelTen.Font = new Font("Segoe UI", 10F);
+            labelTen.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            labelTen.ForeColor = SystemColors.WindowFrame;
             labelTen.Location = new Point(48, 84);
             labelTen.Name = "labelTen";
-            labelTen.Size = new Size(80, 19);
+            labelTen.Size = new Size(87, 19);
             labelTen.TabIndex = 1;
             labelTen.Text = "User Name:";
             // 

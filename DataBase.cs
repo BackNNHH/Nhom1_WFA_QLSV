@@ -7,7 +7,6 @@ namespace Nhom1_WFA_QLSV
     public class DataBase
     {
         public static string username = "";
-        public static string password = "";
 
         public static int SlSV = 0;
         public static int SlLop = 0;
@@ -106,10 +105,8 @@ namespace Nhom1_WFA_QLSV
                 if (TOKENburh)
                 {
                     SetData($"UPDATE Users SET password = '{pass}' WHERE id = '{row["id"]}'");
-                    password = pass;
+                 
                 }
-                else
-                    password = row["password"].ToString();
 #pragma warning restore CS8601
             }
             return dt;
