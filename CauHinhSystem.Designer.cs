@@ -34,6 +34,7 @@
             label2 = new Label();
             fontDiag = new FontDialog();
             cboFont = new ComboBox();
+            materialButton1 = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
             // label1
@@ -51,9 +52,9 @@
             // btnBgC
             // 
             btnBgC.BackColor = Color.FromArgb(242, 242, 242);
-            btnBgC.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            btnBgC.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             btnBgC.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            btnBgC.Location = new Point(148, 97);
+            btnBgC.Location = new Point(148, 91);
             btnBgC.Name = "btnBgC";
             btnBgC.Size = new Size(201, 23);
             btnBgC.TabIndex = 1;
@@ -67,7 +68,7 @@
             label2.BackColor = Color.FromArgb(242, 242, 242);
             label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(49, 131);
+            label2.Location = new Point(49, 127);
             label2.Name = "label2";
             label2.Size = new Size(37, 17);
             label2.TabIndex = 0;
@@ -76,7 +77,7 @@
             // cboFont
             // 
             cboFont.BackColor = Color.FromArgb(242, 242, 242);
-            cboFont.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cboFont.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             cboFont.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cboFont.FormattingEnabled = true;
             cboFont.Location = new Point(148, 127);
@@ -85,11 +86,33 @@
             cboFont.TabIndex = 2;
             cboFont.SelectedIndexChanged += cboFont_SelectedIndexChanged;
             // 
+            // materialButton1
+            // 
+            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton1.BackColor = Color.FromArgb(242, 242, 242);
+            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton1.Depth = 0;
+            materialButton1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialButton1.HighEmphasis = true;
+            materialButton1.Icon = null;
+            materialButton1.Location = new Point(343, 202);
+            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton1.Name = "materialButton1";
+            materialButton1.NoAccentTextColor = Color.Empty;
+            materialButton1.Size = new Size(158, 36);
+            materialButton1.TabIndex = 3;
+            materialButton1.Text = "materialButton1";
+            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton1.UseAccentColor = false;
+            materialButton1.UseVisualStyleBackColor = false;
+            // 
             // CauHinhSystem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(materialButton1);
             Controls.Add(cboFont);
             Controls.Add(btnBgC);
             Controls.Add(label2);
@@ -110,5 +133,6 @@
         private Label label2;
         private FontDialog fontDiag;
         private ComboBox cboFont;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }
