@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             title = new Label();
             panel1 = new Panel();
             nav = new MenuStrip();
@@ -79,27 +80,27 @@
             nav.Items.AddRange(new ToolStripItem[] { navMain, navQLSV, nhaToolStripMenuItem, đăngNhậpToolStripMenuItem });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
-            nav.Size = new Size(126, 379);
+            nav.Size = new Size(118, 379);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
             // navMain
             // 
             navMain.Name = "navMain";
-            navMain.Size = new Size(113, 19);
+            navMain.Size = new Size(105, 19);
             navMain.Text = "Trang Chủ";
             // 
             // navQLSV
             // 
             navQLSV.Name = "navQLSV";
-            navQLSV.Size = new Size(113, 19);
+            navQLSV.Size = new Size(105, 19);
             navQLSV.Text = "Quản Lý sinh viên";
             navQLSV.Click += navQLSV_Click;
             // 
             // nhaToolStripMenuItem
             // 
             nhaToolStripMenuItem.Name = "nhaToolStripMenuItem";
-            nhaToolStripMenuItem.Size = new Size(113, 19);
+            nhaToolStripMenuItem.Size = new Size(105, 19);
             nhaToolStripMenuItem.Text = "Nhập điểm ";
             nhaToolStripMenuItem.Click += nhaToolStripMenuItem_Click;
             // 
@@ -107,37 +108,37 @@
             // 
             đăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cấuHìnhHệThôgsToolStripMenuItem, toolStripSeparator1, MnuDangXuat, toolStripSeparator2, thoátToolStripMenuItem });
             đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            đăngNhậpToolStripMenuItem.Size = new Size(113, 19);
+            đăngNhậpToolStripMenuItem.Size = new Size(105, 19);
             đăngNhậpToolStripMenuItem.Text = "Hệ Thống";
             // 
             // cấuHìnhHệThôgsToolStripMenuItem
             // 
             cấuHìnhHệThôgsToolStripMenuItem.Name = "cấuHìnhHệThôgsToolStripMenuItem";
-            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(180, 22);
+            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(173, 22);
             cấuHìnhHệThôgsToolStripMenuItem.Text = "Cấu hình hệ thống";
             cấuHìnhHệThôgsToolStripMenuItem.Click += cấuHìnhHệThôgsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(170, 6);
             // 
             // MnuDangXuat
             // 
             MnuDangXuat.Name = "MnuDangXuat";
-            MnuDangXuat.Size = new Size(180, 22);
+            MnuDangXuat.Size = new Size(173, 22);
             MnuDangXuat.Text = "Đăng xuất";
             MnuDangXuat.Click += MnuDangXuat_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(170, 6);
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(180, 22);
+            thoátToolStripMenuItem.Size = new Size(173, 22);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // texSLSV
@@ -237,6 +238,7 @@
             Controls.Add(texSLSV);
             Controls.Add(panel1);
             Controls.Add(title);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Trang Chủ";

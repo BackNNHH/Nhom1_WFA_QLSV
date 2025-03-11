@@ -173,6 +173,7 @@
             Controls.Add(button2);
             Controls.Add(panel1);
             Name = "SignIn";
+            ShowIcon = false;
             Text = "SignIn";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
