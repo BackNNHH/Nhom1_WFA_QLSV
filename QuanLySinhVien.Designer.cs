@@ -157,11 +157,11 @@
             // 
             BtnThem.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnThem.BackColor = Color.FromArgb(242, 242, 242);
-            BtnThem.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnThem.ForeColor = SystemColors.WindowText;
-            BtnThem.Location = new Point(12, 537);
+            BtnThem.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnThem.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnThem.Location = new Point(12, 551);
             BtnThem.Name = "BtnThem";
-            BtnThem.Size = new Size(75, 23);
+            BtnThem.Size = new Size(100, 30);
             BtnThem.TabIndex = 3;
             BtnThem.Text = "Thêm";
             BtnThem.UseVisualStyleBackColor = false;
@@ -171,11 +171,11 @@
             // 
             BtnSua.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnSua.BackColor = Color.FromArgb(242, 242, 242);
-            BtnSua.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnSua.ForeColor = SystemColors.WindowText;
-            BtnSua.Location = new Point(93, 537);
+            BtnSua.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnSua.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnSua.Location = new Point(118, 551);
             BtnSua.Name = "BtnSua";
-            BtnSua.Size = new Size(75, 23);
+            BtnSua.Size = new Size(100, 30);
             BtnSua.TabIndex = 3;
             BtnSua.Text = "Sửa";
             BtnSua.UseVisualStyleBackColor = false;
@@ -185,11 +185,11 @@
             // 
             BtnLuu.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnLuu.BackColor = Color.FromArgb(242, 242, 242);
-            BtnLuu.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnLuu.ForeColor = SystemColors.WindowText;
-            BtnLuu.Location = new Point(174, 537);
+            BtnLuu.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnLuu.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnLuu.Location = new Point(224, 551);
             BtnLuu.Name = "BtnLuu";
-            BtnLuu.Size = new Size(75, 23);
+            BtnLuu.Size = new Size(100, 30);
             BtnLuu.TabIndex = 3;
             BtnLuu.Text = "Lưu";
             BtnLuu.UseVisualStyleBackColor = false;
@@ -199,11 +199,11 @@
             // 
             BtnHuy.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnHuy.BackColor = Color.FromArgb(242, 242, 242);
-            BtnHuy.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnHuy.ForeColor = SystemColors.WindowText;
-            BtnHuy.Location = new Point(255, 537);
+            BtnHuy.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnHuy.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnHuy.Location = new Point(330, 551);
             BtnHuy.Name = "BtnHuy";
-            BtnHuy.Size = new Size(75, 23);
+            BtnHuy.Size = new Size(100, 30);
             BtnHuy.TabIndex = 3;
             BtnHuy.Text = "Hủy";
             BtnHuy.UseVisualStyleBackColor = false;
@@ -213,11 +213,11 @@
             // 
             BtnXoa.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnXoa.BackColor = Color.FromArgb(242, 242, 242);
-            BtnXoa.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnXoa.ForeColor = SystemColors.WindowText;
-            BtnXoa.Location = new Point(336, 537);
+            BtnXoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnXoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnXoa.Location = new Point(436, 551);
             BtnXoa.Name = "BtnXoa";
-            BtnXoa.Size = new Size(75, 23);
+            BtnXoa.Size = new Size(100, 30);
             BtnXoa.TabIndex = 3;
             BtnXoa.Text = "Xóa";
             BtnXoa.UseVisualStyleBackColor = false;
@@ -229,9 +229,9 @@
             BtnTaiLai.BackColor = Color.FromArgb(242, 242, 242);
             BtnTaiLai.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnTaiLai.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            BtnTaiLai.Location = new Point(713, 537);
+            BtnTaiLai.Location = new Point(688, 551);
             BtnTaiLai.Name = "BtnTaiLai";
-            BtnTaiLai.Size = new Size(75, 23);
+            BtnTaiLai.Size = new Size(100, 30);
             BtnTaiLai.TabIndex = 3;
             BtnTaiLai.Text = "Tải lại";
             BtnTaiLai.UseVisualStyleBackColor = false;
@@ -251,7 +251,7 @@
             DgvKhachHang.Name = "DgvKhachHang";
             DgvKhachHang.ReadOnly = true;
             DgvKhachHang.RowHeadersWidth = 51;
-            DgvKhachHang.Size = new Size(776, 331);
+            DgvKhachHang.Size = new Size(776, 314);
             DgvKhachHang.TabIndex = 4;
             DgvKhachHang.CellContentClick += DgvKhachHang_CellContentClick;
             // 
@@ -445,9 +445,9 @@
             btnSearch.BackColor = Color.FromArgb(242, 242, 242);
             btnSearch.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             btnSearch.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            btnSearch.Location = new Point(632, 537);
+            btnSearch.Location = new Point(582, 551);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(75, 23);
+            btnSearch.Size = new Size(100, 30);
             btnSearch.TabIndex = 3;
             btnSearch.Text = "Tìm kiếm";
             btnSearch.UseVisualStyleBackColor = false;
@@ -457,7 +457,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 572);
+            ClientSize = new Size(800, 593);
             Controls.Add(CboLop);
             Controls.Add(radNu);
             Controls.Add(radNam);
@@ -486,7 +486,7 @@
             Name = "QuanLySinhVien";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "QuanLySinhVien";
+            Text = "Quản Lý Sinh Viên";
             Load += QuanLySinhVien_Load;
             ((System.ComponentModel.ISupportInitialize)DgvKhachHang).EndInit();
             ResumeLayout(false);
