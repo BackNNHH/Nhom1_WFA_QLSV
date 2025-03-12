@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CauHinhSystem));
             coloDiag = new ColorDialog();
             btnBgC = new Button();
             fontDiag = new FontDialog();
@@ -38,14 +39,23 @@
             groupBox2 = new GroupBox();
             pictureBox1 = new PictureBox();
             label2 = new Label();
+            groupBox3 = new GroupBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            mbtnKYS = new MaterialSkin.Controls.MaterialButton();
+            label3 = new Label();
+            pictureBox3 = new PictureBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // btnBgC
             // 
+            btnBgC.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnBgC.BackColor = Color.FromArgb(242, 242, 242);
             btnBgC.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             btnBgC.ForeColor = Color.FromArgb(222, 0, 0, 0);
@@ -59,6 +69,7 @@
             // 
             // cboFont
             // 
+            cboFont.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cboFont.BackColor = Color.FromArgb(242, 242, 242);
             cboFont.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             cboFont.ForeColor = Color.FromArgb(222, 0, 0, 0);
@@ -150,11 +161,96 @@
             label2.TabIndex = 3;
             label2.Text = "Loại chủ đề đang sửa dụng\r\ncó 2 loại gồm chủ đề sáng và chủ đề tối...\r\n";
             // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = Color.FromArgb(242, 242, 242);
+            groupBox3.Controls.Add(textBox2);
+            groupBox3.Controls.Add(textBox1);
+            groupBox3.Controls.Add(mbtnKYS);
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(pictureBox3);
+            groupBox3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            groupBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            groupBox3.Location = new Point(49, 264);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(706, 81);
+            groupBox3.TabIndex = 5;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Account";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.FromArgb(242, 242, 242);
+            textBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            textBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            textBox2.Location = new Point(249, 46);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 24);
+            textBox2.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(242, 242, 242);
+            textBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            textBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            textBox1.Location = new Point(92, 46);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 24);
+            textBox1.TabIndex = 6;
+            // 
+            // mbtnKYS
+            // 
+            mbtnKYS.AutoSize = false;
+            mbtnKYS.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            mbtnKYS.BackColor = Color.FromArgb(242, 242, 242);
+            mbtnKYS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            mbtnKYS.Depth = 0;
+            mbtnKYS.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            mbtnKYS.HighEmphasis = true;
+            mbtnKYS.Icon = null;
+            mbtnKYS.Location = new Point(487, 26);
+            mbtnKYS.Margin = new Padding(4, 6, 4, 6);
+            mbtnKYS.MouseState = MaterialSkin.MouseState.HOVER;
+            mbtnKYS.Name = "mbtnKYS";
+            mbtnKYS.NoAccentTextColor = Color.Empty;
+            mbtnKYS.Size = new Size(201, 36);
+            mbtnKYS.TabIndex = 5;
+            mbtnKYS.Text = "KillYouSelf";
+            mbtnKYS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            mbtnKYS.UseAccentColor = true;
+            mbtnKYS.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(242, 242, 242);
+            label3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            label3.Location = new Point(73, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(215, 17);
+            label3.TabIndex = 3;
+            label3.Text = "DELETE or Change you password";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.FromArgb(242, 242, 242);
+            pictureBox3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            pictureBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(6, 18);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(61, 57);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
+            // 
             // CauHinhSystem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "CauHinhSystem";
@@ -167,6 +263,9 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -182,5 +281,11 @@
         private Label label2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private GroupBox groupBox3;
+        private PictureBox pictureBox3;
+        private MaterialSkin.Controls.MaterialButton mbtnKYS;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Label label3;
     }
 }

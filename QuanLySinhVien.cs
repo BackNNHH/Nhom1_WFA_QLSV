@@ -2,7 +2,7 @@
 
 namespace Nhom1_WFA_QLSV
 {
-    public partial class QuanLySinhVien : Form
+    public partial class QuanLySinhVien : BaseMaterialForm
     {
         bool isEdit = false;
         public QuanLySinhVien()
