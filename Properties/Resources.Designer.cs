@@ -134,9 +134,9 @@ namespace Nhom1_WFA_QLSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap system {
+        internal static System.Drawing.Bitmap systemIc {
             get {
-                object obj = ResourceManager.GetObject("system", resourceCulture);
+                object obj = ResourceManager.GetObject("systemIc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

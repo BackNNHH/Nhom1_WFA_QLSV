@@ -94,7 +94,7 @@
             // đăngNhậpToolStripMenuItem
             // 
             đăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cấuHìnhHệThôgsToolStripMenuItem, toolStripSeparator1, MnuDangXuat, toolStripSeparator2, thoátToolStripMenuItem });
-            đăngNhậpToolStripMenuItem.Image = Properties.Resources.system;
+            đăngNhậpToolStripMenuItem.Image = Properties.Resources.systemIc;
             đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
             đăngNhậpToolStripMenuItem.Size = new Size(121, 24);
             đăngNhậpToolStripMenuItem.Text = "Hệ Thống";
