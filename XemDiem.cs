@@ -18,11 +18,6 @@ namespace Nhom1_WFA_QLSV
         {
             InitializeComponent();
             LoadDanhSachLop();
-            if (ThemeManager.IsDarkMode == true)
-            {
-                dtgv.BackgroundColor = Color.Black;
-
-            }
         }
 
         private void XemDiem_Load(object sender, EventArgs e)

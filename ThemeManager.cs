@@ -28,4 +28,6 @@ public static class ThemeManager
         IsDarkMode = !IsDarkMode;
         ApplyThemeToAllForms();
     }
+
+
 }

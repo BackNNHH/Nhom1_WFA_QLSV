@@ -62,5 +62,11 @@ namespace Nhom1_WFA_QLSV
             var f = new CauHinhSystem();
             f.Show();
         }
+
+        private void xemDdieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new XemDiem();
+            f.Show();
+        }
     }
 }
