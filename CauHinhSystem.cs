@@ -6,7 +6,7 @@ namespace Nhom1_WFA_QLSV
 {
     public partial class CauHinhSystem : BaseMaterialForm
     {
-        private static Color _cColor= Properties.Settings.Default.BackColor;
+        private static Color _cColor = Properties.Settings.Default.BackColor;
         private static Font _cFont = Properties.Settings.Default.Font;
 
         public static Color CurrentColor
@@ -40,6 +40,10 @@ namespace Nhom1_WFA_QLSV
         private void btnBgC_Click(object sender, EventArgs e)
         {
             ThemeManager.ToggleTheme();
+            if (ThemeManager.IsDarkMode)
+            {
+                _cColor = SystemColors.WindowFrame;
+            }
         }
         public static void ApplyTTAF()
         {
@@ -67,17 +71,39 @@ namespace Nhom1_WFA_QLSV
 
         }
 
-        private void btnF_Click(object sender, EventArgs e)
+        //private void btnF_Click(object sender, EventArgs e)
+        //{
+        //    DialogResult result = fontDiag.ShowDialog();
+        //    if (result == DialogResult.OK)
+        //    {
+
+        //        CurrentFont = fontDiag.Font;
+        //        //this.BackColor = coloDiag.Color;
+        //        ApplyTTAF();
+
+        //    }
+        //}
+
+        private void CauHinhSystem_Load(object sender, EventArgs e)
         {
-            DialogResult result = fontDiag.ShowDialog();
-            if (result == DialogResult.OK)
+            LoadFF();
+        }
+
+        void LoadFF()
+        {
+            cboFont.Text = CurrentFont.Name;
+            FontFamily[] ff = FontFamily.Families;
+            foreach (FontFamily f in ff)
             {
-
-                CurrentFont = fontDiag.Font;
-                //this.BackColor = coloDiag.Color;
-                ApplyTTAF();
-
+                cboFont.Items.Add(f.Name);
             }
+        }
+
+        private void cboFont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            CurrentFont = new Font(cboFont.Text, 9);
+            ApplyTTAF();
         }
     }
 
