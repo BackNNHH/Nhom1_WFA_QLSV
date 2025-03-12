@@ -160,9 +160,9 @@
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label2.Location = new Point(88, 26);
             label2.Name = "label2";
-            label2.Size = new Size(261, 34);
+            label2.Size = new Size(323, 51);
             label2.TabIndex = 3;
-            label2.Text = "Loại chủ đề đang sửa dụng\r\ncó 2 loại gồm chủ đề sáng và chủ đề tối...\r\n";
+            label2.Text = "Loại chủ đề đang sửa dụng\r\ncó 2 loại gồm chủ đề sáng và chủ đề tối...\r\nCó một số form cần load lại để áp dụng chuyển đổi!";
             // 
             // groupBox3
             // 
@@ -258,7 +258,7 @@
             Controls.Add(groupBox1);
             Name = "CauHinhSystem";
             ShowIcon = false;
-            Text = "Cấu Hình Hệ Thống";
+            Text = " ";
             Load += CauHinhSystem_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

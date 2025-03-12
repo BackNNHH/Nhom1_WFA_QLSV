@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Drawing.Drawing2D;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -9,19 +11,20 @@ namespace Nhom1_WFA_QLSV
         {
             InitializeComponent();
             CauHinhSystem.LoadMeme(this);
+            if (ThemeManager.IsDarkMode)
+            {
+                DgvKhachHang.DefaultCellStyle = new DataGridViewCellStyle() { BackColor = Color.FromArgb(255, 50, 50, 50) };
+            }
+            else
+            {
+                DgvKhachHang.DefaultCellStyle = new DataGridViewCellStyle() { BackColor = Color.FromArgb(255, 242, 242, 242) };
+            }
         }
 
         private void QuanLySinhVien_Load(object sender, EventArgs e)
         {
             //LoadThanhPho();
             LoadKhachHang();
-            if (ThemeManager.IsDarkMode)
-            {
-                DgvKhachHang.BackgroundColor = Color.Pink;
-            }
-            else { 
-                DgvKhachHang.BackgroundColor = Color.Purple;
-            }
             SetEnable(false);
         }
         private void LoadKhachHang()
