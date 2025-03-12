@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CauHinhSystem));
             coloDiag = new ColorDialog();
             btnBgC = new Button();
             fontDiag = new FontDialog();
@@ -44,13 +43,11 @@
             textBox1 = new TextBox();
             mbtnKYS = new MaterialSkin.Controls.MaterialButton();
             label3 = new Label();
-            pictureBox3 = new PictureBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // btnBgC
@@ -168,7 +165,6 @@
             groupBox3.Controls.Add(textBox1);
             groupBox3.Controls.Add(mbtnKYS);
             groupBox3.Controls.Add(label3);
-            groupBox3.Controls.Add(pictureBox3);
             groupBox3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             groupBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
             groupBox3.Location = new Point(49, 264);
@@ -232,19 +228,6 @@
             label3.TabIndex = 3;
             label3.Text = "DELETE or Change you password";
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.FromArgb(242, 242, 242);
-            pictureBox3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            pictureBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(6, 18);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(61, 57);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 4;
-            pictureBox3.TabStop = false;
-            // 
             // CauHinhSystem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -265,7 +248,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -282,7 +264,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private GroupBox groupBox3;
-        private PictureBox pictureBox3;
         private MaterialSkin.Controls.MaterialButton mbtnKYS;
         private TextBox textBox2;
         private TextBox textBox1;
