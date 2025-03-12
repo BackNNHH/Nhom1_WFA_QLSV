@@ -60,6 +60,7 @@
             label7 = new Label();
             CboLop = new ComboBox();
             label8 = new Label();
+            btnSearch = new Button();
             ((System.ComponentModel.ISupportInitialize)DgvKhachHang).BeginInit();
             SuspendLayout();
             // 
@@ -156,8 +157,8 @@
             // 
             BtnThem.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnThem.BackColor = Color.FromArgb(242, 242, 242);
-            BtnThem.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnThem.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnThem.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnThem.ForeColor = SystemColors.WindowText;
             BtnThem.Location = new Point(12, 537);
             BtnThem.Name = "BtnThem";
             BtnThem.Size = new Size(75, 23);
@@ -170,8 +171,8 @@
             // 
             BtnSua.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnSua.BackColor = Color.FromArgb(242, 242, 242);
-            BtnSua.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnSua.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnSua.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnSua.ForeColor = SystemColors.WindowText;
             BtnSua.Location = new Point(93, 537);
             BtnSua.Name = "BtnSua";
             BtnSua.Size = new Size(75, 23);
@@ -184,8 +185,8 @@
             // 
             BtnLuu.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnLuu.BackColor = Color.FromArgb(242, 242, 242);
-            BtnLuu.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnLuu.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnLuu.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnLuu.ForeColor = SystemColors.WindowText;
             BtnLuu.Location = new Point(174, 537);
             BtnLuu.Name = "BtnLuu";
             BtnLuu.Size = new Size(75, 23);
@@ -198,8 +199,8 @@
             // 
             BtnHuy.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnHuy.BackColor = Color.FromArgb(242, 242, 242);
-            BtnHuy.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnHuy.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnHuy.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnHuy.ForeColor = SystemColors.WindowText;
             BtnHuy.Location = new Point(255, 537);
             BtnHuy.Name = "BtnHuy";
             BtnHuy.Size = new Size(75, 23);
@@ -212,8 +213,8 @@
             // 
             BtnXoa.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnXoa.BackColor = Color.FromArgb(242, 242, 242);
-            BtnXoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            BtnXoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            BtnXoa.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnXoa.ForeColor = SystemColors.WindowText;
             BtnXoa.Location = new Point(336, 537);
             BtnXoa.Name = "BtnXoa";
             BtnXoa.Size = new Size(75, 23);
@@ -438,6 +439,20 @@
             label8.TabIndex = 0;
             label8.Text = "Lớp";
             // 
+            // btnSearch
+            // 
+            btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSearch.BackColor = Color.FromArgb(242, 242, 242);
+            btnSearch.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            btnSearch.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            btnSearch.Location = new Point(632, 537);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(75, 23);
+            btnSearch.TabIndex = 3;
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+            // 
             // QuanLySinhVien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -449,6 +464,7 @@
             Controls.Add(TxtNgaySinh);
             Controls.Add(DgvKhachHang);
             Controls.Add(BtnTaiLai);
+            Controls.Add(btnSearch);
             Controls.Add(BtnXoa);
             Controls.Add(BtnHuy);
             Controls.Add(BtnLuu);
@@ -511,5 +527,6 @@
         private Label label7;
         private ComboBox CboLop;
         private Label label8;
+        private Button btnSearch;
     }
 }

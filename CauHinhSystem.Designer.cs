@@ -39,6 +39,7 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             groupBox3 = new GroupBox();
+            materialButton4 = new MaterialSkin.Controls.MaterialButton();
             materialButton3 = new MaterialSkin.Controls.MaterialButton();
             materialButton2 = new MaterialSkin.Controls.MaterialButton();
             materialButton1 = new MaterialSkin.Controls.MaterialButton();
@@ -47,7 +48,6 @@
             textBox1 = new TextBox();
             mbtnKYS = new MaterialSkin.Controls.MaterialButton();
             label3 = new Label();
-            materialButton4 = new MaterialSkin.Controls.MaterialButton();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
@@ -189,6 +189,27 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Account";
             // 
+            // materialButton4
+            // 
+            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton4.BackColor = Color.FromArgb(242, 242, 242);
+            materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton4.Depth = 0;
+            materialButton4.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialButton4.HighEmphasis = true;
+            materialButton4.Icon = null;
+            materialButton4.Location = new Point(407, 43);
+            materialButton4.Margin = new Padding(4, 6, 4, 6);
+            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton4.Name = "materialButton4";
+            materialButton4.NoAccentTextColor = Color.Empty;
+            materialButton4.Size = new Size(158, 36);
+            materialButton4.TabIndex = 11;
+            materialButton4.Text = "materialButton4";
+            materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton4.UseAccentColor = false;
+            materialButton4.UseVisualStyleBackColor = false;
+            // 
             // materialButton3
             // 
             materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -289,10 +310,10 @@
             // 
             mbtnKYS.AutoSize = false;
             mbtnKYS.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            mbtnKYS.BackColor = Color.Red;
+            mbtnKYS.BackColor = Color.FromArgb(242, 242, 242);
             mbtnKYS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             mbtnKYS.Depth = 0;
-            mbtnKYS.ForeColor = Color.Red;
+            mbtnKYS.ForeColor = Color.FromArgb(222, 0, 0, 0);
             mbtnKYS.HighEmphasis = true;
             mbtnKYS.Icon = null;
             mbtnKYS.Location = new Point(467, 46);
@@ -319,27 +340,6 @@
             label3.Size = new Size(215, 17);
             label3.TabIndex = 3;
             label3.Text = "DELETE or Change you password";
-            // 
-            // materialButton4
-            // 
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.BackColor = Color.LightGray;
-            materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton4.Depth = 0;
-            materialButton4.ForeColor = Color.LightGray;
-            materialButton4.HighEmphasis = true;
-            materialButton4.Icon = null;
-            materialButton4.Location = new Point(407, 43);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.NoAccentTextColor = Color.Empty;
-            materialButton4.Size = new Size(158, 36);
-            materialButton4.TabIndex = 11;
-            materialButton4.Text = "materialButton4";
-            materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = false;
             // 
             // CauHinhSystem
             // 
