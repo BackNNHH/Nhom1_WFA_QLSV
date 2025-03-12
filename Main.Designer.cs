@@ -59,9 +59,9 @@
             panel1.Controls.Add(nav);
             panel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             panel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            panel1.Location = new Point(0, 71);
+            panel1.Location = new Point(0, 108);
             panel1.Name = "panel1";
-            panel1.Size = new Size(142, 379);
+            panel1.Size = new Size(142, 342);
             panel1.TabIndex = 2;
             // 
             // nav
@@ -74,7 +74,7 @@
             nav.Items.AddRange(new ToolStripItem[] { navQLSV, nhaToolStripMenuItem, xemDdieToolStripMenuItem, đăngNhậpToolStripMenuItem });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
-            nav.Size = new Size(134, 379);
+            nav.Size = new Size(134, 342);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
@@ -240,11 +240,11 @@
             // 
             LblUserName.AutoSize = true;
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
-            LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            LblUserName.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            LblUserName.Location = new Point(18, 7);
+            LblUserName.Location = new Point(6, 64);
             LblUserName.Name = "LblUserName";
-            LblUserName.Size = new Size(0, 17);
+            LblUserName.Size = new Size(0, 25);
             LblUserName.TabIndex = 5;
             // 
             // Main

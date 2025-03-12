@@ -43,11 +43,13 @@
             textBox1 = new TextBox();
             mbtnKYS = new MaterialSkin.Controls.MaterialButton();
             label3 = new Label();
+            pictureBox3 = new PictureBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // cboFont
@@ -164,6 +166,7 @@
             // groupBox3
             // 
             groupBox3.BackColor = Color.FromArgb(242, 242, 242);
+            groupBox3.Controls.Add(pictureBox3);
             groupBox3.Controls.Add(textBox2);
             groupBox3.Controls.Add(textBox1);
             groupBox3.Controls.Add(mbtnKYS);
@@ -231,6 +234,19 @@
             label3.TabIndex = 3;
             label3.Text = "DELETE or Change you password";
             // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.FromArgb(242, 242, 242);
+            pictureBox3.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            pictureBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            pictureBox3.Image = Properties.Resources.oooo_oo;
+            pictureBox3.Location = new Point(6, 18);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(61, 57);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
+            // 
             // CauHinhSystem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -251,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -271,5 +288,6 @@
         private TextBox textBox1;
         private Label label3;
         private RJToggleButton rjToggleButton1;
+        private PictureBox pictureBox3;
     }
 }
