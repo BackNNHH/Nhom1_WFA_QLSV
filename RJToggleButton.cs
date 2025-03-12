@@ -43,7 +43,6 @@ namespace Nhom1_WFA_QLSV
         public override string Text
         {
             get => base.Text;
-            set { }
         }
 
         [DefaultValue(true)]

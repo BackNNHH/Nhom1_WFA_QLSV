@@ -85,7 +85,7 @@
             navQLSV.AutoSize = false;
             navQLSV.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
             navQLSV.Name = "navQLSV";
-            navQLSV.Size = new Size(142, 28);
+            navQLSV.Size = new Size(142, 40);
             navQLSV.Text = "Quản Lý sinh viên";
             navQLSV.Click += navQLSV_Click;
             // 
