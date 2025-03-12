@@ -32,9 +32,9 @@
             panel1 = new Panel();
             nav = new MenuStrip();
             navQLSV = new ToolStripMenuItem();
-            nhaToolStripMenuItem = new ToolStripMenuItem();
-            xemDdieToolStripMenuItem = new ToolStripMenuItem();
-            đăngNhậpToolStripMenuItem = new ToolStripMenuItem();
+            navNhapDiem = new ToolStripMenuItem();
+            navXemDiem = new ToolStripMenuItem();
+            navSystem = new ToolStripMenuItem();
             cấuHìnhHệThôgsToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             MnuDangXuat = new ToolStripMenuItem();
@@ -59,9 +59,10 @@
             panel1.Controls.Add(nav);
             panel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             panel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            panel1.Location = new Point(0, 108);
+            panel1.Location = new Point(6, 136);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(142, 342);
+            panel1.Size = new Size(162, 456);
             panel1.TabIndex = 2;
             // 
             // nav
@@ -71,73 +72,87 @@
             nav.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             nav.ForeColor = Color.FromArgb(222, 0, 0, 0);
             nav.ImageScalingSize = new Size(20, 20);
-            nav.Items.AddRange(new ToolStripItem[] { navQLSV, nhaToolStripMenuItem, xemDdieToolStripMenuItem, đăngNhậpToolStripMenuItem });
+            nav.Items.AddRange(new ToolStripItem[] { navQLSV, navNhapDiem, navXemDiem, navSystem });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
-            nav.Size = new Size(134, 342);
+            nav.Padding = new Padding(7, 3, 0, 3);
+            nav.Size = new Size(157, 456);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
             // navQLSV
             // 
+            navQLSV.AutoSize = false;
+            navQLSV.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
             navQLSV.Name = "navQLSV";
-            navQLSV.Size = new Size(121, 21);
+            navQLSV.Size = new Size(142, 28);
             navQLSV.Text = "Quản Lý sinh viên";
             navQLSV.Click += navQLSV_Click;
+            navQLSV.MouseLeave += navQLSV_MouseLeave;
+            navQLSV.MouseHover += navQLSV_MouseHover;
             // 
-            // nhaToolStripMenuItem
+            // navNhapDiem
             // 
-            nhaToolStripMenuItem.Name = "nhaToolStripMenuItem";
-            nhaToolStripMenuItem.Size = new Size(121, 21);
-            nhaToolStripMenuItem.Text = "Nhập điểm ";
-            nhaToolStripMenuItem.Click += nhaToolStripMenuItem_Click;
+            navNhapDiem.AutoSize = false;
+            navNhapDiem.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            navNhapDiem.Name = "navNhapDiem";
+            navNhapDiem.Size = new Size(142, 40);
+            navNhapDiem.Text = "Nhập điểm ";
+            navNhapDiem.Click += nhaToolStripMenuItem_Click;
+            navNhapDiem.MouseHover += navNhapDiem_MouseHover;
             // 
-            // xemDdieToolStripMenuItem
+            // navXemDiem
             // 
-            xemDdieToolStripMenuItem.Name = "xemDdieToolStripMenuItem";
-            xemDdieToolStripMenuItem.Size = new Size(121, 21);
-            xemDdieToolStripMenuItem.Text = "Xem điểm";
-            xemDdieToolStripMenuItem.Click += xemDdieToolStripMenuItem_Click;
+            navXemDiem.AutoSize = false;
+            navXemDiem.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            navXemDiem.Name = "navXemDiem";
+            navXemDiem.Size = new Size(142, 40);
+            navXemDiem.Text = "Xem điểm";
+            navXemDiem.Click += xemDdieToolStripMenuItem_Click;
+            navXemDiem.MouseHover += navXemDiem_MouseHover;
             // 
-            // đăngNhậpToolStripMenuItem
+            // navSystem
             // 
-            đăngNhậpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cấuHìnhHệThôgsToolStripMenuItem, toolStripSeparator1, MnuDangXuat, toolStripSeparator2, thoátToolStripMenuItem });
-            đăngNhậpToolStripMenuItem.Image = Properties.Resources.systemIc;
-            đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            đăngNhậpToolStripMenuItem.Size = new Size(121, 24);
-            đăngNhậpToolStripMenuItem.Text = "Hệ Thống";
+            navSystem.AutoSize = false;
+            navSystem.DropDownItems.AddRange(new ToolStripItem[] { cấuHìnhHệThôgsToolStripMenuItem, toolStripSeparator1, MnuDangXuat, toolStripSeparator2, thoátToolStripMenuItem });
+            navSystem.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            navSystem.Image = Properties.Resources.systemIc;
+            navSystem.Name = "navSystem";
+            navSystem.Size = new Size(142, 40);
+            navSystem.Text = "Hệ Thống";
+            navSystem.MouseHover += navSystem_MouseHover;
             // 
             // cấuHìnhHệThôgsToolStripMenuItem
             // 
             cấuHìnhHệThôgsToolStripMenuItem.Image = Properties.Resources.setting;
             cấuHìnhHệThôgsToolStripMenuItem.Name = "cấuHìnhHệThôgsToolStripMenuItem";
-            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(196, 26);
+            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(209, 26);
             cấuHìnhHệThôgsToolStripMenuItem.Text = "Cấu hình hệ thống";
             cấuHìnhHệThôgsToolStripMenuItem.Click += cấuHìnhHệThôgsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(193, 6);
+            toolStripSeparator1.Size = new Size(206, 6);
             // 
             // MnuDangXuat
             // 
             MnuDangXuat.Image = Properties.Resources.signout;
             MnuDangXuat.Name = "MnuDangXuat";
-            MnuDangXuat.Size = new Size(196, 26);
+            MnuDangXuat.Size = new Size(209, 26);
             MnuDangXuat.Text = "Đăng xuất";
             MnuDangXuat.Click += MnuDangXuat_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(193, 6);
+            toolStripSeparator2.Size = new Size(206, 6);
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Image = Properties.Resources.exit;
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(196, 26);
+            thoátToolStripMenuItem.Size = new Size(209, 26);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // texSLSV
@@ -146,9 +161,9 @@
             texSLSV.BackColor = Color.FromArgb(242, 242, 242);
             texSLSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texSLSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texSLSV.Location = new Point(216, 144);
+            texSLSV.Location = new Point(247, 192);
             texSLSV.Name = "texSLSV";
-            texSLSV.Size = new Size(128, 17);
+            texSLSV.Size = new Size(139, 18);
             texSLSV.TabIndex = 3;
             texSLSV.Text = "Số Lượng Sinh Viên";
             // 
@@ -157,10 +172,11 @@
             txtSLSV.BackColor = Color.FromArgb(242, 242, 242);
             txtSLSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtSLSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtSLSV.Location = new Point(347, 141);
+            txtSLSV.Location = new Point(397, 188);
+            txtSLSV.Margin = new Padding(3, 4, 3, 4);
             txtSLSV.Name = "txtSLSV";
             txtSLSV.ReadOnly = true;
-            txtSLSV.Size = new Size(100, 24);
+            txtSLSV.Size = new Size(114, 24);
             txtSLSV.TabIndex = 4;
             txtSLSV.Text = "N/A";
             // 
@@ -170,9 +186,9 @@
             texMVP.BackColor = Color.FromArgb(242, 242, 242);
             texMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texMVP.Location = new Point(216, 173);
+            texMVP.Location = new Point(247, 231);
             texMVP.Name = "texMVP";
-            texMVP.Size = new Size(98, 17);
+            texMVP.Size = new Size(107, 18);
             texMVP.TabIndex = 3;
             texMVP.Text = "Sinh Viên MVP";
             // 
@@ -181,10 +197,11 @@
             textBox1.BackColor = Color.FromArgb(242, 242, 242);
             textBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             textBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textBox1.Location = new Point(347, 170);
+            textBox1.Location = new Point(397, 227);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(100, 24);
+            textBox1.Size = new Size(114, 24);
             textBox1.TabIndex = 4;
             textBox1.Text = "N/A";
             // 
@@ -194,9 +211,9 @@
             texLop.BackColor = Color.FromArgb(242, 242, 242);
             texLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texLop.Location = new Point(493, 141);
+            texLop.Location = new Point(563, 188);
             texLop.Name = "texLop";
-            texLop.Size = new Size(95, 17);
+            texLop.Size = new Size(101, 18);
             texLop.TabIndex = 3;
             texLop.Text = "Số Lượng Lớp";
             // 
@@ -205,10 +222,11 @@
             txtLop.BackColor = Color.FromArgb(242, 242, 242);
             txtLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtLop.Location = new Point(608, 138);
+            txtLop.Location = new Point(695, 184);
+            txtLop.Margin = new Padding(3, 4, 3, 4);
             txtLop.Name = "txtLop";
             txtLop.ReadOnly = true;
-            txtLop.Size = new Size(100, 24);
+            txtLop.Size = new Size(114, 24);
             txtLop.TabIndex = 4;
             txtLop.Text = "N/A";
             // 
@@ -218,9 +236,9 @@
             texKhoa.BackColor = Color.FromArgb(242, 242, 242);
             texKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texKhoa.Location = new Point(493, 173);
+            texKhoa.Location = new Point(563, 231);
             texKhoa.Name = "texKhoa";
-            texKhoa.Size = new Size(104, 17);
+            texKhoa.Size = new Size(110, 18);
             texKhoa.TabIndex = 3;
             texKhoa.Text = "Số Lượng Khoa";
             // 
@@ -229,10 +247,11 @@
             txtKhoa.BackColor = Color.FromArgb(242, 242, 242);
             txtKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtKhoa.Location = new Point(608, 170);
+            txtKhoa.Location = new Point(695, 227);
+            txtKhoa.Margin = new Padding(3, 4, 3, 4);
             txtKhoa.Name = "txtKhoa";
             txtKhoa.ReadOnly = true;
-            txtKhoa.Size = new Size(100, 24);
+            txtKhoa.Size = new Size(114, 24);
             txtKhoa.TabIndex = 4;
             txtKhoa.Text = "N/A";
             // 
@@ -240,18 +259,18 @@
             // 
             LblUserName.AutoSize = true;
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
-            LblUserName.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Regular, GraphicsUnit.Pixel);
+            LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            LblUserName.Location = new Point(6, 64);
+            LblUserName.Location = new Point(7, 85);
             LblUserName.Name = "LblUserName";
-            LblUserName.Size = new Size(0, 25);
+            LblUserName.Size = new Size(0, 18);
             LblUserName.TabIndex = 5;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(LblUserName);
             Controls.Add(textBox1);
             Controls.Add(texMVP);
@@ -263,7 +282,9 @@
             Controls.Add(texSLSV);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Main";
+            Padding = new Padding(3, 85, 3, 4);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Trang Chủ";
             Load += Main_Load;
@@ -287,14 +308,14 @@
         private TextBox txtLop;
         private Label texKhoa;
         private TextBox txtKhoa;
-        private ToolStripMenuItem nhaToolStripMenuItem;
-        private ToolStripMenuItem đăngNhậpToolStripMenuItem;
+        private ToolStripMenuItem navNhapDiem;
+        private ToolStripMenuItem navSystem;
         private ToolStripMenuItem cấuHìnhHệThôgsToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem MnuDangXuat;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Label LblUserName;
-        private ToolStripMenuItem xemDdieToolStripMenuItem;
+        private ToolStripMenuItem navXemDiem;
     }
 }
