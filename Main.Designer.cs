@@ -88,8 +88,6 @@
             navQLSV.Size = new Size(142, 28);
             navQLSV.Text = "Quản Lý sinh viên";
             navQLSV.Click += navQLSV_Click;
-            navQLSV.MouseLeave += navQLSV_MouseLeave;
-            navQLSV.MouseHover += navQLSV_MouseHover;
             // 
             // navNhapDiem
             // 
@@ -99,7 +97,6 @@
             navNhapDiem.Size = new Size(142, 40);
             navNhapDiem.Text = "Nhập điểm ";
             navNhapDiem.Click += nhaToolStripMenuItem_Click;
-            navNhapDiem.MouseHover += navNhapDiem_MouseHover;
             // 
             // navXemDiem
             // 
@@ -109,7 +106,6 @@
             navXemDiem.Size = new Size(142, 40);
             navXemDiem.Text = "Xem điểm";
             navXemDiem.Click += xemDdieToolStripMenuItem_Click;
-            navXemDiem.MouseHover += navXemDiem_MouseHover;
             // 
             // navSystem
             // 
@@ -120,7 +116,6 @@
             navSystem.Name = "navSystem";
             navSystem.Size = new Size(142, 40);
             navSystem.Text = "Hệ Thống";
-            navSystem.MouseHover += navSystem_MouseHover;
             // 
             // cấuHìnhHệThôgsToolStripMenuItem
             // 

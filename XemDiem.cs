@@ -39,7 +39,9 @@ namespace Nhom1_WFA_QLSV
             // Duyệt qua từng dòng trong DataTable và thêm vào ComboBox
             foreach (DataRow row in dt.Rows)
             {
+#pragma warning disable CS8604 // Possible null reference argument.
                 cboLop.Items.Add(row["TenLop"].ToString());
+#pragma warning restore CS8604 // Possible null reference argument.
             }
 
             // Chọn mặc định là "Tất cả"

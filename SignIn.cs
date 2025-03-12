@@ -57,5 +57,9 @@ namespace Nhom1_WFA_QLSV
             f.Show();
         }
 
+        private void SignIn_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

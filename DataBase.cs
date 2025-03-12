@@ -67,6 +67,25 @@ namespace Nhom1_WFA_QLSV
             dataAdapter.Fill(dt);
             return dt;
         }
+
+        public static bool TruyVanXuLyDuLieu(string sql)
+        {
+            try
+            {
+                var connection = new SqlConnection(DbStr);
+                var command = new SqlCommand(sql, connection);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+                return true;
+            }
+            catch
+            {
+                //Handle error 
+                return false;
+            }
+        }
+
         public static bool SetData(string sql)
         {
             try
@@ -100,14 +119,14 @@ namespace Nhom1_WFA_QLSV
             if (dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
-#pragma warning disable CS8601
+#pragma warning disable CS8601 // Possible null reference assignment.
                 username = row["username"].ToString();
+#pragma warning restore CS8601 // Possible null reference assignment.
                 if (TOKENburh)
                 {
                     SetData($"UPDATE Users SET password = '{pass}' WHERE id = '{row["id"]}'");
                  
                 }
-#pragma warning restore CS8601
             }
             return dt;
         }
