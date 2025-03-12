@@ -1,12 +1,13 @@
-﻿using System.Diagnostics;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Drawing.Drawing2D;
+﻿using Microsoft.Data.SqlClient;
+using System.Data;
+using System.Diagnostics;
 
 namespace Nhom1_WFA_QLSV
 {
     public partial class QuanLySinhVien : BaseMaterialForm
     {
         bool isEdit = false;
+        bool isSearch = false;
         public QuanLySinhVien()
         {
             InitializeComponent();
@@ -54,10 +55,7 @@ namespace Nhom1_WFA_QLSV
         //    DgvCboThanhPho.ValueMember = "MaThanhPho";
         //}
 
-        /// <summary> 
-        /// Thay đổi trạng thái các nút nhấn 
-        /// </summary> 
-        /// <param name="enable"></param> 
+
         void SetEnable(bool enable)
         {
             TxtMaSV.Enabled = enable;
@@ -81,23 +79,26 @@ namespace Nhom1_WFA_QLSV
             radNu.Enabled = enable;
             CboLop.Enabled = enable;
         }
-
+        //void setSear(bool sear)
+        //{
+        //    isSearch = !sear;
+        //}
         private void BtnThem_Click(object sender, EventArgs e)
         {
             SetEnable(true);
-            //isEdit = false;
-            ////xóa giá trị đang nhập 
-            //TxtMaSV.Clear();
-            //TxtTenSV.Clear();
-            //TxtNgaySinh.Refresh();
-            //TxtDiaChi.Clear();
-            //TxtDienThoai.Clear();
-            //TxtDiaChi.Clear();
-            //TxtEmail.Clear();
-            //TxtDienThoai.Clear();
-            //TxtMaSV.Clear();
-            //radNam.Checked = true;
-            //radNu.Checked = false;
+            isEdit = false;
+            //xóa giá trị đang nhập 
+            TxtMaSV.Clear();
+            TxtTenSV.Clear();
+            TxtNgaySinh.Refresh();
+            TxtDiaChi.Clear();
+            TxtDienThoai.Clear();
+            TxtDiaChi.Clear();
+            TxtEmail.Clear();
+            TxtDienThoai.Clear();
+            TxtMaSV.Clear();
+            radNam.Checked = true;
+            radNu.Checked = false;
         }
 
         private void BtnSua_Click(object sender, EventArgs e)
@@ -106,11 +107,64 @@ namespace Nhom1_WFA_QLSV
             isEdit = true;
             TxtMaSV.Enabled = false;
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (isSearch)
+            {
+                string query = "SELECT * FROM SinhVien WHERE 1=1";
+
+                if (!string.IsNullOrEmpty(TxtMaSV.Text)) query += " AND MaSV LIKE @MaSV";
+                if (!string.IsNullOrEmpty(TxtTenSV.Text)) query += " AND HoTen LIKE @HoTen";
+                //if (!string.IsNullOrEmpty(TxtNgaySinh.Text)) query += " AND NgaySinh = @NgaySinh";
+                if (GetGioiTinh() != "N/A") query += " AND GioiTinh LIKE @GioiTinh";
+                if (!string.IsNullOrEmpty(TxtDiaChi.Text)) query += " AND DiaChi LIKE @DiaChi";
+                if (!string.IsNullOrEmpty(TxtEmail.Text)) query += " AND Email LIKE @Email";
+                if (!string.IsNullOrEmpty(TxtDienThoai.Text)) query += " AND SoDienThoai LIKE @DienThoai";
+                if (!string.IsNullOrEmpty(CboLop.Text)) query += " AND MaLop LIKE @MaLop";
+                try
+                {
+                    using SqlConnection connection = new(DataBase.DbStr);
+                    using SqlCommand command = new(query, connection);
+
+                    if (!string.IsNullOrEmpty(TxtMaSV.Text)) command.Parameters.AddWithValue("@MaSV", "%" + TxtMaSV.Text + "%");
+                    if (!string.IsNullOrEmpty(TxtTenSV.Text)) command.Parameters.AddWithValue("@HoTen", "%" + TxtTenSV.Text + "%");
+                    //if (!string.IsNullOrEmpty(TxtNgaySinh.Text)) command.Parameters.AddWithValue("@NgaySinh", TxtNgaySinh.Value.ToString("yyyy-MM-dd"));
+                    if (GetGioiTinh() != "N/A") command.Parameters.AddWithValue("@GioiTinh", GetGioiTinh());
+                    if (!string.IsNullOrEmpty(TxtDiaChi.Text)) command.Parameters.AddWithValue("@DiaChi", "%" + TxtDiaChi.Text + "%");
+                    if (!string.IsNullOrEmpty(TxtEmail.Text)) command.Parameters.AddWithValue("@Email", "%" + TxtEmail.Text + "%");
+                    if (!string.IsNullOrEmpty(TxtDienThoai.Text)) command.Parameters.AddWithValue("@DienThoai", "%" + TxtDienThoai.Text + "%");
+                    if (!string.IsNullOrEmpty(CboLop.Text)) command.Parameters.AddWithValue("@MaLop", CboLop.SelectedValue);
+
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    DataTable dt = new();
+                    dt.Load(reader);
+                    reader.Close();
+                    DgvKhachHang.DataSource = dt;
+                }
+                catch (Exception ex) { MessageBox.Show("OMG YOU GET 'CON BỌ' lớn: " + ex.Message); }
+            }
+            else
+            {
+                isSearch = true;
+                BtnThem_Click(sender, e);
+                SetEnable(true);
+                TxtNgaySinh.Enabled = false;
+                BtnThem.Enabled = false;
+                BtnSua.Enabled = false;
+                BtnXoa.Enabled = false;
+                BtnLuu.Enabled = false;
+                BtnHuy.Enabled = true;
+
+                radNam.Checked = false; radNu.Checked = false;
+                CboLop.Text = string.Empty;//""???
+            }
+        }
         public string GetGioiTinh()
         {
             string gioiTinh = "Nam";
             if (radNu.Checked) gioiTinh = "Nữ";
-            else if (radNam.Checked) gioiTinh = "Nam";
+            else if (!radNam.Checked) gioiTinh = "N/A";
             return gioiTinh;
         }
         private void BtnLuu_Click(object sender, EventArgs e)
@@ -172,6 +226,7 @@ namespace Nhom1_WFA_QLSV
         private void BtnHuy_Click(object sender, EventArgs e)
         {
             isEdit = true;
+            isSearch = false;
             this.SetEnable(false); // Không cho phép sửa thông tin trên form
         }
 
@@ -192,7 +247,16 @@ namespace Nhom1_WFA_QLSV
             }
         }
 
-        private void BtnTaiLai_Click(object sender, EventArgs e) { this.LoadKhachHang(); }
+        private void BtnTaiLai_Click(object sender, EventArgs e)
+        {
+            this.LoadKhachHang();
+            if (isSearch)
+            {
+                radNam.Checked = false; radNu.Checked = false;
+                CboLop.Text = string.Empty;
+                BtnHuy_Click(sender, e);
+            }
+        }
 
         private void DgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -221,8 +285,9 @@ namespace Nhom1_WFA_QLSV
             }
             CboLop.SelectedValue = DgvKhachHang.Rows[e.RowIndex].Cells["MaLop"].Value;
             //TxtMaLop.Text = DgvKhachHang.Rows[e.RowIndex].Cells["MaLop"].Value.ToString();
-
-            this.SetEnable(false); // Không cho phép sửa thông tin trên form
+            if (!isSearch)
+                this.SetEnable(false); // Không cho phép sửa thông tin trên form
         }
+
     }
 }
