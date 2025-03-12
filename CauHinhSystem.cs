@@ -80,6 +80,7 @@ namespace Nhom1_WFA_QLSV
         private void CauHinhSystem_Load(object sender, EventArgs e)
         {
             LoadFF();
+            mbtnKYS.BackColor = Color.Red;
         }
 
         void LoadFF()
@@ -106,6 +107,11 @@ namespace Nhom1_WFA_QLSV
             {
                 _cColor = SystemColors.WindowFrame;
             }
+        }
+
+        private void mbtnKYS_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

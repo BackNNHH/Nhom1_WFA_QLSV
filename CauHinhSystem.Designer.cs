@@ -39,11 +39,15 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             groupBox3 = new GroupBox();
+            materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            materialButton1 = new MaterialSkin.Controls.MaterialButton();
             pictureBox3 = new PictureBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             mbtnKYS = new MaterialSkin.Controls.MaterialButton();
             label3 = new Label();
+            materialButton4 = new MaterialSkin.Controls.MaterialButton();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
@@ -167,6 +171,10 @@
             // groupBox3
             // 
             groupBox3.BackColor = Color.FromArgb(242, 242, 242);
+            groupBox3.Controls.Add(materialButton4);
+            groupBox3.Controls.Add(materialButton3);
+            groupBox3.Controls.Add(materialButton2);
+            groupBox3.Controls.Add(materialButton1);
             groupBox3.Controls.Add(pictureBox3);
             groupBox3.Controls.Add(textBox2);
             groupBox3.Controls.Add(textBox1);
@@ -176,10 +184,73 @@
             groupBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
             groupBox3.Location = new Point(49, 264);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(706, 81);
+            groupBox3.Size = new Size(706, 165);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Text = "Account";
+            // 
+            // materialButton3
+            // 
+            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton3.BackColor = Color.FromArgb(242, 242, 242);
+            materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton3.Depth = 0;
+            materialButton3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialButton3.HighEmphasis = true;
+            materialButton3.Icon = null;
+            materialButton3.Location = new Point(540, 133);
+            materialButton3.Margin = new Padding(4, 6, 4, 6);
+            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton3.Name = "materialButton3";
+            materialButton3.NoAccentTextColor = Color.Empty;
+            materialButton3.Size = new Size(158, 36);
+            materialButton3.TabIndex = 10;
+            materialButton3.Text = "materialButton3";
+            materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton3.UseAccentColor = false;
+            materialButton3.UseVisualStyleBackColor = false;
+            // 
+            // materialButton2
+            // 
+            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton2.BackColor = Color.FromArgb(242, 242, 242);
+            materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton2.Depth = 0;
+            materialButton2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialButton2.HighEmphasis = true;
+            materialButton2.Icon = null;
+            materialButton2.Location = new Point(154, 120);
+            materialButton2.Margin = new Padding(4, 6, 4, 6);
+            materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton2.Name = "materialButton2";
+            materialButton2.NoAccentTextColor = Color.Empty;
+            materialButton2.Size = new Size(158, 36);
+            materialButton2.TabIndex = 9;
+            materialButton2.Text = "materialButton2";
+            materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton2.UseAccentColor = false;
+            materialButton2.UseVisualStyleBackColor = false;
+            // 
+            // materialButton1
+            // 
+            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton1.BackColor = Color.FromArgb(242, 242, 242);
+            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton1.Depth = 0;
+            materialButton1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialButton1.HighEmphasis = true;
+            materialButton1.Icon = null;
+            materialButton1.Location = new Point(308, 104);
+            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton1.Name = "materialButton1";
+            materialButton1.NoAccentTextColor = Color.Empty;
+            materialButton1.Size = new Size(158, 36);
+            materialButton1.TabIndex = 8;
+            materialButton1.Text = "materialButton1";
+            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton1.UseAccentColor = false;
+            materialButton1.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -218,13 +289,13 @@
             // 
             mbtnKYS.AutoSize = false;
             mbtnKYS.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            mbtnKYS.BackColor = Color.FromArgb(242, 242, 242);
+            mbtnKYS.BackColor = Color.Red;
             mbtnKYS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             mbtnKYS.Depth = 0;
-            mbtnKYS.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            mbtnKYS.ForeColor = Color.Red;
             mbtnKYS.HighEmphasis = true;
             mbtnKYS.Icon = null;
-            mbtnKYS.Location = new Point(487, 26);
+            mbtnKYS.Location = new Point(467, 46);
             mbtnKYS.Margin = new Padding(4, 6, 4, 6);
             mbtnKYS.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnKYS.Name = "mbtnKYS";
@@ -235,6 +306,7 @@
             mbtnKYS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             mbtnKYS.UseAccentColor = true;
             mbtnKYS.UseVisualStyleBackColor = false;
+            mbtnKYS.Click += mbtnKYS_Click;
             // 
             // label3
             // 
@@ -247,6 +319,27 @@
             label3.Size = new Size(215, 17);
             label3.TabIndex = 3;
             label3.Text = "DELETE or Change you password";
+            // 
+            // materialButton4
+            // 
+            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton4.BackColor = Color.LightGray;
+            materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton4.Depth = 0;
+            materialButton4.ForeColor = Color.LightGray;
+            materialButton4.HighEmphasis = true;
+            materialButton4.Icon = null;
+            materialButton4.Location = new Point(407, 43);
+            materialButton4.Margin = new Padding(4, 6, 4, 6);
+            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton4.Name = "materialButton4";
+            materialButton4.NoAccentTextColor = Color.Empty;
+            materialButton4.Size = new Size(158, 36);
+            materialButton4.TabIndex = 11;
+            materialButton4.Text = "materialButton4";
+            materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton4.UseAccentColor = false;
+            materialButton4.UseVisualStyleBackColor = false;
             // 
             // CauHinhSystem
             // 
@@ -290,5 +383,9 @@
         private Label label3;
         private RJToggleButton tggbtn;
         private PictureBox pictureBox3;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private MaterialSkin.Controls.MaterialButton materialButton4;
     }
 }
