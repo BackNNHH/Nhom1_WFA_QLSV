@@ -15,6 +15,13 @@ namespace Nhom1_WFA_QLSV
         {
             //LoadThanhPho();
             LoadKhachHang();
+            if (ThemeManager.IsDarkMode)
+            {
+                DgvKhachHang.BackgroundColor = Color.Pink;
+            }
+            else { 
+                DgvKhachHang.BackgroundColor = Color.Purple;
+            }
             SetEnable(false);
         }
         private void LoadKhachHang()
