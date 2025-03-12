@@ -35,15 +35,15 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            rjToggleButton1 = new RJToggleButton();
+            tggbtn = new RJToggleButton();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             groupBox3 = new GroupBox();
+            pictureBox3 = new PictureBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             mbtnKYS = new MaterialSkin.Controls.MaterialButton();
             label3 = new Label();
-            pictureBox3 = new PictureBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
@@ -60,9 +60,10 @@
             cboFont.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cboFont.FormattingEnabled = true;
             cboFont.ItemHeight = 17;
-            cboFont.Location = new Point(487, 33);
+            cboFont.Location = new Point(557, 44);
+            cboFont.Margin = new Padding(3, 4, 3, 4);
             cboFont.Name = "cboFont";
-            cboFont.Size = new Size(201, 25);
+            cboFont.Size = new Size(229, 25);
             cboFont.TabIndex = 2;
             cboFont.SelectedIndexChanged += cboFont_SelectedIndexChanged;
             // 
@@ -74,9 +75,11 @@
             groupBox1.Controls.Add(cboFont);
             groupBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             groupBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            groupBox1.Location = new Point(49, 177);
+            groupBox1.Location = new Point(56, 236);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(706, 81);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(807, 108);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Font";
@@ -87,9 +90,10 @@
             pictureBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             pictureBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             pictureBox2.Image = Properties.Resources.Font_Icon;
-            pictureBox2.Location = new Point(6, 18);
+            pictureBox2.Location = new Point(7, 24);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(61, 57);
+            pictureBox2.Size = new Size(70, 76);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -100,43 +104,45 @@
             label1.BackColor = Color.FromArgb(242, 242, 242);
             label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(88, 36);
+            label1.Location = new Point(101, 48);
             label1.Name = "label1";
-            label1.Size = new Size(242, 17);
+            label1.Size = new Size(259, 18);
             label1.TabIndex = 3;
             label1.Text = "Font được sửa dụng hầu hết các form\r\n";
             // 
             // groupBox2
             // 
             groupBox2.BackColor = Color.FromArgb(242, 242, 242);
-            groupBox2.Controls.Add(rjToggleButton1);
+            groupBox2.Controls.Add(tggbtn);
             groupBox2.Controls.Add(pictureBox1);
             groupBox2.Controls.Add(label2);
             groupBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             groupBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            groupBox2.Location = new Point(49, 90);
+            groupBox2.Location = new Point(56, 120);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(706, 81);
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(807, 108);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Theme";
             // 
-            // rjToggleButton1
+            // tggbtn
             // 
-            rjToggleButton1.BackColor = Color.FromArgb(242, 242, 242);
-            rjToggleButton1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            rjToggleButton1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            rjToggleButton1.Location = new Point(588, 26);
-            rjToggleButton1.Margin = new Padding(3, 2, 3, 2);
-            rjToggleButton1.MinimumSize = new Size(39, 16);
-            rjToggleButton1.Name = "rjToggleButton1";
-            rjToggleButton1.OffBackColor = Color.IndianRed;
-            rjToggleButton1.OffToggleColor = Color.Gainsboro;
-            rjToggleButton1.OnBackColor = Color.MediumSpringGreen;
-            rjToggleButton1.OnToggleColor = Color.WhiteSmoke;
-            rjToggleButton1.Size = new Size(100, 36);
-            rjToggleButton1.TabIndex = 5;
-            rjToggleButton1.UseVisualStyleBackColor = false;
+            tggbtn.BackColor = Color.FromArgb(242, 242, 242);
+            tggbtn.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            tggbtn.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            tggbtn.Location = new Point(672, 35);
+            tggbtn.MinimumSize = new Size(45, 21);
+            tggbtn.Name = "tggbtn";
+            tggbtn.OffBackColor = SystemColors.ControlLightLight;
+            tggbtn.OffToggleColor = Color.Black;
+            tggbtn.OnBackColor = SystemColors.ActiveCaptionText;
+            tggbtn.OnToggleColor = Color.White;
+            tggbtn.Size = new Size(114, 48);
+            tggbtn.TabIndex = 5;
+            tggbtn.UseVisualStyleBackColor = false;
+            tggbtn.CheckedChanged += rjToggleButton1_CheckedChanged;
             // 
             // pictureBox1
             // 
@@ -144,9 +150,10 @@
             pictureBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             pictureBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             pictureBox1.Image = Properties.Resources.theme_10;
-            pictureBox1.Location = new Point(6, 18);
+            pictureBox1.Location = new Point(7, 24);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(61, 57);
+            pictureBox1.Size = new Size(70, 76);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -157,9 +164,9 @@
             label2.BackColor = Color.FromArgb(242, 242, 242);
             label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(88, 26);
+            label2.Location = new Point(101, 35);
             label2.Name = "label2";
-            label2.Size = new Size(261, 34);
+            label2.Size = new Size(287, 36);
             label2.TabIndex = 3;
             label2.Text = "Loại chủ đề đang sửa dụng\r\ncó 2 loại gồm chủ đề sáng và chủ đề tối...\r\n";
             // 
@@ -173,21 +180,38 @@
             groupBox3.Controls.Add(label3);
             groupBox3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             groupBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            groupBox3.Location = new Point(49, 264);
+            groupBox3.Location = new Point(56, 352);
+            groupBox3.Margin = new Padding(3, 4, 3, 4);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(706, 81);
+            groupBox3.Padding = new Padding(3, 4, 3, 4);
+            groupBox3.Size = new Size(807, 108);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Text = "Account";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.FromArgb(242, 242, 242);
+            pictureBox3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            pictureBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            pictureBox3.Image = Properties.Resources.oooo_oo;
+            pictureBox3.Location = new Point(7, 24);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(70, 76);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
             // 
             // textBox2
             // 
             textBox2.BackColor = Color.FromArgb(242, 242, 242);
             textBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             textBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textBox2.Location = new Point(249, 46);
+            textBox2.Location = new Point(285, 61);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 24);
+            textBox2.Size = new Size(114, 24);
             textBox2.TabIndex = 7;
             // 
             // textBox1
@@ -195,9 +219,10 @@
             textBox1.BackColor = Color.FromArgb(242, 242, 242);
             textBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             textBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textBox1.Location = new Point(92, 46);
+            textBox1.Location = new Point(105, 61);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 24);
+            textBox1.Size = new Size(114, 24);
             textBox1.TabIndex = 6;
             // 
             // mbtnKYS
@@ -210,12 +235,12 @@
             mbtnKYS.ForeColor = Color.FromArgb(222, 0, 0, 0);
             mbtnKYS.HighEmphasis = true;
             mbtnKYS.Icon = null;
-            mbtnKYS.Location = new Point(487, 26);
-            mbtnKYS.Margin = new Padding(4, 6, 4, 6);
+            mbtnKYS.Location = new Point(557, 35);
+            mbtnKYS.Margin = new Padding(5, 8, 5, 8);
             mbtnKYS.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnKYS.Name = "mbtnKYS";
             mbtnKYS.NoAccentTextColor = Color.Empty;
-            mbtnKYS.Size = new Size(201, 36);
+            mbtnKYS.Size = new Size(230, 48);
             mbtnKYS.TabIndex = 5;
             mbtnKYS.Text = "KillYouSelf";
             mbtnKYS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -228,34 +253,23 @@
             label3.BackColor = Color.FromArgb(242, 242, 242);
             label3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label3.Location = new Point(73, 20);
+            label3.Location = new Point(83, 27);
             label3.Name = "label3";
-            label3.Size = new Size(215, 17);
+            label3.Size = new Size(231, 18);
             label3.TabIndex = 3;
             label3.Text = "DELETE or Change you password";
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.FromArgb(242, 242, 242);
-            pictureBox3.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            pictureBox3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            pictureBox3.Image = Properties.Resources.oooo_oo;
-            pictureBox3.Location = new Point(6, 18);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(61, 57);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 4;
-            pictureBox3.TabStop = false;
-            // 
             // CauHinhSystem
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CauHinhSystem";
+            Padding = new Padding(3, 85, 3, 4);
             ShowIcon = false;
             Text = "Cấu Hình Hệ Thống";
             Load += CauHinhSystem_Load;
@@ -287,7 +301,7 @@
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label3;
-        private RJToggleButton rjToggleButton1;
+        private RJToggleButton tggbtn;
         private PictureBox pictureBox3;
     }
 }

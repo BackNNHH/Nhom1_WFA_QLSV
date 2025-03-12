@@ -86,7 +86,6 @@
             cbMonHoc.Name = "cbMonHoc";
             cbMonHoc.Size = new Size(355, 25);
             cbMonHoc.TabIndex = 5;
-            cbMonHoc.MouseClick += comboBox2_MouseClick;
             // 
             // txtMSSV
             // 
@@ -97,6 +96,7 @@
             txtMSSV.Name = "txtMSSV";
             txtMSSV.Size = new Size(355, 24);
             txtMSSV.TabIndex = 6;
+            txtMSSV.TextChanged += txtMSSV_TextChanged_1;
             // 
             // label4
             // 
@@ -165,6 +165,7 @@
             btnLuu.TabIndex = 12;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
+            btnLuu.Click += btnLuu_Click_1;
             // 
             // btnThoat
             // 

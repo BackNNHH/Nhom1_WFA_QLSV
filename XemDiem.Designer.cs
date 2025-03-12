@@ -31,8 +31,6 @@
             cboLop = new MaterialSkin.Controls.MaterialComboBox();
             label1 = new Label();
             dtgv = new DataGridView();
-            label2 = new Label();
-            mtrtxtName = new MaterialSkin.Controls.MaterialTextBox();
             txtMSSV = new DataGridViewTextBoxColumn();
             txtName = new DataGridViewTextBoxColumn();
             txtLop = new DataGridViewTextBoxColumn();
@@ -41,6 +39,8 @@
             txtDGK = new DataGridViewTextBoxColumn();
             txtDCK = new DataGridViewTextBoxColumn();
             txtDTB = new DataGridViewTextBoxColumn();
+            label2 = new Label();
+            mtrtxtName = new MaterialSkin.Controls.MaterialTextBox();
             ((System.ComponentModel.ISupportInitialize)dtgv).BeginInit();
             SuspendLayout();
             // 
@@ -92,37 +92,6 @@
             dtgv.RowHeadersWidth = 51;
             dtgv.Size = new Size(1033, 259);
             dtgv.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(242, 242, 242);
-            label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(406, 96);
-            label2.Name = "label2";
-            label2.Size = new Size(32, 18);
-            label2.TabIndex = 4;
-            label2.Text = "Tên";
-            // 
-            // mtrtxtName
-            // 
-            mtrtxtName.AnimateReadOnly = false;
-            mtrtxtName.BackColor = Color.FromArgb(242, 242, 242);
-            mtrtxtName.BorderStyle = BorderStyle.None;
-            mtrtxtName.Depth = 0;
-            mtrtxtName.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            mtrtxtName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            mtrtxtName.LeadingIcon = null;
-            mtrtxtName.Location = new Point(478, 82);
-            mtrtxtName.MaxLength = 50;
-            mtrtxtName.MouseState = MaterialSkin.MouseState.OUT;
-            mtrtxtName.Multiline = false;
-            mtrtxtName.Name = "mtrtxtName";
-            mtrtxtName.Size = new Size(237, 50);
-            mtrtxtName.TabIndex = 5;
-            mtrtxtName.Text = "";
-            mtrtxtName.TrailingIcon = null;
             // 
             // txtMSSV
             // 
@@ -195,6 +164,37 @@
             txtDTB.MinimumWidth = 6;
             txtDTB.Name = "txtDTB";
             txtDTB.ReadOnly = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(242, 242, 242);
+            label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            label2.Location = new Point(406, 96);
+            label2.Name = "label2";
+            label2.Size = new Size(32, 18);
+            label2.TabIndex = 4;
+            label2.Text = "Tên";
+            // 
+            // mtrtxtName
+            // 
+            mtrtxtName.AnimateReadOnly = false;
+            mtrtxtName.BackColor = Color.FromArgb(242, 242, 242);
+            mtrtxtName.BorderStyle = BorderStyle.None;
+            mtrtxtName.Depth = 0;
+            mtrtxtName.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            mtrtxtName.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            mtrtxtName.LeadingIcon = null;
+            mtrtxtName.Location = new Point(478, 82);
+            mtrtxtName.MaxLength = 50;
+            mtrtxtName.MouseState = MaterialSkin.MouseState.OUT;
+            mtrtxtName.Multiline = false;
+            mtrtxtName.Name = "mtrtxtName";
+            mtrtxtName.Size = new Size(237, 50);
+            mtrtxtName.TabIndex = 5;
+            mtrtxtName.Text = "";
+            mtrtxtName.TrailingIcon = null;
             // 
             // XemDiem
             // 

@@ -58,7 +58,7 @@ namespace Nhom1_WFA_QLSV
 
                     // Tạo truy vấn SQL cơ bản
                     string query = @"
-                    SELECT sv.MaSV, sv.HoTen, lh.TenLop, bd.TenMon, bd.DiemTX, bd.DiemGK, bd.DiemCK
+                    SELECT sv.MaSV, sv.HoTen, lh.TenLop, bd.TenMon, bd.DiemTX, bd.DiemGK, bd.DiemCK, COALESCE(((bd.DiemTX*2) + (bd.DiemGK*3) + (bd.DiemCK*5)) / 10.0, NULL) AS DiemTB
                     FROM SinhVien sv
                     LEFT JOIN Diem bd ON sv.MaSV = bd.MaSV
                     INNER JOIN LopHoc lh ON sv.MaLop = lh.MaLop";

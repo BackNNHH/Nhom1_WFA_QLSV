@@ -38,14 +38,6 @@ namespace Nhom1_WFA_QLSV
             //_cColor = this.BackColor;
         }
 
-        private void btnBgC_Click(object sender, EventArgs e)
-        {
-            ThemeManager.ToggleTheme();
-            if (ThemeManager.IsDarkMode)
-            {
-                _cColor = SystemColors.WindowFrame;
-            }
-        }
         public static void ApplyTTAF()
         {
             foreach (Form form in Application.OpenForms)
@@ -105,6 +97,15 @@ namespace Nhom1_WFA_QLSV
 
             CurrentFont = new Font(cboFont.Text, 9);
             ApplyTTAF();
+        }
+
+        private void rjToggleButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            ThemeManager.ToggleTheme();
+            if (ThemeManager.IsDarkMode)
+            {
+                _cColor = SystemColors.WindowFrame;
+            }
         }
     }
 

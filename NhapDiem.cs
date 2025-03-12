@@ -11,7 +11,50 @@ namespace Nhom1_WFA_QLSV
             //CauHinhSystem.LoadMeme(this);
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+
+
+        private void LoadMonHocTheoSinhVien(string mssv)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(DataBase.DbStr);
+
+                conn.Open();
+                string query = @"
+                   SELECT MonHoc.MaMon, MonHoc.TenMon
+                   FROM DangKyMonHoc
+                   INNER JOIN MonHoc ON DangKyMonHoc.MaMon = MonHoc.MaMon
+                   WHERE DangKyMonHoc.MaSV = @MaSV";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaSV", mssv);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                cbMonHoc.DataSource = dt;
+                cbMonHoc.DisplayMember = "TenMon"; // Hiển thị tên môn học
+                cbMonHoc.ValueMember = "MaMon";   // Lưu mã môn học
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+
+
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
             string mssv = txtMSSV.Text;
             string monHoc = cbMonHoc.Text;
@@ -53,53 +96,7 @@ namespace Nhom1_WFA_QLSV
             MessageBox.Show("Lưu điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex);
-            }
-        }
-
-
-
-        private void LoadMonHocTheoSinhVien(string mssv)
-        {
-            try
-            {
-                SqlConnection conn = new SqlConnection(DataBase.DbStr);
-
-                conn.Open();
-                string query = @"
-                   SELECT MonHoc.MaMon, MonHoc.TenMon
-                   FROM DangKyMonHoc
-                   INNER JOIN MonHoc ON DangKyMonHoc.MaMon = MonHoc.MaMon
-                   WHERE DangKyMonHoc.MaSV = @MaSV";
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@MaSV", mssv);
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                cbMonHoc.DataSource = dt;
-                cbMonHoc.DisplayMember = "TenMon"; // Hiển thị tên môn học
-                cbMonHoc.ValueMember = "MaMon";   // Lưu mã môn học
-                conn.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-        }
-
-        private void txtMSSV_TextChanged(object sender, EventArgs e)
+        private void txtMSSV_TextChanged_1(object sender, EventArgs e)
         {
             string mssv = txtMSSV.Text.Trim();
             if (!string.IsNullOrEmpty(mssv))
@@ -110,16 +107,6 @@ namespace Nhom1_WFA_QLSV
             {
                 MessageBox.Show("Hãy nhập mã sinh viên trước khi chọn môn!");
             }
-        }
-
-        private void comboBox2_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void btnThoat_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 
