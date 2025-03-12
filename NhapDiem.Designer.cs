@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             txtDiemTX = new TextBox();
             label2 = new Label();
             label3 = new Label();
@@ -42,18 +41,6 @@
             btnLuu = new Button();
             btnThoat = new Button();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(242, 242, 242);
-            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(288, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(82, 18);
-            label1.TabIndex = 0;
-            label1.Text = "Nhập Điểm";
             // 
             // txtDiemTX
             // 
@@ -209,16 +196,13 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(txtDiemTX);
-            Controls.Add(label1);
             Name = "NhapDiem";
-            Text = "Form1";
+            Text = "Nhập Điểm";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private TextBox txtDiemTX;
         private Label label2;
         private Label label3;
