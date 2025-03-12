@@ -17,6 +17,8 @@ namespace Nhom1_WFA_QLSV
             CauHinhSystem.LoadMeme(this);
         }
 
+        public int Size { set; get; }
+
         private void Main_Load(object sender, EventArgs e)
         {
 
@@ -67,6 +69,31 @@ namespace Nhom1_WFA_QLSV
         {
             var f = new XemDiem();
             f.Show();
+        }
+
+        private void navQLSV_MouseHover(object sender, EventArgs e)
+        {
+            navQLSV.Size = new System.Drawing.Size(navQLSV.Width, 50);
+        }
+
+        private void navNhapDiem_MouseHover(object sender, EventArgs e)
+        {
+            navNhapDiem.BackColor = Color.GreenYellow;
+        }
+
+        private void navXemDiem_MouseHover(object sender, EventArgs e)
+        {
+            navXemDiem.BackColor = Color.Blue;
+        }
+
+        private void navSystem_MouseHover(object sender, EventArgs e)
+        {
+            navSystem.BackColor = Color.Red;
+        }
+
+        private void navQLSV_MouseLeave(object sender, EventArgs e)
+        {
+            navQLSV.Size = new System.Drawing.Size(navQLSV.Width, 40);
         }
     }
 }
