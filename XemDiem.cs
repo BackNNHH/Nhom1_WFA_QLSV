@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace Nhom1_WFA_QLSV
 {
+
     public partial class XemDiem : BaseMaterialForm
     {
         public XemDiem()
@@ -22,7 +23,6 @@ namespace Nhom1_WFA_QLSV
 
         private void XemDiem_Load(object sender, EventArgs e)
         {
-
         }
 
         // Load danh sách lớp vào ComboBox
@@ -51,34 +51,57 @@ namespace Nhom1_WFA_QLSV
 
         private void cboLop_SelectedIndexChanged(object sender, EventArgs e)
         {
+            LoadData();
+        }
+
+        private void mtrtxtName_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
             try
             {
-                var lop = cboLop.SelectedItem?.ToString(); // Lấy giá trị từ ComboBox
+                string lop = cboLop.SelectedItem?.ToString(); // Lớp đang chọn
+                string searchName = mtrtxtName.Text.Trim();  // Tên đang nhập
+
                 using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
                 {
                     conn.Open();
-
-                    // Tạo truy vấn SQL cơ bản
-                    string query = @"
-                    SELECT sv.MaSV, sv.HoTen, lh.TenLop, bd.TenMon, bd.DiemTX, bd.DiemGK, bd.DiemCK, COALESCE(((bd.DiemTX*2) + (bd.DiemGK*3) + (bd.DiemCK*5)) / 10.0, NULL) AS DiemTB
+                    string searchQuery = @"
+                    SELECT sv.MaSV, sv.HoTen, lh.TenLop, bd.TenMon, bd.DiemTX, bd.DiemGK, bd.DiemCK,
+                    COALESCE(((bd.DiemTX*2) + (bd.DiemGK*3) + (bd.DiemCK*5)) / 10.0, NULL) AS DiemTB
                     FROM SinhVien sv
                     LEFT JOIN Diem bd ON sv.MaSV = bd.MaSV
                     INNER JOIN LopHoc lh ON sv.MaLop = lh.MaLop";
 
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    List<string> conditions = new List<string>();
 
-                    // Nếu chọn lớp cụ thể thì thêm điều kiện WHERE
+                    // Lọc theo lớp
                     if (!string.IsNullOrEmpty(lop) && lop != "Tất cả")
                     {
-                        query += " WHERE lh.TenLop = @Lop";
+                        conditions.Add("lh.TenLop = @Lop");
+                        parameters.Add(new SqlParameter("@Lop", lop));
                     }
 
-                    // Tạo SqlCommand sau khi query đã hoàn chỉnh
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    // Lọc theo tên sinh viên
+                    if (!string.IsNullOrEmpty(searchName))
                     {
-                        if (!string.IsNullOrEmpty(lop) && lop != "Tất cả")
-                        {
-                            cmd.Parameters.AddWithValue("@Lop", lop);
-                        }
+                        conditions.Add("sv.HoTen LIKE @SearchName");
+                        parameters.Add(new SqlParameter("@SearchName", "%" + searchName + "%"));
+                    }
+
+                    // Nếu có điều kiện thì thêm WHERE vào truy vấn
+                    if (conditions.Count > 0)
+                    {
+                        searchQuery += " WHERE " + string.Join(" AND ", conditions);
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(searchQuery, conn))
+                    {
+                        cmd.Parameters.AddRange(parameters.ToArray());
 
                         DataTable dt = new DataTable();
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -93,9 +116,5 @@ namespace Nhom1_WFA_QLSV
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
-
-
-
-
     }
 }

@@ -195,6 +195,7 @@
             mtrtxtName.TabIndex = 5;
             mtrtxtName.Text = "";
             mtrtxtName.TrailingIcon = null;
+            mtrtxtName.TextChanged += mtrtxtName_TextChanged;
             // 
             // XemDiem
             // 
