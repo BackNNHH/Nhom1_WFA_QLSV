@@ -93,6 +93,16 @@ namespace Nhom1_WFA_QLSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap oooo_oo {
+            get {
+                object obj = ResourceManager.GetObject("oooo-oo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap registration {
             get {
                 object obj = ResourceManager.GetObject("registration", resourceCulture);
