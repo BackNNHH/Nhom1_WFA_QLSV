@@ -58,11 +58,12 @@
             cboLop.FormattingEnabled = true;
             cboLop.IntegralHeight = false;
             cboLop.ItemHeight = 43;
-            cboLop.Location = new Point(126, 83);
+            cboLop.Location = new Point(110, 62);
+            cboLop.Margin = new Padding(3, 2, 3, 2);
             cboLop.MaxDropDownItems = 4;
             cboLop.MouseState = MaterialSkin.MouseState.OUT;
             cboLop.Name = "cboLop";
-            cboLop.Size = new Size(188, 49);
+            cboLop.Size = new Size(165, 49);
             cboLop.StartIndex = 0;
             cboLop.TabIndex = 0;
             cboLop.SelectedIndexChanged += cboLop_SelectedIndexChanged;
@@ -73,9 +74,9 @@
             label1.BackColor = Color.FromArgb(242, 242, 242);
             label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(29, 96);
+            label1.Location = new Point(25, 72);
             label1.Name = "label1";
-            label1.Size = new Size(33, 18);
+            label1.Size = new Size(32, 17);
             label1.TabIndex = 1;
             label1.Text = "Lớp";
             // 
@@ -83,14 +84,18 @@
             // 
             dtgv.AllowUserToAddRows = false;
             dtgv.AllowUserToDeleteRows = false;
+            dtgv.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dtgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dtgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgv.Columns.AddRange(new DataGridViewColumn[] { txtMSSV, txtName, txtLop, txtMon, txtDTX, txtDGK, txtDCK, txtDTB });
             dtgv.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dtgv.Location = new Point(6, 185);
+            dtgv.Location = new Point(5, 139);
+            dtgv.Margin = new Padding(3, 2, 3, 2);
             dtgv.Name = "dtgv";
             dtgv.ReadOnly = true;
             dtgv.RowHeadersWidth = 51;
-            dtgv.Size = new Size(1033, 259);
+            dtgv.Size = new Size(904, 194);
             dtgv.TabIndex = 2;
             // 
             // txtMSSV
@@ -171,9 +176,9 @@
             label2.BackColor = Color.FromArgb(242, 242, 242);
             label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(406, 96);
+            label2.Location = new Point(355, 72);
             label2.Name = "label2";
-            label2.Size = new Size(32, 18);
+            label2.Size = new Size(30, 17);
             label2.TabIndex = 4;
             label2.Text = "Tên";
             // 
@@ -186,12 +191,13 @@
             mtrtxtName.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             mtrtxtName.ForeColor = Color.FromArgb(222, 0, 0, 0);
             mtrtxtName.LeadingIcon = null;
-            mtrtxtName.Location = new Point(478, 82);
+            mtrtxtName.Location = new Point(418, 62);
+            mtrtxtName.Margin = new Padding(3, 2, 3, 2);
             mtrtxtName.MaxLength = 50;
             mtrtxtName.MouseState = MaterialSkin.MouseState.OUT;
             mtrtxtName.Multiline = false;
             mtrtxtName.Name = "mtrtxtName";
-            mtrtxtName.Size = new Size(237, 50);
+            mtrtxtName.Size = new Size(207, 50);
             mtrtxtName.TabIndex = 5;
             mtrtxtName.Text = "";
             mtrtxtName.TrailingIcon = null;
@@ -199,15 +205,17 @@
             // 
             // XemDiem
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1043, 450);
+            ClientSize = new Size(913, 338);
             Controls.Add(mtrtxtName);
             Controls.Add(label2);
             Controls.Add(dtgv);
             Controls.Add(label1);
             Controls.Add(cboLop);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "XemDiem";
+            Padding = new Padding(3, 48, 3, 2);
             Text = "Xem Điểm";
             Load += XemDiem_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv).EndInit();

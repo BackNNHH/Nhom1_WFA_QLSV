@@ -294,49 +294,6 @@
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
             // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.FromArgb(242, 242, 242);
-            textBox2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            textBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textBox2.Location = new Point(249, 46);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 24);
-            textBox2.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.FromArgb(242, 242, 242);
-            textBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            textBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textBox1.Location = new Point(92, 46);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 24);
-            textBox1.TabIndex = 6;
-            // 
-            // mbtnKYS
-            // 
-            mbtnKYS.AutoSize = false;
-            mbtnKYS.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            mbtnKYS.BackColor = Color.Red;
-            mbtnKYS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            mbtnKYS.Depth = 0;
-            mbtnKYS.ForeColor = Color.Red;
-            mbtnKYS.HighEmphasis = true;
-            mbtnKYS.Icon = null;
-            mbtnKYS.Location = new Point(467, 46);
-            mbtnKYS.Margin = new Padding(4, 6, 4, 6);
-            mbtnKYS.MouseState = MaterialSkin.MouseState.HOVER;
-            mbtnKYS.Name = "mbtnKYS";
-            mbtnKYS.NoAccentTextColor = Color.Empty;
-            mbtnKYS.Size = new Size(201, 36);
-            mbtnKYS.TabIndex = 5;
-            mbtnKYS.Text = "KillYouSelf";
-            mbtnKYS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            mbtnKYS.UseAccentColor = true;
-            mbtnKYS.UseVisualStyleBackColor = false;
-            mbtnKYS.Click += mbtnKYS_Click;
-            // 
             // label3
             // 
             label3.AutoSize = true;
