@@ -157,13 +157,15 @@
             // 
             BtnThem.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnThem.BackColor = Color.FromArgb(242, 242, 242);
-            BtnThem.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnThem.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnThem.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            BtnThem.Location = new Point(12, 551);
+            BtnThem.Image = Properties.Resources.add_user;
+            BtnThem.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnThem.Location = new Point(12, 539);
             BtnThem.Name = "BtnThem";
-            BtnThem.Size = new Size(100, 30);
+            BtnThem.Size = new Size(100, 42);
             BtnThem.TabIndex = 3;
-            BtnThem.Text = "Thêm";
+            BtnThem.Text = "      Thêm";
             BtnThem.UseVisualStyleBackColor = false;
             BtnThem.Click += BtnThem_Click;
             // 
@@ -173,11 +175,13 @@
             BtnSua.BackColor = Color.FromArgb(242, 242, 242);
             BtnSua.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnSua.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            BtnSua.Location = new Point(118, 551);
+            BtnSua.Image = Properties.Resources.editing;
+            BtnSua.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnSua.Location = new Point(118, 539);
             BtnSua.Name = "BtnSua";
-            BtnSua.Size = new Size(100, 30);
+            BtnSua.Size = new Size(100, 42);
             BtnSua.TabIndex = 3;
-            BtnSua.Text = "Sửa";
+            BtnSua.Text = "       Sửa";
             BtnSua.UseVisualStyleBackColor = false;
             BtnSua.Click += BtnSua_Click;
             // 
@@ -187,9 +191,9 @@
             BtnLuu.BackColor = Color.FromArgb(242, 242, 242);
             BtnLuu.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnLuu.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            BtnLuu.Location = new Point(224, 551);
+            BtnLuu.Location = new Point(224, 539);
             BtnLuu.Name = "BtnLuu";
-            BtnLuu.Size = new Size(100, 30);
+            BtnLuu.Size = new Size(100, 42);
             BtnLuu.TabIndex = 3;
             BtnLuu.Text = "Lưu";
             BtnLuu.UseVisualStyleBackColor = false;
@@ -201,9 +205,9 @@
             BtnHuy.BackColor = Color.FromArgb(242, 242, 242);
             BtnHuy.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnHuy.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            BtnHuy.Location = new Point(330, 551);
+            BtnHuy.Location = new Point(330, 539);
             BtnHuy.Name = "BtnHuy";
-            BtnHuy.Size = new Size(100, 30);
+            BtnHuy.Size = new Size(100, 42);
             BtnHuy.TabIndex = 3;
             BtnHuy.Text = "Hủy";
             BtnHuy.UseVisualStyleBackColor = false;
@@ -215,11 +219,13 @@
             BtnXoa.BackColor = Color.FromArgb(242, 242, 242);
             BtnXoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnXoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            BtnXoa.Location = new Point(436, 551);
+            BtnXoa.Image = Properties.Resources.user;
+            BtnXoa.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnXoa.Location = new Point(436, 539);
             BtnXoa.Name = "BtnXoa";
-            BtnXoa.Size = new Size(100, 30);
+            BtnXoa.Size = new Size(100, 42);
             BtnXoa.TabIndex = 3;
-            BtnXoa.Text = "Xóa";
+            BtnXoa.Text = "        Xóa";
             BtnXoa.UseVisualStyleBackColor = false;
             BtnXoa.Click += BtnXoa_Click;
             // 
@@ -229,9 +235,9 @@
             BtnTaiLai.BackColor = Color.FromArgb(242, 242, 242);
             BtnTaiLai.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnTaiLai.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            BtnTaiLai.Location = new Point(688, 551);
+            BtnTaiLai.Location = new Point(688, 539);
             BtnTaiLai.Name = "BtnTaiLai";
-            BtnTaiLai.Size = new Size(100, 30);
+            BtnTaiLai.Size = new Size(100, 42);
             BtnTaiLai.TabIndex = 3;
             BtnTaiLai.Text = "Tải lại";
             BtnTaiLai.UseVisualStyleBackColor = false;
@@ -445,11 +451,13 @@
             btnSearch.BackColor = Color.FromArgb(242, 242, 242);
             btnSearch.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             btnSearch.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            btnSearch.Location = new Point(582, 551);
+            btnSearch.Image = Properties.Resources.search;
+            btnSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSearch.Location = new Point(582, 539);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(100, 30);
+            btnSearch.Size = new Size(100, 42);
             btnSearch.TabIndex = 3;
-            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Text = "         Tìm kiếm";
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
