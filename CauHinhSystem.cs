@@ -80,6 +80,8 @@ namespace Nhom1_WFA_QLSV
         private void CauHinhSystem_Load(object sender, EventArgs e)
         {
             LoadFF();
+            mtrbtnPassword.Hide();
+            mtrbtnNewPassword.Hide();
         }
 
         void LoadFF()
@@ -111,26 +113,37 @@ namespace Nhom1_WFA_QLSV
 
         private void customMaterialButton1_Click_1(object sender, EventArgs e)
         {
-            var traLoi = MessageBox.Show("Bạn có chắc xóa tài khoản không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (traLoi == DialogResult.Yes)
+            mtrbtnPassword.Show();
+            if (!String.IsNullOrEmpty(mtrbtnPassword.Text))
             {
-                var sqlDelete = $"DELETE FROM Users WHERE username = '{DataBase.username}'";
-                DataBase.TruyVanXuLyDuLieu(sqlDelete);
-                MessageBox.Show("Xóa không thành công!");
-                Application.Exit();
-                Application.Restart();
+                var traLoi = MessageBox.Show("Bạn có chắc xóa tài khoản không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traLoi == DialogResult.Yes)
+                {
+                    var sqlDelete = $"DELETE FROM Users WHERE username = '{DataBase.username}'";
+                    DataBase.TruyVanXuLyDuLieu(sqlDelete);
+                    MessageBox.Show("Xóa không thành công!");
+                    Application.Exit();
+                    Application.Restart();
+                }
             }
+            mtrbtnPassword.Hide();
         }
 
         private void customMaterialButton2_Click(object sender, EventArgs e)
         {
+            mtrbtnPassword.Show();
+            mtrbtnNewPassword.Show();
+
             try
             {
-                string OldPass = mtrbtnPassword.Text;
-                String NewPass = mtrbtnNewPassword.Text;
-                var sqlUpdate = $"UPDATE Users SET password = '{NewPass}' WHERE password = '{OldPass}'";
-                DataBase.SetData(sqlUpdate);
-
+                if (!string.IsNullOrEmpty(mtrbtnNewPassword.Text) && !String.IsNullOrEmpty(mtrbtnPassword.Text)){
+                    string OldPass = mtrbtnPassword.Text;
+                    String NewPass = mtrbtnNewPassword.Text;
+                    var sqlUpdate = $"UPDATE Users SET password = '{NewPass}' WHERE password = '{OldPass}'";
+                    DataBase.SetData(sqlUpdate);
+                }
+                mtrbtnPassword.Hide();
+                mtrbtnNewPassword.Hide();
             }
             catch(Exception ex) 
             {

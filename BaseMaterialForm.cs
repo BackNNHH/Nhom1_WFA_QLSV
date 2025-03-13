@@ -6,19 +6,13 @@ public class BaseMaterialForm : MaterialForm
 {
     protected readonly MaterialSkinManager materialSkinManager;
 
-    private static List<BaseMaterialForm> openForms = new List<BaseMaterialForm>();
-
-    public static IEnumerable<BaseMaterialForm> OpenForms => openForms; // Truy xuất danh sách form mở
-
-    List<BaseMaterialForm> openFormsCopy = BaseMaterialForm.OpenForms.ToList();
-
     public BaseMaterialForm()
     {
         materialSkinManager = MaterialSkinManager.Instance;
         materialSkinManager.AddFormToManage(this);
+        materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
+
         ApplyTheme();
-        openForms.Add(this); // Thêm form vào danh sách khi khởi tạo
-        this.FormClosed += (s, e) => openForms.Remove(this); // Xóa khi đóng
     }
 
     protected override void OnShown(EventArgs e)

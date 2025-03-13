@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             panel1 = new Panel();
             nav = new MenuStrip();
@@ -49,6 +50,9 @@
             texKhoa = new Label();
             txtKhoa = new TextBox();
             LblUserName = new Label();
+            materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            imageList1 = new ImageList(components);
             panel1.SuspendLayout();
             nav.SuspendLayout();
             SuspendLayout();
@@ -76,7 +80,7 @@
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
             nav.Padding = new Padding(7, 3, 0, 3);
-            nav.Size = new Size(157, 456);
+            nav.Size = new Size(149, 456);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
@@ -156,7 +160,7 @@
             texSLSV.BackColor = Color.FromArgb(242, 242, 242);
             texSLSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texSLSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texSLSV.Location = new Point(247, 192);
+            texSLSV.Location = new Point(220, 440);
             texSLSV.Name = "texSLSV";
             texSLSV.Size = new Size(139, 18);
             texSLSV.TabIndex = 3;
@@ -167,7 +171,7 @@
             txtSLSV.BackColor = Color.FromArgb(242, 242, 242);
             txtSLSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtSLSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtSLSV.Location = new Point(397, 188);
+            txtSLSV.Location = new Point(370, 436);
             txtSLSV.Margin = new Padding(3, 4, 3, 4);
             txtSLSV.Name = "txtSLSV";
             txtSLSV.ReadOnly = true;
@@ -181,7 +185,7 @@
             texMVP.BackColor = Color.FromArgb(242, 242, 242);
             texMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texMVP.Location = new Point(247, 231);
+            texMVP.Location = new Point(220, 479);
             texMVP.Name = "texMVP";
             texMVP.Size = new Size(107, 18);
             texMVP.TabIndex = 3;
@@ -192,7 +196,7 @@
             textBox1.BackColor = Color.FromArgb(242, 242, 242);
             textBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             textBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textBox1.Location = new Point(397, 227);
+            textBox1.Location = new Point(370, 475);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -206,7 +210,7 @@
             texLop.BackColor = Color.FromArgb(242, 242, 242);
             texLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texLop.Location = new Point(563, 188);
+            texLop.Location = new Point(536, 436);
             texLop.Name = "texLop";
             texLop.Size = new Size(101, 18);
             texLop.TabIndex = 3;
@@ -217,7 +221,7 @@
             txtLop.BackColor = Color.FromArgb(242, 242, 242);
             txtLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtLop.Location = new Point(695, 184);
+            txtLop.Location = new Point(668, 432);
             txtLop.Margin = new Padding(3, 4, 3, 4);
             txtLop.Name = "txtLop";
             txtLop.ReadOnly = true;
@@ -231,7 +235,7 @@
             texKhoa.BackColor = Color.FromArgb(242, 242, 242);
             texKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texKhoa.Location = new Point(563, 231);
+            texKhoa.Location = new Point(536, 479);
             texKhoa.Name = "texKhoa";
             texKhoa.Size = new Size(110, 18);
             texKhoa.TabIndex = 3;
@@ -242,7 +246,7 @@
             txtKhoa.BackColor = Color.FromArgb(242, 242, 242);
             txtKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtKhoa.Location = new Point(695, 227);
+            txtKhoa.Location = new Point(668, 475);
             txtKhoa.Margin = new Padding(3, 4, 3, 4);
             txtKhoa.Name = "txtKhoa";
             txtKhoa.ReadOnly = true;
@@ -261,11 +265,53 @@
             LblUserName.Size = new Size(0, 18);
             LblUserName.TabIndex = 5;
             // 
+            // materialCard1
+            // 
+            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Depth = 0;
+            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard1.Location = new Point(220, 136);
+            materialCard1.Margin = new Padding(14);
+            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard1.Name = "materialCard1";
+            materialCard1.Padding = new Padding(14);
+            materialCard1.Size = new Size(212, 87);
+            materialCard1.TabIndex = 6;
+            // 
+            // materialFloatingActionButton1
+            // 
+            materialFloatingActionButton1.BackColor = Color.FromArgb(242, 242, 242);
+            materialFloatingActionButton1.Depth = 0;
+            materialFloatingActionButton1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialFloatingActionButton1.Icon = Properties.Resources.group;
+            materialFloatingActionButton1.Image = Properties.Resources.group;
+            materialFloatingActionButton1.Location = new Point(404, 153);
+            materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialFloatingActionButton1.Name = "materialFloatingActionButton1";
+            materialFloatingActionButton1.Size = new Size(60, 60);
+            materialFloatingActionButton1.TabIndex = 7;
+            materialFloatingActionButton1.Text = "materialFloatingActionButton1";
+            materialFloatingActionButton1.UseVisualStyleBackColor = false;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "add-user.png");
+            imageList1.Images.SetKeyName(1, "circle.png");
+            imageList1.Images.SetKeyName(2, "department.png");
+            imageList1.Images.SetKeyName(3, "graphic-board.png");
+            imageList1.Images.SetKeyName(4, "group.png");
+            imageList1.Images.SetKeyName(5, "mvp.png");
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(materialFloatingActionButton1);
+            Controls.Add(materialCard1);
             Controls.Add(LblUserName);
             Controls.Add(textBox1);
             Controls.Add(texMVP);
@@ -312,5 +358,8 @@
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Label LblUserName;
         private ToolStripMenuItem navXemDiem;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
+        private ImageList imageList1;
     }
 }
