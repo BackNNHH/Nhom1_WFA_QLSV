@@ -133,8 +133,10 @@
             // TxtDienThoai
             // 
             TxtDienThoai.BackColor = Color.FromArgb(242, 242, 242);
+            TxtDienThoai.BorderStyle = BorderStyle.FixedSingle;
             TxtDienThoai.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtDienThoai.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            TxtDienThoai.ImeMode = ImeMode.NoControl;
             TxtDienThoai.Location = new Point(569, 140);
             TxtDienThoai.MaxLength = 10;
             TxtDienThoai.Name = "TxtDienThoai";
@@ -157,7 +159,7 @@
             // 
             BtnThem.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BtnThem.BackColor = Color.FromArgb(242, 242, 242);
-            BtnThem.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            BtnThem.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             BtnThem.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnThem.Image = Properties.Resources.add_user;
             BtnThem.ImageAlign = ContentAlignment.MiddleLeft;
@@ -363,6 +365,7 @@
             // TxtEmail
             // 
             TxtEmail.BackColor = Color.FromArgb(242, 242, 242);
+            TxtEmail.BorderStyle = BorderStyle.FixedSingle;
             TxtEmail.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtEmail.ForeColor = Color.FromArgb(222, 0, 0, 0);
             TxtEmail.Location = new Point(569, 111);
