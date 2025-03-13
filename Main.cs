@@ -1,9 +1,11 @@
-﻿using System.Diagnostics;
+﻿
+using System.Diagnostics;
 
 namespace Nhom1_WFA_QLSV
 {
     public partial class Main : BaseMaterialForm
     {
+        private AverageScoreChart avgScoreChart;
 
         //public bool DaDangNhap { get; set; } = false;
         //public void PhanQuyen()
@@ -15,6 +17,19 @@ namespace Nhom1_WFA_QLSV
         {
             InitializeComponent();
             CauHinhSystem.LoadMeme(this);
+            avgScoreChart = new AverageScoreChart(chartScores);
+
+            // Dữ liệu mẫu (có thể thay bằng dữ liệu từ CSDL)
+            Dictionary<string, double> dailyAverages = new Dictionary<string, double>
+            {
+                { "10/03", 7.5 },
+                { "11/03", 8.2 },
+                { "12/03", 6.8 },
+                { "13/03", 9.1 },
+                { "14/03", 7.9 }
+            };
+
+            avgScoreChart.SetDailyAverageData(dailyAverages);
         }
 
 

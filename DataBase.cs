@@ -122,6 +122,7 @@ namespace Nhom1_WFA_QLSV
 #pragma warning disable CS8601 // Possible null reference assignment.
                 username = row["username"].ToString();
 #pragma warning restore CS8601 // Possible null reference assignment.
+#pragma warning restore CS8601 // Possible null reference assignment.
                 if (TOKENburh)
                 {
                     SetData($"UPDATE Users SET password = '{pass}' WHERE id = '{row["id"]}'");

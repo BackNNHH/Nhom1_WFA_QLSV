@@ -30,6 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel1 = new Panel();
             nav = new MenuStrip();
             navQLSV = new ToolStripMenuItem();
@@ -53,8 +56,10 @@
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             imageList1 = new ImageList(components);
+            chartScores = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel1.SuspendLayout();
             nav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chartScores).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -305,11 +310,29 @@
             imageList1.Images.SetKeyName(4, "group.png");
             imageList1.Images.SetKeyName(5, "mvp.png");
             // 
+            // chartScores
+            // 
+            chartScores.BackColor = Color.FromArgb(242, 242, 242);
+            chartArea2.Name = "ChartArea1";
+            chartScores.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chartScores.Legends.Add(legend2);
+            chartScores.Location = new Point(220, 535);
+            chartScores.Name = "chartScores";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chartScores.Series.Add(series2);
+            chartScores.Size = new Size(602, 266);
+            chartScores.TabIndex = 8;
+            chartScores.Text = "avgScoreChart";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(914, 842);
+            Controls.Add(chartScores);
             Controls.Add(materialFloatingActionButton1);
             Controls.Add(materialCard1);
             Controls.Add(LblUserName);
@@ -333,6 +356,7 @@
             panel1.PerformLayout();
             nav.ResumeLayout(false);
             nav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chartScores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -361,5 +385,6 @@
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
         private ImageList imageList1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartScores;
     }
 }
