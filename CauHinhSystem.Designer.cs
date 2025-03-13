@@ -262,7 +262,7 @@
             customMaterialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             customMaterialButton2.UseAccentColor = false;
             customMaterialButton2.UseVisualStyleBackColor = false;
-            customMaterialButton2.Click += customMaterialButton2_Click;
+            customMaterialButton2.Click += customMaterialButton2_Click_1;
             // 
             // customMaterialButton1
             // 
