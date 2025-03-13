@@ -283,12 +283,13 @@
             // 
             // HoTen
             // 
-            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             HoTen.DataPropertyName = "HoTen";
             HoTen.HeaderText = "Họ Tên";
             HoTen.MinimumWidth = 6;
             HoTen.Name = "HoTen";
             HoTen.ReadOnly = true;
+            HoTen.Width = 76;
             // 
             // NgaySinh
             // 
@@ -307,7 +308,7 @@
             GioiTInh.MinimumWidth = 6;
             GioiTInh.Name = "GioiTInh";
             GioiTInh.ReadOnly = true;
-            GioiTInh.Width = 87;
+            GioiTInh.Width = 80;
             // 
             // DiaChi
             // 
@@ -344,7 +345,7 @@
             MaLop.MinimumWidth = 6;
             MaLop.Name = "MaLop";
             MaLop.ReadOnly = true;
-            MaLop.Width = 80;
+            MaLop.Width = 74;
             // 
             // label4
             // 
@@ -538,6 +539,12 @@
         private Label label6;
         private TextBox TxtEmail;
         private DateTimePicker TxtNgaySinh;
+        private RadioButton radNam;
+        private RadioButton radNu;
+        private Label label7;
+        private ComboBox CboLop;
+        private Label label8;
+        private Button btnSearch;
         private DataGridViewTextBoxColumn MaSV;
         private DataGridViewTextBoxColumn HoTen;
         private DataGridViewTextBoxColumn NgaySinh;
@@ -546,11 +553,5 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn SoDienThoai;
         private DataGridViewTextBoxColumn MaLop;
-        private RadioButton radNam;
-        private RadioButton radNu;
-        private Label label7;
-        private ComboBox CboLop;
-        private Label label8;
-        private Button btnSearch;
     }
 }
