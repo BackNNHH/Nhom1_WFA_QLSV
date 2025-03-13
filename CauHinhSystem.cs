@@ -113,6 +113,7 @@ namespace Nhom1_WFA_QLSV
 
         private void customMaterialButton1_Click_1(object sender, EventArgs e)
         {
+            int count = 0;
             mtrbtnPassword.Show();
             if (!String.IsNullOrEmpty(mtrbtnPassword.Text))
             {
@@ -122,32 +123,33 @@ namespace Nhom1_WFA_QLSV
                     var sqlDelete = $"DELETE FROM Users WHERE username = '{DataBase.username}'";
                     DataBase.TruyVanXuLyDuLieu(sqlDelete);
                     MessageBox.Show("Xóa không thành công!");
-                    Application.Exit();
                     Application.Restart();
                 }
             }
-            mtrbtnPassword.Hide();
+            if (count == 2)
+            {
+                mtrbtnPassword.Hide();
+            }
         }
 
-        private void customMaterialButton2_Click(object sender, EventArgs e)
+        private void customMaterialButton2_Click_1(object sender, EventArgs e)
         {
+            int count = 0;
             mtrbtnPassword.Show();
             mtrbtnNewPassword.Show();
 
-            try
+            if (!String.IsNullOrEmpty(mtrbtnNewPassword.Text) && !String.IsNullOrEmpty(mtrbtnPassword.Text))
             {
-                if (!string.IsNullOrEmpty(mtrbtnNewPassword.Text) && !String.IsNullOrEmpty(mtrbtnPassword.Text)){
-                    string OldPass = mtrbtnPassword.Text;
-                    String NewPass = mtrbtnNewPassword.Text;
-                    var sqlUpdate = $"UPDATE Users SET password = '{NewPass}' WHERE password = '{OldPass}'";
-                    DataBase.SetData(sqlUpdate);
-                }
+                string OldPass = mtrbtnPassword.Text;
+                String NewPass = mtrbtnNewPassword.Text;
+                var sqlUpdate = $"UPDATE Users SET password = '{NewPass}' WHERE password = '{OldPass}'";
+                DataBase.SetData(sqlUpdate);
+                MessageBox.Show("Cập nhật thông tin!");
+            }
+            if (count == 2)
+            {
                 mtrbtnPassword.Hide();
                 mtrbtnNewPassword.Hide();
-            }
-            catch(Exception ex) 
-            {
-                MessageBox.Show("Lỗi: " + ex);
             }
         }
     }
