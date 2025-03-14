@@ -57,6 +57,7 @@ namespace Nhom1_WFA_QLSV
                 if (MaSV.Text == dt.Rows[0]["MaSV"].ToString())
                     return true;
             }
+            if (UniqueCheck(MaSV,where)) return true;
             return false;
         }
         public static DataTable GetData(string sql)
