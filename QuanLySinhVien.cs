@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Diagnostics;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -24,6 +25,15 @@ namespace Nhom1_WFA_QLSV
 
         private void QuanLySinhVien_Load(object sender, EventArgs e)
         {
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1) this.Opacity += 0.05;
+                else timer.Stop();
+            };
+            timer.Start();
             //LoadThanhPho();
             LoadKhachHang();
             SetEnable(false);
@@ -164,7 +174,8 @@ namespace Nhom1_WFA_QLSV
                 return;
             }
 
-            if (!TxtEmail.Text.Contains("@")){
+            if (!TxtEmail.Text.Contains("@"))
+            {
                 MessageBox.Show("Email không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -294,5 +305,22 @@ namespace Nhom1_WFA_QLSV
                 this.SetEnable(false); // Không cho phép sửa thông tin trên form
         }
 
+        private void QuanLySinhVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0) this.Opacity -= 0.05;
+                else
+                {
+                    timer.Stop();
+                    e.Cancel = false;
+                    this.Close();
+                }
+            };
+            timer.Start();
+        }
     }
 }

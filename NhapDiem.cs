@@ -88,9 +88,9 @@ namespace Nhom1_WFA_QLSV
 
             cmd.Parameters.AddWithValue("@MaSV", mssv);
             cmd.Parameters.AddWithValue("@TenMon", monHoc);
-            cmd.Parameters.AddWithValue("@DiemTX", diemTX);
-            cmd.Parameters.AddWithValue("@DiemGK", diemGK);
-            cmd.Parameters.AddWithValue("@DiemCK", diemCK);
+            cmd.Parameters.AddWithValue("@DiemTX", DiemIsValid(diemTX));
+            cmd.Parameters.AddWithValue("@DiemGK", DiemIsValid(diemGK));
+            cmd.Parameters.AddWithValue("@DiemCK", DiemIsValid(diemCK));
 
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -102,12 +102,41 @@ namespace Nhom1_WFA_QLSV
             string mssv = txtMSSV.Text.Trim();
             if (!string.IsNullOrEmpty(mssv))
             {
+                if (IsDataExist(mssv))
+                {
+
+                }
                 LoadMonHocTheoSinhVien(mssv);
             }
             else
             {
                 MessageBox.Show("Hãy nhập mã sinh viên trước khi chọn môn!");
             }
+        }
+
+        private bool IsDataExist(string studentID)
+        {
+            using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+            {
+                string query = "SELECT COUNT(*) FROM SinhVien WHERE MaSV = @MaSV";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaSV", studentID);
+
+                conn.Open();
+                int count = (int)cmd.ExecuteScalar(); 
+                return count > 0; 
+            }
+        }
+
+
+        private float DiemIsValid(float diem)
+        {
+            if (diem < 0 || diem > 10)
+            {
+                MessageBox.Show("Điểm bạn nhập không hợp lệ!");
+                return 0;
+            }
+            return diem;
         }
 
         private void NhapDiem_FormClosing(object sender, FormClosingEventArgs e)
