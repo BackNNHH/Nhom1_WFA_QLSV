@@ -10,7 +10,7 @@ public class BaseMaterialForm : MaterialForm
     {
         materialSkinManager = MaterialSkinManager.Instance;
         materialSkinManager.AddFormToManage(this);
-        materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
+        materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.DeepOrange700, TextShade.WHITE);
 
         ApplyTheme();
     }

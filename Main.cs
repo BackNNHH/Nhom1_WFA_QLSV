@@ -1,9 +1,14 @@
-﻿using System.Diagnostics;
+﻿
+using Microsoft.Data.SqlClient;
+using System.Data;
+using System.Diagnostics;
 
 namespace Nhom1_WFA_QLSV
 {
     public partial class Main : BaseMaterialForm
     {
+        public AverageScoreChart avgScoreChart;
+        public DateTime now = DateTime.Now;
 
         //public bool DaDangNhap { get; set; } = false;
         //public void PhanQuyen()
@@ -15,20 +20,129 @@ namespace Nhom1_WFA_QLSV
         {
             InitializeComponent();
             CauHinhSystem.LoadMeme(this);
+            UpdateChartData();
+            LoadChartData();
         }
 
 
         private void Main_Load(object sender, EventArgs e)
         {
-
             DataBase.UpateData();
-            txtKhoa.Text = DataBase.SlKhoa.ToString();
-            txtLop.Text = DataBase.SlLop.ToString();
-            txtSLSV.Text = DataBase.SlSV.ToString();
+            lbKhoa.Text = DataBase.SlKhoa.ToString();
+            lbLop.Text = DataBase.SlLop.ToString();
+            lbSV.Text = DataBase.SlSV.ToString();
+            lbMVP.Text = GetMVPStudent();
             LblUserName.Text = DataBase.username;
+        }
+
+        private void UpdateChartData()
+        {
+            if (!IsTodayUpdated())
+            {
+                if (chartScores != null)
+                {
+                    try
+                    {
+                        List<double> scores = new List<double>();
+                        double avgScore = 0;
+
+                        using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+                        {
+                            string query = @"
+                            SELECT DiemTX, DiemGK, DiemCK, 
+                            COALESCE(((DiemTX * 2) + (DiemGK * 3) + (DiemCK * 5)) / 10.0, NULL) AS DiemTB
+                            FROM Diem;";
+
+                            SqlCommand cmd = new SqlCommand(query, conn);
+                            conn.Open();
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    double score = reader.GetDouble(3);
+                                    scores.Add(score);
+                                }
+                            }
+                        }
+
+                        if (scores.Count > 0)
+                        {
+                            avgScore = scores.Average();
 
 
-            Debug.WriteLine("NAS");
+                            using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+                            {
+                                string query = "INSERT INTO StudentScores(DateRecorded, AverageScore) VALUES (@now, @avgScore)";
+                                using (SqlCommand cmd = new SqlCommand(query, conn))
+                                {
+                                    cmd.Parameters.AddWithValue("@now", DateTime.Now);
+                                    cmd.Parameters.AddWithValue("@avgScore", avgScore);
+
+                                    conn.Open();
+                                    cmd.ExecuteNonQuery();
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+
+        private bool IsTodayUpdated()
+        {
+            using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+            {
+                string query = "SELECT COUNT(*) FROM StudentScores WHERE DateRecorded = CAST(GETDATE() AS DATE)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
+        private void LoadChartData()
+        {
+            Dictionary<string, double> dailyAverages = new Dictionary<string, double>();
+            DataTable dataTable = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+            {
+                string query = "SELECT TOP 7 DateRecorded, AverageScore FROM StudentScores ORDER BY DateRecorded ASC";
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(dataTable);
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    string date = Convert.ToDateTime(row["DateRecorded"]).ToString("dd/MM");
+                    double avgScore = Convert.ToDouble(row["AverageScore"]);
+                    dailyAverages[date] = avgScore;
+                }
+            }
+            avgScoreChart = new AverageScoreChart(chartScores);
+            // Cập nhật biểu đồ
+            avgScoreChart.SetDailyAverageData(dailyAverages);
+        }
+
+        private string GetMVPStudent()
+        {
+            string name;
+            using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+            {
+                string query = @"
+                    SELECT TOP 1 sv.HoTen,
+                    COALESCE(((bd.DiemTX*2) + (bd.DiemGK*3) + (bd.DiemCK*5)) / 10.0, NULL) AS DiemTB
+                    FROM SinhVien sv
+                    LEFT JOIN Diem bd ON sv.MaSV = bd.MaSV";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                name = (string)cmd.ExecuteScalar();
+            }
+            return name;
         }
 
         private void navQLSV_Click(object sender, EventArgs e)
@@ -69,6 +183,7 @@ namespace Nhom1_WFA_QLSV
             var f = new XemDiem();
             f.Show();
         }
+
 
     }
 }

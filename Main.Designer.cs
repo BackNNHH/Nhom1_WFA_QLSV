@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             panel1 = new Panel();
             nav = new MenuStrip();
@@ -42,19 +44,30 @@
             toolStripSeparator2 = new ToolStripSeparator();
             thoátToolStripMenuItem = new ToolStripMenuItem();
             texSLSV = new Label();
-            txtSLSV = new TextBox();
             texMVP = new Label();
-            textBox1 = new TextBox();
             texLop = new Label();
-            txtLop = new TextBox();
             texKhoa = new Label();
-            txtKhoa = new TextBox();
             LblUserName = new Label();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            lbSV = new Label();
             materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            imageList1 = new ImageList(components);
+            chartScores = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            lbLop = new Label();
+            materialFloatingActionButton3 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            lbMVP = new Label();
+            materialFloatingActionButton4 = new MaterialSkin.Controls.MaterialFloatingActionButton();
+            materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            lbKhoa = new Label();
             panel1.SuspendLayout();
             nav.SuspendLayout();
+            materialCard1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chartScores).BeginInit();
+            materialCard2.SuspendLayout();
+            materialCard3.SuspendLayout();
+            materialCard4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -80,7 +93,7 @@
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
             nav.Padding = new Padding(7, 3, 0, 3);
-            nav.Size = new Size(149, 456);
+            nav.Size = new Size(157, 456);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
@@ -157,102 +170,50 @@
             // texSLSV
             // 
             texSLSV.AutoSize = true;
-            texSLSV.BackColor = Color.FromArgb(242, 242, 242);
+            texSLSV.BackColor = Color.FromArgb(255, 255, 255);
             texSLSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texSLSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texSLSV.Location = new Point(220, 440);
+            texSLSV.Location = new Point(17, 14);
             texSLSV.Name = "texSLSV";
             texSLSV.Size = new Size(139, 18);
             texSLSV.TabIndex = 3;
             texSLSV.Text = "Số Lượng Sinh Viên";
             // 
-            // txtSLSV
-            // 
-            txtSLSV.BackColor = Color.FromArgb(242, 242, 242);
-            txtSLSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtSLSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtSLSV.Location = new Point(370, 436);
-            txtSLSV.Margin = new Padding(3, 4, 3, 4);
-            txtSLSV.Name = "txtSLSV";
-            txtSLSV.ReadOnly = true;
-            txtSLSV.Size = new Size(114, 24);
-            txtSLSV.TabIndex = 4;
-            txtSLSV.Text = "N/A";
-            // 
             // texMVP
             // 
             texMVP.AutoSize = true;
-            texMVP.BackColor = Color.FromArgb(242, 242, 242);
+            texMVP.BackColor = Color.FromArgb(255, 255, 255);
             texMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texMVP.Location = new Point(220, 479);
+            texMVP.Location = new Point(17, 14);
             texMVP.Name = "texMVP";
-            texMVP.Size = new Size(107, 18);
+            texMVP.Size = new Size(137, 18);
             texMVP.TabIndex = 3;
-            texMVP.Text = "Sinh Viên MVP";
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.FromArgb(242, 242, 242);
-            textBox1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            textBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textBox1.Location = new Point(370, 475);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(114, 24);
-            textBox1.TabIndex = 4;
-            textBox1.Text = "N/A";
+            texMVP.Text = "Sinh Viên Tiêu Biểu";
             // 
             // texLop
             // 
             texLop.AutoSize = true;
-            texLop.BackColor = Color.FromArgb(242, 242, 242);
+            texLop.BackColor = Color.FromArgb(255, 255, 255);
             texLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texLop.Location = new Point(536, 436);
+            texLop.Location = new Point(17, 17);
             texLop.Name = "texLop";
             texLop.Size = new Size(101, 18);
             texLop.TabIndex = 3;
             texLop.Text = "Số Lượng Lớp";
             // 
-            // txtLop
-            // 
-            txtLop.BackColor = Color.FromArgb(242, 242, 242);
-            txtLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtLop.Location = new Point(668, 432);
-            txtLop.Margin = new Padding(3, 4, 3, 4);
-            txtLop.Name = "txtLop";
-            txtLop.ReadOnly = true;
-            txtLop.Size = new Size(114, 24);
-            txtLop.TabIndex = 4;
-            txtLop.Text = "N/A";
-            // 
             // texKhoa
             // 
             texKhoa.AutoSize = true;
-            texKhoa.BackColor = Color.FromArgb(242, 242, 242);
+            texKhoa.BackColor = Color.FromArgb(255, 255, 255);
             texKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texKhoa.Location = new Point(536, 479);
+            texKhoa.Location = new Point(17, 14);
             texKhoa.Name = "texKhoa";
             texKhoa.Size = new Size(110, 18);
             texKhoa.TabIndex = 3;
             texKhoa.Text = "Số Lượng Khoa";
-            // 
-            // txtKhoa
-            // 
-            txtKhoa.BackColor = Color.FromArgb(242, 242, 242);
-            txtKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtKhoa.Location = new Point(668, 475);
-            txtKhoa.Margin = new Padding(3, 4, 3, 4);
-            txtKhoa.Name = "txtKhoa";
-            txtKhoa.ReadOnly = true;
-            txtKhoa.Size = new Size(114, 24);
-            txtKhoa.TabIndex = 4;
-            txtKhoa.Text = "N/A";
             // 
             // LblUserName
             // 
@@ -268,6 +229,8 @@
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Controls.Add(lbSV);
+            materialCard1.Controls.Add(texSLSV);
             materialCard1.Depth = 0;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard1.Location = new Point(220, 136);
@@ -277,6 +240,18 @@
             materialCard1.Padding = new Padding(14);
             materialCard1.Size = new Size(212, 87);
             materialCard1.TabIndex = 6;
+            // 
+            // lbSV
+            // 
+            lbSV.AutoSize = true;
+            lbSV.BackColor = Color.FromArgb(255, 255, 255);
+            lbSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lbSV.Location = new Point(19, 55);
+            lbSV.Name = "lbSV";
+            lbSV.Size = new Size(35, 18);
+            lbSV.TabIndex = 4;
+            lbSV.Text = "N/A";
             // 
             // materialFloatingActionButton1
             // 
@@ -293,34 +268,163 @@
             materialFloatingActionButton1.Text = "materialFloatingActionButton1";
             materialFloatingActionButton1.UseVisualStyleBackColor = false;
             // 
-            // imageList1
+            // chartScores
             // 
-            imageList1.ColorDepth = ColorDepth.Depth32Bit;
-            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
-            imageList1.TransparentColor = Color.Transparent;
-            imageList1.Images.SetKeyName(0, "add-user.png");
-            imageList1.Images.SetKeyName(1, "circle.png");
-            imageList1.Images.SetKeyName(2, "department.png");
-            imageList1.Images.SetKeyName(3, "graphic-board.png");
-            imageList1.Images.SetKeyName(4, "group.png");
-            imageList1.Images.SetKeyName(5, "mvp.png");
+            chartScores.BackColor = Color.FromArgb(242, 242, 242);
+            chartArea1.Name = "ChartArea1";
+            chartScores.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chartScores.Legends.Add(legend1);
+            chartScores.Location = new Point(174, 391);
+            chartScores.Name = "chartScores";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chartScores.Series.Add(series1);
+            chartScores.Size = new Size(717, 266);
+            chartScores.TabIndex = 8;
+            // 
+            // materialFloatingActionButton2
+            // 
+            materialFloatingActionButton2.BackColor = Color.FromArgb(242, 242, 242);
+            materialFloatingActionButton2.Depth = 0;
+            materialFloatingActionButton2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialFloatingActionButton2.Icon = Properties.Resources.graphic_board;
+            materialFloatingActionButton2.Image = Properties.Resources.graphic_board;
+            materialFloatingActionButton2.Location = new Point(735, 153);
+            materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialFloatingActionButton2.Name = "materialFloatingActionButton2";
+            materialFloatingActionButton2.Size = new Size(60, 60);
+            materialFloatingActionButton2.TabIndex = 10;
+            materialFloatingActionButton2.Text = "materialFloatingActionButton2";
+            materialFloatingActionButton2.UseVisualStyleBackColor = false;
+            // 
+            // materialCard2
+            // 
+            materialCard2.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard2.Controls.Add(lbLop);
+            materialCard2.Controls.Add(texLop);
+            materialCard2.Depth = 0;
+            materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard2.Location = new Point(551, 136);
+            materialCard2.Margin = new Padding(14);
+            materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard2.Name = "materialCard2";
+            materialCard2.Padding = new Padding(14);
+            materialCard2.Size = new Size(212, 87);
+            materialCard2.TabIndex = 9;
+            // 
+            // lbLop
+            // 
+            lbLop.AutoSize = true;
+            lbLop.BackColor = Color.FromArgb(255, 255, 255);
+            lbLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lbLop.Location = new Point(17, 55);
+            lbLop.Name = "lbLop";
+            lbLop.Size = new Size(35, 18);
+            lbLop.TabIndex = 4;
+            lbLop.Text = "N/A";
+            // 
+            // materialFloatingActionButton3
+            // 
+            materialFloatingActionButton3.BackColor = Color.FromArgb(242, 242, 242);
+            materialFloatingActionButton3.Depth = 0;
+            materialFloatingActionButton3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialFloatingActionButton3.Icon = Properties.Resources.mvp;
+            materialFloatingActionButton3.Image = Properties.Resources.mvp;
+            materialFloatingActionButton3.Location = new Point(404, 289);
+            materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialFloatingActionButton3.Name = "materialFloatingActionButton3";
+            materialFloatingActionButton3.Size = new Size(60, 60);
+            materialFloatingActionButton3.TabIndex = 9;
+            materialFloatingActionButton3.Text = "materialFloatingActionButton3";
+            materialFloatingActionButton3.UseVisualStyleBackColor = false;
+            // 
+            // materialCard3
+            // 
+            materialCard3.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard3.Controls.Add(lbMVP);
+            materialCard3.Controls.Add(texMVP);
+            materialCard3.Depth = 0;
+            materialCard3.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard3.Location = new Point(220, 272);
+            materialCard3.Margin = new Padding(14);
+            materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard3.Name = "materialCard3";
+            materialCard3.Padding = new Padding(14);
+            materialCard3.Size = new Size(212, 87);
+            materialCard3.TabIndex = 8;
+            // 
+            // lbMVP
+            // 
+            lbMVP.AutoSize = true;
+            lbMVP.BackColor = Color.FromArgb(255, 255, 255);
+            lbMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lbMVP.Location = new Point(22, 55);
+            lbMVP.Name = "lbMVP";
+            lbMVP.Size = new Size(35, 18);
+            lbMVP.TabIndex = 4;
+            lbMVP.Text = "N/A";
+            // 
+            // materialFloatingActionButton4
+            // 
+            materialFloatingActionButton4.BackColor = Color.FromArgb(242, 242, 242);
+            materialFloatingActionButton4.Depth = 0;
+            materialFloatingActionButton4.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialFloatingActionButton4.Icon = Properties.Resources.department;
+            materialFloatingActionButton4.Image = Properties.Resources.department;
+            materialFloatingActionButton4.Location = new Point(735, 289);
+            materialFloatingActionButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialFloatingActionButton4.Name = "materialFloatingActionButton4";
+            materialFloatingActionButton4.Size = new Size(60, 60);
+            materialFloatingActionButton4.TabIndex = 11;
+            materialFloatingActionButton4.Text = "materialFloatingActionButton4";
+            materialFloatingActionButton4.UseVisualStyleBackColor = false;
+            // 
+            // materialCard4
+            // 
+            materialCard4.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard4.Controls.Add(lbKhoa);
+            materialCard4.Controls.Add(texKhoa);
+            materialCard4.Depth = 0;
+            materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard4.Location = new Point(551, 272);
+            materialCard4.Margin = new Padding(14);
+            materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard4.Name = "materialCard4";
+            materialCard4.Padding = new Padding(14);
+            materialCard4.Size = new Size(212, 87);
+            materialCard4.TabIndex = 10;
+            // 
+            // lbKhoa
+            // 
+            lbKhoa.AutoSize = true;
+            lbKhoa.BackColor = Color.FromArgb(255, 255, 255);
+            lbKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lbKhoa.Location = new Point(17, 55);
+            lbKhoa.Name = "lbKhoa";
+            lbKhoa.Size = new Size(35, 18);
+            lbKhoa.TabIndex = 4;
+            lbKhoa.Text = "N/A";
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(914, 661);
+            Controls.Add(materialFloatingActionButton4);
+            Controls.Add(materialFloatingActionButton3);
+            Controls.Add(materialCard4);
+            Controls.Add(materialFloatingActionButton2);
+            Controls.Add(materialCard3);
+            Controls.Add(materialCard2);
+            Controls.Add(chartScores);
             Controls.Add(materialFloatingActionButton1);
             Controls.Add(materialCard1);
             Controls.Add(LblUserName);
-            Controls.Add(textBox1);
-            Controls.Add(texMVP);
-            Controls.Add(txtKhoa);
-            Controls.Add(texKhoa);
-            Controls.Add(txtLop);
-            Controls.Add(texLop);
-            Controls.Add(txtSLSV);
-            Controls.Add(texSLSV);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
@@ -333,6 +437,15 @@
             panel1.PerformLayout();
             nav.ResumeLayout(false);
             nav.PerformLayout();
+            materialCard1.ResumeLayout(false);
+            materialCard1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chartScores).EndInit();
+            materialCard2.ResumeLayout(false);
+            materialCard2.PerformLayout();
+            materialCard3.ResumeLayout(false);
+            materialCard3.PerformLayout();
+            materialCard4.ResumeLayout(false);
+            materialCard4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -342,13 +455,9 @@
         private MenuStrip nav;
         private ToolStripMenuItem navQLSV;
         private Label texSLSV;
-        private TextBox txtSLSV;
         private Label texMVP;
-        private TextBox textBox1;
         private Label texLop;
-        private TextBox txtLop;
         private Label texKhoa;
-        private TextBox txtKhoa;
         private ToolStripMenuItem navNhapDiem;
         private ToolStripMenuItem navSystem;
         private ToolStripMenuItem cấuHìnhHệThôgsToolStripMenuItem;
@@ -360,6 +469,16 @@
         private ToolStripMenuItem navXemDiem;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
-        private ImageList imageList1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartScores;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton2;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton3;
+        private MaterialSkin.Controls.MaterialCard materialCard3;
+        private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton4;
+        private MaterialSkin.Controls.MaterialCard materialCard4;
+        private Label lbSV;
+        private Label lbLop;
+        private Label lbMVP;
+        private Label lbKhoa;
     }
 }

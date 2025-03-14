@@ -119,9 +119,7 @@ namespace Nhom1_WFA_QLSV
             if (dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
-#pragma warning disable CS8601 // Possible null reference assignment.
                 username = row["username"].ToString();
-#pragma warning restore CS8601 // Possible null reference assignment.
                 if (TOKENburh)
                 {
                     SetData($"UPDATE Users SET password = '{pass}' WHERE id = '{row["id"]}'");
