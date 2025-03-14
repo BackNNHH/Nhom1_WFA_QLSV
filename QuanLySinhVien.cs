@@ -164,6 +164,11 @@ namespace Nhom1_WFA_QLSV
                 return;
             }
 
+            if (!TxtEmail.Text.Contains("@")){
+                MessageBox.Show("Email không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string ngaySinh = TxtNgaySinh.Value.ToString("yyyy-MM-dd");
 
 
