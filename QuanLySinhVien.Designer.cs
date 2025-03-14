@@ -164,7 +164,7 @@
             BtnThem.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnThem.Image = Properties.Resources.add_user;
             BtnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnThem.Location = new Point(5, 539);
+            BtnThem.Location = new Point(12, 539);
             BtnThem.Name = "BtnThem";
             BtnThem.Size = new Size(100, 42);
             BtnThem.TabIndex = 3;
