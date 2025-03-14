@@ -182,6 +182,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "SignIn";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SignIn";
             FormClosing += SignIn_FormClosing;
             Load += SignIn_Load;
