@@ -428,7 +428,7 @@
             label7.BackColor = Color.FromArgb(242, 242, 242);
             label7.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label7.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label7.Location = new Point(18, 171);
+            label7.Location = new Point(6, 171);
             label7.Name = "label7";
             label7.Size = new Size(65, 17);
             label7.TabIndex = 0;
