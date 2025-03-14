@@ -40,6 +40,7 @@
             txtDiemCK = new TextBox();
             btnLuu = new Button();
             btnThoat = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // txtDiemTX
@@ -58,7 +59,7 @@
             label2.BackColor = Color.FromArgb(242, 242, 242);
             label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(109, 88);
+            label2.Location = new Point(45, 87);
             label2.Name = "label2";
             label2.Size = new Size(49, 18);
             label2.TabIndex = 3;
@@ -70,7 +71,7 @@
             label3.BackColor = Color.FromArgb(242, 242, 242);
             label3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label3.Location = new Point(117, 132);
+            label3.Location = new Point(395, 87);
             label3.Name = "label3";
             label3.Size = new Size(38, 18);
             label3.TabIndex = 4;
@@ -82,9 +83,9 @@
             cbMonHoc.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             cbMonHoc.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cbMonHoc.FormattingEnabled = true;
-            cbMonHoc.Location = new Point(201, 129);
+            cbMonHoc.Location = new Point(479, 84);
             cbMonHoc.Name = "cbMonHoc";
-            cbMonHoc.Size = new Size(355, 25);
+            cbMonHoc.Size = new Size(291, 25);
             cbMonHoc.TabIndex = 5;
             // 
             // txtMSSV
@@ -92,9 +93,9 @@
             txtMSSV.BackColor = Color.FromArgb(242, 242, 242);
             txtMSSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtMSSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtMSSV.Location = new Point(201, 85);
+            txtMSSV.Location = new Point(118, 84);
             txtMSSV.Name = "txtMSSV";
-            txtMSSV.Size = new Size(355, 24);
+            txtMSSV.Size = new Size(257, 24);
             txtMSSV.TabIndex = 6;
             txtMSSV.TextChanged += txtMSSV_TextChanged_1;
             // 
@@ -180,11 +181,23 @@
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click_1;
             // 
+            // label1
+            // 
+            label1.BackColor = Color.FromArgb(242, 242, 242);
+            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(601, 400);
+            label1.Name = "label1";
+            label1.Size = new Size(193, 21);
+            label1.TabIndex = 14;
+            label1.Text = "label1";
+            // 
             // NhapDiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 451);
+            Controls.Add(label1);
             Controls.Add(btnThoat);
             Controls.Add(btnLuu);
             Controls.Add(txtDiemCK);
@@ -219,5 +232,6 @@
         private TextBox txtDiemCK;
         private Button btnLuu;
         private Button btnThoat;
+        private Label label1;
     }
 }

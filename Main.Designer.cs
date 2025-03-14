@@ -48,26 +48,26 @@
             texLop = new Label();
             texKhoa = new Label();
             LblUserName = new Label();
-            materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            CrdSv = new MaterialSkin.Controls.MaterialCard();
             lbSV = new Label();
             materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             chartScores = new System.Windows.Forms.DataVisualization.Charting.Chart();
             materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            CrdLop = new MaterialSkin.Controls.MaterialCard();
             lbLop = new Label();
             materialFloatingActionButton3 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            CrdMVP = new MaterialSkin.Controls.MaterialCard();
             lbMVP = new Label();
             materialFloatingActionButton4 = new MaterialSkin.Controls.MaterialFloatingActionButton();
-            materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            CrdKhoa = new MaterialSkin.Controls.MaterialCard();
             lbKhoa = new Label();
             panel1.SuspendLayout();
             nav.SuspendLayout();
-            materialCard1.SuspendLayout();
+            CrdSv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartScores).BeginInit();
-            materialCard2.SuspendLayout();
-            materialCard3.SuspendLayout();
-            materialCard4.SuspendLayout();
+            CrdLop.SuspendLayout();
+            CrdMVP.SuspendLayout();
+            CrdKhoa.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -228,20 +228,20 @@
             LblUserName.TabIndex = 5;
             LblUserName.Text = "User";
             // 
-            // materialCard1
+            // CrdSv
             // 
-            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Controls.Add(lbSV);
-            materialCard1.Controls.Add(texSLSV);
-            materialCard1.Depth = 0;
-            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(220, 136);
-            materialCard1.Margin = new Padding(14);
-            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard1.Name = "materialCard1";
-            materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(212, 87);
-            materialCard1.TabIndex = 6;
+            CrdSv.BackColor = Color.FromArgb(255, 255, 255);
+            CrdSv.Controls.Add(lbSV);
+            CrdSv.Controls.Add(texSLSV);
+            CrdSv.Depth = 0;
+            CrdSv.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            CrdSv.Location = new Point(220, 136);
+            CrdSv.Margin = new Padding(14);
+            CrdSv.MouseState = MaterialSkin.MouseState.HOVER;
+            CrdSv.Name = "CrdSv";
+            CrdSv.Padding = new Padding(14);
+            CrdSv.Size = new Size(212, 87);
+            CrdSv.TabIndex = 6;
             // 
             // lbSV
             // 
@@ -301,20 +301,20 @@
             materialFloatingActionButton2.Text = "materialFloatingActionButton2";
             materialFloatingActionButton2.UseVisualStyleBackColor = false;
             // 
-            // materialCard2
+            // CrdLop
             // 
-            materialCard2.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard2.Controls.Add(lbLop);
-            materialCard2.Controls.Add(texLop);
-            materialCard2.Depth = 0;
-            materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard2.Location = new Point(551, 136);
-            materialCard2.Margin = new Padding(14);
-            materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard2.Name = "materialCard2";
-            materialCard2.Padding = new Padding(14);
-            materialCard2.Size = new Size(212, 87);
-            materialCard2.TabIndex = 9;
+            CrdLop.BackColor = Color.FromArgb(255, 255, 255);
+            CrdLop.Controls.Add(lbLop);
+            CrdLop.Controls.Add(texLop);
+            CrdLop.Depth = 0;
+            CrdLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            CrdLop.Location = new Point(551, 136);
+            CrdLop.Margin = new Padding(14);
+            CrdLop.MouseState = MaterialSkin.MouseState.HOVER;
+            CrdLop.Name = "CrdLop";
+            CrdLop.Padding = new Padding(14);
+            CrdLop.Size = new Size(212, 87);
+            CrdLop.TabIndex = 9;
             // 
             // lbLop
             // 
@@ -343,20 +343,20 @@
             materialFloatingActionButton3.Text = "materialFloatingActionButton3";
             materialFloatingActionButton3.UseVisualStyleBackColor = false;
             // 
-            // materialCard3
+            // CrdMVP
             // 
-            materialCard3.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard3.Controls.Add(lbMVP);
-            materialCard3.Controls.Add(texMVP);
-            materialCard3.Depth = 0;
-            materialCard3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard3.Location = new Point(220, 272);
-            materialCard3.Margin = new Padding(14);
-            materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard3.Name = "materialCard3";
-            materialCard3.Padding = new Padding(14);
-            materialCard3.Size = new Size(212, 87);
-            materialCard3.TabIndex = 8;
+            CrdMVP.BackColor = Color.FromArgb(255, 255, 255);
+            CrdMVP.Controls.Add(lbMVP);
+            CrdMVP.Controls.Add(texMVP);
+            CrdMVP.Depth = 0;
+            CrdMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            CrdMVP.Location = new Point(220, 272);
+            CrdMVP.Margin = new Padding(14);
+            CrdMVP.MouseState = MaterialSkin.MouseState.HOVER;
+            CrdMVP.Name = "CrdMVP";
+            CrdMVP.Padding = new Padding(14);
+            CrdMVP.Size = new Size(212, 87);
+            CrdMVP.TabIndex = 8;
             // 
             // lbMVP
             // 
@@ -385,20 +385,20 @@
             materialFloatingActionButton4.Text = "materialFloatingActionButton4";
             materialFloatingActionButton4.UseVisualStyleBackColor = false;
             // 
-            // materialCard4
+            // CrdKhoa
             // 
-            materialCard4.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard4.Controls.Add(lbKhoa);
-            materialCard4.Controls.Add(texKhoa);
-            materialCard4.Depth = 0;
-            materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard4.Location = new Point(551, 272);
-            materialCard4.Margin = new Padding(14);
-            materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard4.Name = "materialCard4";
-            materialCard4.Padding = new Padding(14);
-            materialCard4.Size = new Size(212, 87);
-            materialCard4.TabIndex = 10;
+            CrdKhoa.BackColor = Color.FromArgb(255, 255, 255);
+            CrdKhoa.Controls.Add(lbKhoa);
+            CrdKhoa.Controls.Add(texKhoa);
+            CrdKhoa.Depth = 0;
+            CrdKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            CrdKhoa.Location = new Point(551, 272);
+            CrdKhoa.Margin = new Padding(14);
+            CrdKhoa.MouseState = MaterialSkin.MouseState.HOVER;
+            CrdKhoa.Name = "CrdKhoa";
+            CrdKhoa.Padding = new Padding(14);
+            CrdKhoa.Size = new Size(212, 87);
+            CrdKhoa.TabIndex = 10;
             // 
             // lbKhoa
             // 
@@ -419,13 +419,13 @@
             ClientSize = new Size(914, 661);
             Controls.Add(materialFloatingActionButton4);
             Controls.Add(materialFloatingActionButton3);
-            Controls.Add(materialCard4);
+            Controls.Add(CrdKhoa);
             Controls.Add(materialFloatingActionButton2);
-            Controls.Add(materialCard3);
-            Controls.Add(materialCard2);
+            Controls.Add(CrdMVP);
+            Controls.Add(CrdLop);
             Controls.Add(chartScores);
             Controls.Add(materialFloatingActionButton1);
-            Controls.Add(materialCard1);
+            Controls.Add(CrdSv);
             Controls.Add(LblUserName);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -439,15 +439,15 @@
             panel1.ResumeLayout(false);
             nav.ResumeLayout(false);
             nav.PerformLayout();
-            materialCard1.ResumeLayout(false);
-            materialCard1.PerformLayout();
+            CrdSv.ResumeLayout(false);
+            CrdSv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)chartScores).EndInit();
-            materialCard2.ResumeLayout(false);
-            materialCard2.PerformLayout();
-            materialCard3.ResumeLayout(false);
-            materialCard3.PerformLayout();
-            materialCard4.ResumeLayout(false);
-            materialCard4.PerformLayout();
+            CrdLop.ResumeLayout(false);
+            CrdLop.PerformLayout();
+            CrdMVP.ResumeLayout(false);
+            CrdMVP.PerformLayout();
+            CrdKhoa.ResumeLayout(false);
+            CrdKhoa.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -469,15 +469,15 @@
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Label LblUserName;
         private ToolStripMenuItem navXemDiem;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialCard CrdSv;
         private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartScores;
         private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton2;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialCard CrdLop;
         private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton3;
-        private MaterialSkin.Controls.MaterialCard materialCard3;
+        private MaterialSkin.Controls.MaterialCard CrdMVP;
         private MaterialSkin.Controls.MaterialFloatingActionButton materialFloatingActionButton4;
-        private MaterialSkin.Controls.MaterialCard materialCard4;
+        private MaterialSkin.Controls.MaterialCard CrdKhoa;
         private Label lbSV;
         private Label lbLop;
         private Label lbMVP;

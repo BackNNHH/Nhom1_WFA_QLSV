@@ -123,7 +123,6 @@ namespace Nhom1_WFA_QLSV
 
         private void customMaterialButton1_Click_1(object sender, EventArgs e)
         {
-            int count = 1;
             mtrbtnPassword.Show();
             if (!String.IsNullOrEmpty(mtrbtnPassword.Text))
             {
@@ -136,16 +135,10 @@ namespace Nhom1_WFA_QLSV
                     Application.Restart();
                 }
             }
-            if (count == 2)
-            {
-                mtrbtnPassword.Hide();
-            }
-            count += 1;
         }
 
         private void customMaterialButton2_Click_1(object sender, EventArgs e)
         {
-            int count = 1;
             mtrbtnPassword.Show();
             mtrbtnNewPassword.Show();
 
@@ -156,13 +149,9 @@ namespace Nhom1_WFA_QLSV
                 var sqlUpdate = $"UPDATE Users SET password = '{NewPass}' WHERE password = '{OldPass}'";
                 DataBase.SetData(sqlUpdate);
                 MessageBox.Show("Cập nhật thông tin!");
-            }
-            if (count == 2)
-            {
                 mtrbtnPassword.Hide();
                 mtrbtnNewPassword.Hide();
             }
-            count += 1;
         }
 
         private void CauHinhSystem_FormClosing(object sender, FormClosingEventArgs e)
