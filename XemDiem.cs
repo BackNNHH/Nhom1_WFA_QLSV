@@ -68,7 +68,6 @@ namespace Nhom1_WFA_QLSV
 
                 using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
                 {
-                    conn.Open();
                     string searchQuery = @"
                     SELECT sv.MaSV, sv.HoTen, lh.TenLop, bd.TenMon, bd.DiemTX, bd.DiemGK, bd.DiemCK,
                     COALESCE(((bd.DiemTX*2) + (bd.DiemGK*3) + (bd.DiemCK*5)) / 10.0, NULL) AS DiemTB

@@ -29,8 +29,7 @@ namespace Nhom1_WFA_QLSV
             };
             chart.ChartAreas.Add(chartArea);
 
-            // Series biểu diễn điểm trung bình theo ngày
-            dailySeries = new Series("Điểm trung bình lớp theo ngày")
+            dailySeries = new Series("Điểm trung bình của tất cả viên theo ngày")
             {
                 ChartType = SeriesChartType.Line,
                 BorderWidth = 3,
@@ -40,7 +39,7 @@ namespace Nhom1_WFA_QLSV
             };
 
             chart.Series.Add(dailySeries);
-            chart.Titles.Add("Điểm trung bình lớp theo ngày");
+            chart.Titles.Add("Biến động điểm trung bình của tất cả sinh viên theo ngày");
         }
 
         public void SetDailyAverageData(Dictionary<string, double> dailyAverages)
@@ -51,7 +50,7 @@ namespace Nhom1_WFA_QLSV
             {
                 DataPoint point = new DataPoint(index, entry.Value)
                 {
-                    AxisLabel = entry.Key  // Gán ngày làm nhãn trục X
+                    AxisLabel = entry.Key   
                 };
                 dailySeries.Points.Add(point);
                 index++;
