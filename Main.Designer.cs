@@ -100,6 +100,7 @@
             // 
             // navQLSV
             // 
+            navQLSV.Image = Properties.Resources.devicemanager;
             navQLSV.AutoSize = false;
             navQLSV.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
             navQLSV.Name = "navQLSV";
@@ -109,6 +110,7 @@
             // 
             // navNhapDiem
             // 
+            navNhapDiem.Image = Properties.Resources.import;
             navNhapDiem.AutoSize = false;
             navNhapDiem.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
             navNhapDiem.Name = "navNhapDiem";
@@ -118,6 +120,7 @@
             // 
             // navXemDiem
             // 
+            navXemDiem.Image = Properties.Resources.books;
             navXemDiem.AutoSize = false;
             navXemDiem.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
             navXemDiem.Name = "navXemDiem";
