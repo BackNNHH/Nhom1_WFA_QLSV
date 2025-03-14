@@ -147,7 +147,8 @@ namespace Nhom1_WFA_QLSV
                     SELECT TOP 1 sv.HoTen,
                     COALESCE(((bd.DiemTX*2) + (bd.DiemGK*3) + (bd.DiemCK*5)) / 10.0, NULL) AS DiemTB
                     FROM SinhVien sv
-                    LEFT JOIN Diem bd ON sv.MaSV = bd.MaSV";
+                    LEFT JOIN Diem bd ON sv.MaSV = bd.MaSV
+                    ORDER BY DiemTB DESC";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();
                 name = (string)cmd.ExecuteScalar();

@@ -100,9 +100,9 @@
             // 
             // navQLSV
             // 
-            navQLSV.Image = Properties.Resources.devicemanager;
             navQLSV.AutoSize = false;
             navQLSV.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            navQLSV.Image = Properties.Resources.devicemanager;
             navQLSV.Name = "navQLSV";
             navQLSV.Size = new Size(142, 40);
             navQLSV.Text = "Quản Lý sinh viên";
@@ -110,9 +110,9 @@
             // 
             // navNhapDiem
             // 
-            navNhapDiem.Image = Properties.Resources.import;
             navNhapDiem.AutoSize = false;
             navNhapDiem.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            navNhapDiem.Image = Properties.Resources.import;
             navNhapDiem.Name = "navNhapDiem";
             navNhapDiem.Size = new Size(142, 40);
             navNhapDiem.Text = "Nhập điểm ";
@@ -120,9 +120,9 @@
             // 
             // navXemDiem
             // 
-            navXemDiem.Image = Properties.Resources.books;
             navXemDiem.AutoSize = false;
             navXemDiem.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Pixel);
+            navXemDiem.Image = Properties.Resources.books;
             navXemDiem.Name = "navXemDiem";
             navXemDiem.Size = new Size(142, 40);
             navXemDiem.Text = "Xem điểm";
