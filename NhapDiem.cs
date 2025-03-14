@@ -6,6 +6,9 @@ namespace Nhom1_WFA_QLSV
 {
     public partial class NhapDiem : BaseMaterialForm
     {
+        private bool DiemTXIsValid = false;
+        private bool DiemGKIsValid = false;
+        private bool DiemCKIsValid = false;
         public NhapDiem()
         {
             InitializeComponent();
@@ -67,35 +70,48 @@ namespace Nhom1_WFA_QLSV
                 return;
             }
 
-
             // Kiểm tra nhập liệu
-            if (string.IsNullOrWhiteSpace(mssv) || string.IsNullOrWhiteSpace(monHoc) ||
+            if (string.IsNullOrWhiteSpace(monHoc) ||
                 !float.TryParse(txtDiemTX.Text, out diemTX) ||
                 !float.TryParse(txtDiemGK.Text, out diemGK) ||
-                !float.TryParse(txtDiemGK.Text, out diemCK))
+                !float.TryParse(txtDiemCK.Text, out diemCK))  // Sửa lỗi ở đây
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ và đúng định dạng điểm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Lưu dữ liệu vào CSDL (Ví dụ: SQL Server)
-            string connectionString = DataBase.DbStr;
-            SqlConnection conn = new SqlConnection(connectionString);
+            // Nếu bất kỳ giá trị nào không hợp lệ, dừng lại
+            if (DiemTXIsValid ||
+                DiemGKIsValid ||
+                DiemCKIsValid)
+            {
+                return;
+            }
+            else
+            {
+                // Lưu dữ liệu vào CSDL (SQL Server)
+                string connectionString = DataBase.DbStr;
 
-            conn.Open();
-            string query = "INSERT INTO Diem(MaSV, TenMon, DiemTX, DiemGK, DiemCK) VALUES (@MaSV, @TenMon, @DiemTX, @DiemGK, @DiemCK)";
-            SqlCommand cmd = new SqlCommand(query, conn);
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO Diem(MaSV, TenMon, DiemTX, DiemGK, DiemCK) VALUES (@MaSV, @TenMon, @DiemTX, @DiemGK, @DiemCK)";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@MaSV", mssv);
+                        cmd.Parameters.AddWithValue("@TenMon", monHoc);
+                        cmd.Parameters.AddWithValue("@DiemTX", diemTX);
+                        cmd.Parameters.AddWithValue("@DiemGK", diemGK);
+                        cmd.Parameters.AddWithValue("@DiemCK", diemCK);
 
-            cmd.Parameters.AddWithValue("@MaSV", mssv);
-            cmd.Parameters.AddWithValue("@TenMon", monHoc);
-            cmd.Parameters.AddWithValue("@DiemTX", DiemIsValid(diemTX));
-            cmd.Parameters.AddWithValue("@DiemGK", DiemIsValid(diemGK));
-            cmd.Parameters.AddWithValue("@DiemCK", DiemIsValid(diemCK));
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Lưu điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lưu điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
         private void txtMSSV_TextChanged_1(object sender, EventArgs e)
         {
@@ -104,13 +120,23 @@ namespace Nhom1_WFA_QLSV
             {
                 if (IsDataExist(mssv))
                 {
-
+                    txtDiemTX.Enabled = true;
+                    txtDiemGK.Enabled = true;
+                    txtDiemCK.Enabled = true;
+                    lbMSSV.Text = "";
+                    LoadMonHocTheoSinhVien(mssv);
                 }
-                LoadMonHocTheoSinhVien(mssv);
+                else
+                {
+                    lbMSSV.Text = "Sinh viên không tồn tại hoặc chưa đăng kí môn!";
+                    lbMSSV.ForeColor = Color.Red;
+                }
             }
             else
             {
-                MessageBox.Show("Hãy nhập mã sinh viên trước khi chọn môn!");
+                txtDiemTX.Enabled = false;
+                txtDiemGK.Enabled = false;
+                txtDiemCK.Enabled = false;
             }
         }
 
@@ -123,20 +149,21 @@ namespace Nhom1_WFA_QLSV
                 cmd.Parameters.AddWithValue("@MaSV", studentID);
 
                 conn.Open();
-                int count = (int)cmd.ExecuteScalar(); 
-                return count > 0; 
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
             }
         }
 
 
-        private float DiemIsValid(float diem)
+        private bool DiemIsValid(float diem, Label lb)
         {
             if (diem < 0 || diem > 10)
             {
-                MessageBox.Show("Điểm bạn nhập không hợp lệ!");
-                return 0;
+                lb.Text = "Giá trị không hợp lệ!";
+                lb.ForeColor = Color.Red;
+                return false;
             }
-            return diem;
+            return true;
         }
 
         private void NhapDiem_FormClosing(object sender, FormClosingEventArgs e)
@@ -168,6 +195,36 @@ namespace Nhom1_WFA_QLSV
                 else timer.Stop();
             };
             timer.Start();
+        }
+
+        private void txtDiemTX_TextChanged(object sender, EventArgs e)
+        {
+            float diemTX;
+            float.TryParse(txtDiemTX.Text, out diemTX);
+            if (DiemIsValid(diemTX, lbTX))
+            {
+                DiemTXIsValid = true;
+            }
+        }
+
+        private void txtDiemGK_TextChanged(object sender, EventArgs e)
+        {
+            float diemGK;
+            float.TryParse(txtDiemGK.Text, out diemGK);
+            if (DiemIsValid(diemGK, lbGK))
+            {
+                DiemGKIsValid = true;
+            }
+        }
+
+        private void txtDiemCK_TextChanged(object sender, EventArgs e)
+        {
+            float diemCK;
+            float.TryParse(txtDiemCK.Text, out diemCK);
+            if (DiemIsValid(diemCK, lbCK))
+            {
+                DiemCKIsValid = true;
+            }
         }
     }
 
