@@ -38,23 +38,6 @@ namespace Nhom1_WFA_QLSV
             CboLop.ValueMember = "MaLop";
         }
 
-        //private void LoadThanhPho()
-        //{
-        //    var sql = "SELECT * FROM ThanhPho ORDER BY TenThanhPho";
-        //    var dtThanhPho = DataBase.GetData(sql);
-
-        //    //Đổ dữ liệu vô Combobox CboThanhPho 
-        //    CboThanhPho.DataSource = dtThanhPho;
-        //    CboThanhPho.DisplayMember = "TenThanhPho";
-        //    CboThanhPho.ValueMember = "MaThanhPho";
-
-        //    //Đổ dữ liệu vô Combobox bên trong DataGridView 
-        //    var DgvCboThanhPho = DgvKhachHang.Columns["MaThanhPho"] as DataGridViewComboBoxColumn;
-        //    DgvCboThanhPho.DataSource = dtThanhPho;
-        //    DgvCboThanhPho.DisplayMember = "TenThanhPho";
-        //    DgvCboThanhPho.ValueMember = "MaThanhPho";
-        //}
-
 
         void SetEnable(bool enable)
         {
@@ -175,6 +158,12 @@ namespace Nhom1_WFA_QLSV
                 return;
             }
 
+            if (int.TryParse(TxtDienThoai.Text, out _))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string ngaySinh = TxtNgaySinh.Value.ToString("yyyy-MM-dd");
 
 
@@ -260,7 +249,7 @@ namespace Nhom1_WFA_QLSV
 
         private void DgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Debug.WriteLine(CboLop.SelectedValue);
+            //if (e.RowIndex < )
             TxtMaSV.Text = DgvKhachHang.Rows[e.RowIndex].Cells["MaSV"].Value.ToString();
             TxtTenSV.Text = DgvKhachHang.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
             TxtNgaySinh.Text = DgvKhachHang.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
