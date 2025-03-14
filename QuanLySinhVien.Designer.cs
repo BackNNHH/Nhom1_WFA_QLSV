@@ -70,9 +70,9 @@
             label1.BackColor = Color.FromArgb(242, 242, 242);
             label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(18, 85);
+            label1.Location = new Point(21, 113);
             label1.Name = "label1";
-            label1.Size = new Size(48, 17);
+            label1.Size = new Size(52, 18);
             label1.TabIndex = 0;
             label1.Text = "Mã SV";
             // 
@@ -81,9 +81,10 @@
             TxtMaSV.BackColor = Color.FromArgb(242, 242, 242);
             TxtMaSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtMaSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            TxtMaSV.Location = new Point(74, 82);
+            TxtMaSV.Location = new Point(85, 109);
+            TxtMaSV.Margin = new Padding(3, 4, 3, 4);
             TxtMaSV.Name = "TxtMaSV";
-            TxtMaSV.Size = new Size(400, 24);
+            TxtMaSV.Size = new Size(457, 24);
             TxtMaSV.TabIndex = 1;
             // 
             // label2
@@ -92,9 +93,9 @@
             label2.BackColor = Color.FromArgb(242, 242, 242);
             label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(18, 114);
+            label2.Location = new Point(21, 152);
             label2.Name = "label2";
-            label2.Size = new Size(50, 17);
+            label2.Size = new Size(55, 18);
             label2.TabIndex = 0;
             label2.Text = "Tên SV";
             // 
@@ -103,9 +104,10 @@
             TxtTenSV.BackColor = Color.FromArgb(242, 242, 242);
             TxtTenSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtTenSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            TxtTenSV.Location = new Point(74, 111);
+            TxtTenSV.Location = new Point(85, 148);
+            TxtTenSV.Margin = new Padding(3, 4, 3, 4);
             TxtTenSV.Name = "TxtTenSV";
-            TxtTenSV.Size = new Size(400, 24);
+            TxtTenSV.Size = new Size(457, 24);
             TxtTenSV.TabIndex = 1;
             // 
             // label3
@@ -114,9 +116,9 @@
             label3.BackColor = Color.FromArgb(242, 242, 242);
             label3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label3.Location = new Point(18, 143);
+            label3.Location = new Point(21, 191);
             label3.Name = "label3";
-            label3.Size = new Size(49, 17);
+            label3.Size = new Size(54, 18);
             label3.TabIndex = 0;
             label3.Text = "Địa chỉ";
             // 
@@ -125,9 +127,10 @@
             TxtDiaChi.BackColor = Color.FromArgb(242, 242, 242);
             TxtDiaChi.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtDiaChi.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            TxtDiaChi.Location = new Point(74, 140);
+            TxtDiaChi.Location = new Point(85, 187);
+            TxtDiaChi.Margin = new Padding(3, 4, 3, 4);
             TxtDiaChi.Name = "TxtDiaChi";
-            TxtDiaChi.Size = new Size(400, 24);
+            TxtDiaChi.Size = new Size(457, 24);
             TxtDiaChi.TabIndex = 1;
             // 
             // TxtDienThoai
@@ -137,10 +140,11 @@
             TxtDienThoai.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtDienThoai.ForeColor = Color.FromArgb(222, 0, 0, 0);
             TxtDienThoai.ImeMode = ImeMode.NoControl;
-            TxtDienThoai.Location = new Point(569, 140);
+            TxtDienThoai.Location = new Point(650, 187);
+            TxtDienThoai.Margin = new Padding(3, 4, 3, 4);
             TxtDienThoai.MaxLength = 10;
             TxtDienThoai.Name = "TxtDienThoai";
-            TxtDienThoai.Size = new Size(225, 24);
+            TxtDienThoai.Size = new Size(257, 24);
             TxtDienThoai.TabIndex = 1;
             // 
             // label5
@@ -149,9 +153,9 @@
             label5.BackColor = Color.FromArgb(242, 242, 242);
             label5.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label5.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label5.Location = new Point(499, 146);
+            label5.Location = new Point(570, 195);
             label5.Name = "label5";
-            label5.Size = new Size(70, 17);
+            label5.Size = new Size(76, 18);
             label5.TabIndex = 0;
             label5.Text = "Điện thoại";
             // 
@@ -164,9 +168,10 @@
             BtnThem.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnThem.Image = Properties.Resources.add_user;
             BtnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnThem.Location = new Point(5, 539);
+            BtnThem.Location = new Point(6, 719);
+            BtnThem.Margin = new Padding(3, 4, 3, 4);
             BtnThem.Name = "BtnThem";
-            BtnThem.Size = new Size(100, 42);
+            BtnThem.Size = new Size(114, 56);
             BtnThem.TabIndex = 3;
             BtnThem.Text = "      Thêm";
             BtnThem.UseMnemonic = false;
@@ -181,9 +186,10 @@
             BtnSua.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnSua.Image = Properties.Resources.editing;
             BtnSua.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnSua.Location = new Point(118, 539);
+            BtnSua.Location = new Point(135, 719);
+            BtnSua.Margin = new Padding(3, 4, 3, 4);
             BtnSua.Name = "BtnSua";
-            BtnSua.Size = new Size(100, 42);
+            BtnSua.Size = new Size(114, 56);
             BtnSua.TabIndex = 3;
             BtnSua.Text = "       Sửa";
             BtnSua.UseVisualStyleBackColor = false;
@@ -197,9 +203,10 @@
             BtnLuu.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnLuu.Image = Properties.Resources.save;
             BtnLuu.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLuu.Location = new Point(224, 539);
+            BtnLuu.Location = new Point(256, 719);
+            BtnLuu.Margin = new Padding(3, 4, 3, 4);
             BtnLuu.Name = "BtnLuu";
-            BtnLuu.Size = new Size(100, 42);
+            BtnLuu.Size = new Size(114, 56);
             BtnLuu.TabIndex = 3;
             BtnLuu.Text = "      Lưu";
             BtnLuu.UseVisualStyleBackColor = false;
@@ -213,9 +220,10 @@
             BtnHuy.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnHuy.Image = Properties.Resources.cancel;
             BtnHuy.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnHuy.Location = new Point(330, 539);
+            BtnHuy.Location = new Point(377, 719);
+            BtnHuy.Margin = new Padding(3, 4, 3, 4);
             BtnHuy.Name = "BtnHuy";
-            BtnHuy.Size = new Size(100, 42);
+            BtnHuy.Size = new Size(114, 56);
             BtnHuy.TabIndex = 3;
             BtnHuy.Text = "      Hủy";
             BtnHuy.UseVisualStyleBackColor = false;
@@ -229,9 +237,10 @@
             BtnXoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnXoa.Image = Properties.Resources.user;
             BtnXoa.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnXoa.Location = new Point(436, 539);
+            BtnXoa.Location = new Point(498, 719);
+            BtnXoa.Margin = new Padding(3, 4, 3, 4);
             BtnXoa.Name = "BtnXoa";
-            BtnXoa.Size = new Size(100, 42);
+            BtnXoa.Size = new Size(114, 56);
             BtnXoa.TabIndex = 3;
             BtnXoa.Text = "        Xóa";
             BtnXoa.UseVisualStyleBackColor = false;
@@ -245,9 +254,10 @@
             BtnTaiLai.ForeColor = Color.FromArgb(222, 0, 0, 0);
             BtnTaiLai.Image = Properties.Resources.reload;
             BtnTaiLai.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnTaiLai.Location = new Point(688, 539);
+            BtnTaiLai.Location = new Point(786, 719);
+            BtnTaiLai.Margin = new Padding(3, 4, 3, 4);
             BtnTaiLai.Name = "BtnTaiLai";
-            BtnTaiLai.Size = new Size(100, 42);
+            BtnTaiLai.Size = new Size(114, 56);
             BtnTaiLai.TabIndex = 3;
             BtnTaiLai.Text = "        Tải lại";
             BtnTaiLai.UseVisualStyleBackColor = false;
@@ -263,11 +273,12 @@
             DgvKhachHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgvKhachHang.Columns.AddRange(new DataGridViewColumn[] { MaSV, HoTen, NgaySinh, GioiTInh, DiaChi, Email, SoDienThoai, MaLop });
             DgvKhachHang.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            DgvKhachHang.Location = new Point(12, 200);
+            DgvKhachHang.Location = new Point(14, 267);
+            DgvKhachHang.Margin = new Padding(3, 4, 3, 4);
             DgvKhachHang.Name = "DgvKhachHang";
             DgvKhachHang.ReadOnly = true;
             DgvKhachHang.RowHeadersWidth = 51;
-            DgvKhachHang.Size = new Size(776, 314);
+            DgvKhachHang.Size = new Size(887, 419);
             DgvKhachHang.TabIndex = 4;
             DgvKhachHang.CellContentClick += DgvKhachHang_CellContentClick;
             // 
@@ -279,7 +290,7 @@
             MaSV.MinimumWidth = 6;
             MaSV.Name = "MaSV";
             MaSV.ReadOnly = true;
-            MaSV.Width = 74;
+            MaSV.Width = 83;
             // 
             // HoTen
             // 
@@ -289,7 +300,7 @@
             HoTen.MinimumWidth = 6;
             HoTen.Name = "HoTen";
             HoTen.ReadOnly = true;
-            HoTen.Width = 76;
+            HoTen.Width = 85;
             // 
             // NgaySinh
             // 
@@ -308,7 +319,7 @@
             GioiTInh.MinimumWidth = 6;
             GioiTInh.Name = "GioiTInh";
             GioiTInh.ReadOnly = true;
-            GioiTInh.Width = 80;
+            GioiTInh.Width = 75;
             // 
             // DiaChi
             // 
@@ -345,7 +356,7 @@
             MaLop.MinimumWidth = 6;
             MaLop.Name = "MaLop";
             MaLop.ReadOnly = true;
-            MaLop.Width = 74;
+            MaLop.Width = 65;
             // 
             // label4
             // 
@@ -353,9 +364,9 @@
             label4.BackColor = Color.FromArgb(242, 242, 242);
             label4.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label4.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label4.Location = new Point(499, 85);
+            label4.Location = new Point(570, 113);
             label4.Name = "label4";
-            label4.Size = new Size(71, 17);
+            label4.Size = new Size(75, 18);
             label4.TabIndex = 0;
             label4.Text = "Ngày Sinh";
             // 
@@ -365,9 +376,9 @@
             label6.BackColor = Color.FromArgb(242, 242, 242);
             label6.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label6.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label6.Location = new Point(499, 117);
+            label6.Location = new Point(570, 156);
             label6.Name = "label6";
-            label6.Size = new Size(42, 17);
+            label6.Size = new Size(46, 18);
             label6.TabIndex = 0;
             label6.Text = "Email";
             // 
@@ -377,9 +388,10 @@
             TxtEmail.BorderStyle = BorderStyle.FixedSingle;
             TxtEmail.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtEmail.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            TxtEmail.Location = new Point(569, 111);
+            TxtEmail.Location = new Point(650, 148);
+            TxtEmail.Margin = new Padding(3, 4, 3, 4);
             TxtEmail.Name = "TxtEmail";
-            TxtEmail.Size = new Size(225, 24);
+            TxtEmail.Size = new Size(257, 24);
             TxtEmail.TabIndex = 1;
             // 
             // TxtNgaySinh
@@ -387,9 +399,10 @@
             TxtNgaySinh.BackColor = Color.FromArgb(242, 242, 242);
             TxtNgaySinh.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             TxtNgaySinh.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            TxtNgaySinh.Location = new Point(569, 82);
+            TxtNgaySinh.Location = new Point(650, 109);
+            TxtNgaySinh.Margin = new Padding(3, 4, 3, 4);
             TxtNgaySinh.Name = "TxtNgaySinh";
-            TxtNgaySinh.Size = new Size(225, 24);
+            TxtNgaySinh.Size = new Size(257, 24);
             TxtNgaySinh.TabIndex = 5;
             // 
             // radNam
@@ -399,9 +412,10 @@
             radNam.Checked = true;
             radNam.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             radNam.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            radNam.Location = new Point(76, 169);
+            radNam.Location = new Point(87, 225);
+            radNam.Margin = new Padding(3, 4, 3, 4);
             radNam.Name = "radNam";
-            radNam.Size = new Size(56, 21);
+            radNam.Size = new Size(61, 22);
             radNam.TabIndex = 6;
             radNam.TabStop = true;
             radNam.Tag = "";
@@ -414,9 +428,10 @@
             radNu.BackColor = Color.FromArgb(242, 242, 242);
             radNu.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             radNu.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            radNu.Location = new Point(133, 169);
+            radNu.Location = new Point(152, 225);
+            radNu.Margin = new Padding(3, 4, 3, 4);
             radNu.Name = "radNu";
-            radNu.Size = new Size(45, 21);
+            radNu.Size = new Size(49, 22);
             radNu.TabIndex = 6;
             radNu.Tag = "";
             radNu.Text = "Nữ";
@@ -428,9 +443,9 @@
             label7.BackColor = Color.FromArgb(242, 242, 242);
             label7.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label7.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label7.Location = new Point(18, 171);
+            label7.Location = new Point(21, 228);
             label7.Name = "label7";
-            label7.Size = new Size(65, 17);
+            label7.Size = new Size(72, 18);
             label7.TabIndex = 0;
             label7.Text = "Giới Tính:";
             // 
@@ -440,9 +455,10 @@
             CboLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             CboLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
             CboLop.FormattingEnabled = true;
-            CboLop.Location = new Point(569, 169);
+            CboLop.Location = new Point(650, 225);
+            CboLop.Margin = new Padding(3, 4, 3, 4);
             CboLop.Name = "CboLop";
-            CboLop.Size = new Size(225, 25);
+            CboLop.Size = new Size(257, 25);
             CboLop.TabIndex = 7;
             // 
             // label8
@@ -451,9 +467,9 @@
             label8.BackColor = Color.FromArgb(242, 242, 242);
             label8.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label8.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label8.Location = new Point(499, 173);
+            label8.Location = new Point(570, 231);
             label8.Name = "label8";
-            label8.Size = new Size(32, 17);
+            label8.Size = new Size(33, 18);
             label8.TabIndex = 0;
             label8.Text = "Lớp";
             // 
@@ -465,9 +481,10 @@
             btnSearch.ForeColor = Color.FromArgb(222, 0, 0, 0);
             btnSearch.Image = Properties.Resources.search;
             btnSearch.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearch.Location = new Point(582, 539);
+            btnSearch.Location = new Point(665, 719);
+            btnSearch.Margin = new Padding(3, 4, 3, 4);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(100, 42);
+            btnSearch.Size = new Size(114, 56);
             btnSearch.TabIndex = 3;
             btnSearch.Text = "         Tìm kiếm";
             btnSearch.UseVisualStyleBackColor = false;
@@ -475,9 +492,9 @@
             // 
             // QuanLySinhVien
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 593);
+            ClientSize = new Size(914, 791);
             Controls.Add(CboLop);
             Controls.Add(radNu);
             Controls.Add(radNam);
@@ -503,7 +520,9 @@
             Controls.Add(label5);
             Controls.Add(TxtMaSV);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "QuanLySinhVien";
+            Padding = new Padding(3, 85, 3, 4);
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản Lý Sinh Viên";

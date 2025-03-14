@@ -183,6 +183,7 @@
             Name = "SignIn";
             ShowIcon = false;
             Text = "SignIn";
+            FormClosing += SignIn_FormClosing;
             Load += SignIn_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

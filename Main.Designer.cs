@@ -84,6 +84,7 @@
             // 
             // nav
             // 
+            nav.AutoSize = false;
             nav.BackColor = Color.FromArgb(242, 242, 242);
             nav.Dock = DockStyle.Left;
             nav.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -93,7 +94,7 @@
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
             nav.Padding = new Padding(7, 3, 0, 3);
-            nav.Size = new Size(157, 456);
+            nav.Size = new Size(181, 456);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
@@ -185,7 +186,7 @@
             texMVP.BackColor = Color.FromArgb(255, 255, 255);
             texMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texMVP.Location = new Point(17, 14);
+            texMVP.Location = new Point(19, 17);
             texMVP.Name = "texMVP";
             texMVP.Size = new Size(137, 18);
             texMVP.TabIndex = 3;
@@ -221,10 +222,11 @@
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
             LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            LblUserName.Location = new Point(7, 85);
+            LblUserName.Location = new Point(49, 85);
             LblUserName.Name = "LblUserName";
-            LblUserName.Size = new Size(0, 18);
+            LblUserName.Size = new Size(39, 18);
             LblUserName.TabIndex = 5;
+            LblUserName.Text = "User";
             // 
             // materialCard1
             // 
@@ -362,7 +364,7 @@
             lbMVP.BackColor = Color.FromArgb(255, 255, 255);
             lbMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbMVP.Location = new Point(22, 55);
+            lbMVP.Location = new Point(19, 55);
             lbMVP.Name = "lbMVP";
             lbMVP.Size = new Size(35, 18);
             lbMVP.TabIndex = 4;
@@ -432,9 +434,9 @@
             Padding = new Padding(3, 85, 3, 4);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Trang Chủ";
+            FormClosing += Main_FormClosing;
             Load += Main_Load;
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             nav.ResumeLayout(false);
             nav.PerformLayout();
             materialCard1.ResumeLayout(false);

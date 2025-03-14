@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -30,6 +31,37 @@ namespace Nhom1_WFA_QLSV
                 if (table.Rows.Count > 0) this.Hide();
                 else texWarm.Text = "User name hoặc token không hợp lệ!";
             }
+        }
+
+        private void QuenMatkhau_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0) this.Opacity -= 0.05;
+                else
+                {
+                    timer.Stop();
+                    e.Cancel = false;
+                    this.Close();
+                }
+            };
+            timer.Start();
+        }
+
+        private void QuenMatkhau_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1) this.Opacity += 0.05;
+                else timer.Stop();
+            };
+            timer.Start();
         }
     }
 }

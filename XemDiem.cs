@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -23,6 +24,15 @@ namespace Nhom1_WFA_QLSV
 
         private void XemDiem_Load(object sender, EventArgs e)
         {
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1) this.Opacity += 0.05;
+                else timer.Stop();
+            };
+            timer.Start();
         }
 
         // Load danh sách lớp vào ComboBox
@@ -114,6 +124,24 @@ namespace Nhom1_WFA_QLSV
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+        }
+
+        private void XemDiem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0) this.Opacity -= 0.05;
+                else
+                {
+                    timer.Stop();
+                    e.Cancel = false;
+                    this.Close();
+                }
+            };
+            timer.Start();
         }
     }
 }
