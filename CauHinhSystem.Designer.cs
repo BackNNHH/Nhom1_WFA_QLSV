@@ -338,6 +338,7 @@
             Name = "CauHinhSystem";
             Padding = new Padding(3, 85, 3, 4);
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
             Load += CauHinhSystem_Load;
             groupBox1.ResumeLayout(false);

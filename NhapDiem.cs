@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -107,6 +108,37 @@ namespace Nhom1_WFA_QLSV
             {
                 MessageBox.Show("Hãy nhập mã sinh viên trước khi chọn môn!");
             }
+        }
+
+        private void NhapDiem_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0) this.Opacity -= 0.05;
+                else
+                {
+                    timer.Stop();
+                    e.Cancel = false;
+                    this.Close();
+                }
+            };
+            timer.Start();
+        }
+
+        private void NhapDiem_Load_1(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1) this.Opacity += 0.05;
+                else timer.Stop();
+            };
+            timer.Start();
         }
     }
 

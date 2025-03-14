@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Diagnostics;
+using Timer = System.Windows.Forms.Timer;
 
 namespace Nhom1_WFA_QLSV
 {
@@ -59,7 +60,33 @@ namespace Nhom1_WFA_QLSV
 
         private void SignIn_Load(object sender, EventArgs e)
         {
-            
+            this.Opacity = 0;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity < 1) this.Opacity += 0.05;
+                else timer.Stop();
+            };
+            timer.Start();
+        }
+
+        private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Timer timer = new Timer();
+            timer.Interval = 30;
+            timer.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0) this.Opacity -= 0.05;
+                else
+                {
+                    timer.Stop();
+                    e.Cancel = false;
+                    this.Close();
+                }
+            };
+            timer.Start();
         }
     }
 }
