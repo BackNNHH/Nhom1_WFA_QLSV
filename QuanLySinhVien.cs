@@ -168,7 +168,7 @@ namespace Nhom1_WFA_QLSV
                 return;
             }
 
-            if (int.TryParse(TxtDienThoai.Text, out _))
+            if (!int.TryParse(TxtDienThoai.Text, out _))
             {
                 MessageBox.Show("Số điện thoại không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -197,13 +197,17 @@ namespace Nhom1_WFA_QLSV
                     MessageBox.Show("Trùng Số Điện Thoại!", "Trùng dữ lệu!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                var sqlEdit = $"UPDATE SinhVien SET HoTen = N'{TxtTenSV.Text}', NgaySinh = '{ngaySinh}', GioiTinh = N'{GetGioiTinh()}', DiaChi = N'{TxtDiaChi.Text}', Email = '{TxtEmail.Text}', SoDienThoai = '{TxtDienThoai.Text}' WHERE MaSV = '{TxtMaSV.Text}'";
-                DataBase.SetData(sqlEdit);
+                var traLoi = MessageBox.Show($"Bạn có muốn lưu thay đổi sinh viên {TxtTenSV.Text} không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (traLoi == DialogResult.Yes)
+                {
+                    var sqlEdit = $"UPDATE SinhVien SET HoTen = N'{TxtTenSV.Text}', NgaySinh = '{ngaySinh}', GioiTinh = N'{GetGioiTinh()}', DiaChi = N'{TxtDiaChi.Text}', Email = '{TxtEmail.Text}', SoDienThoai = '{TxtDienThoai.Text}' WHERE MaSV = '{TxtMaSV.Text}'";
+                    if (DataBase.SetData(sqlEdit)) MessageBox.Show("Đã sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else MessageBox.Show("Sửa thất bại!");
+                }
                 isEdit = false;
             }
             else
             {
-                //MessageBox.Show("SAYGEX69", "SAVEHEX^(", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 if (!DataBase.UniqueCheck(TxtMaSV, "MaSV"))
                 {
                     MessageBox.Show("Trùng Mã Sinh Viên!", "Trùng dữ lệu!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -265,7 +269,14 @@ namespace Nhom1_WFA_QLSV
 
         private void DgvKhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (e.RowIndex < )
+            if (!(e.RowIndex >= 0 && e.RowIndex < DgvKhachHang.Rows.Count)) return;
+            //if (isEdit)
+            //{
+            //    var ask = MessageBox.Show($"Bạn có chắc hủy chỉnh sủa sinh viên {TxtTenSV.Text} không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //    if (ask == DialogResult.Yes) return;
+            //}
+
+
             TxtMaSV.Text = DgvKhachHang.Rows[e.RowIndex].Cells["MaSV"].Value.ToString();
             TxtTenSV.Text = DgvKhachHang.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
             TxtNgaySinh.Text = DgvKhachHang.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
