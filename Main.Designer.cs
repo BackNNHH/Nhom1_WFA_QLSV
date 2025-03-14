@@ -61,6 +61,7 @@
             materialFloatingActionButton4 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             CrdKhoa = new MaterialSkin.Controls.MaterialCard();
             lbKhoa = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             nav.SuspendLayout();
             CrdSv.SuspendLayout();
@@ -92,7 +93,8 @@
             nav.Items.AddRange(new ToolStripItem[] { navQLSV, navNhapDiem, navXemDiem, navSystem });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
-            nav.Size = new Size(158, 342);
+            nav.RenderMode = ToolStripRenderMode.Professional;
+            nav.Size = new Size(148, 342);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
@@ -220,7 +222,7 @@
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
             LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            LblUserName.Location = new Point(43, 64);
+            LblUserName.Location = new Point(69, 64);
             LblUserName.Name = "LblUserName";
             LblUserName.Size = new Size(36, 17);
             LblUserName.TabIndex = 5;
@@ -415,6 +417,18 @@
             lbKhoa.TabIndex = 4;
             lbKhoa.Text = "N/A";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(242, 242, 242);
+            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            label1.Location = new Point(6, 64);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 17);
+            label1.TabIndex = 5;
+            label1.Text = "Welcome ";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -429,6 +443,7 @@
             Controls.Add(chartScores);
             Controls.Add(materialFloatingActionButton1);
             Controls.Add(CrdSv);
+            Controls.Add(label1);
             Controls.Add(LblUserName);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -483,5 +498,6 @@
         private Label lbLop;
         private Label lbMVP;
         private Label lbKhoa;
+        private Label label1;
     }
 }
