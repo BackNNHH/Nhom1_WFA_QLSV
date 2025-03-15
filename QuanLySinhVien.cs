@@ -170,7 +170,13 @@ namespace Nhom1_WFA_QLSV
         {
             if (string.IsNullOrEmpty(TxtMaSV.Text) || string.IsNullOrEmpty(TxtTenSV.Text) || string.IsNullOrEmpty(TxtNgaySinh.Text) || string.IsNullOrEmpty(TxtDiaChi.Text) || string.IsNullOrEmpty(TxtEmail.Text) || string.IsNullOrEmpty(TxtDienThoai.Text))
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin", "Thiếu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string war = "";
+                if (string.IsNullOrEmpty(TxtMaSV.Text)) war += " Mã SV,";
+                if (string.IsNullOrEmpty(TxtTenSV.Text)) war += " Tên SV,";
+                if (string.IsNullOrEmpty(TxtDiaChi.Text)) war += " Địa chỉ,";
+                if (string.IsNullOrEmpty(TxtEmail.Text) ) war += " Email,";
+                if (string.IsNullOrEmpty(TxtDienThoai.Text)) war += " Điện thoại,";
+                MessageBox.Show("Vui lòng điền đủ thông tin\n"+war, "Thiếu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

@@ -308,7 +308,7 @@
             GioiTInh.MinimumWidth = 6;
             GioiTInh.Name = "GioiTInh";
             GioiTInh.ReadOnly = true;
-            GioiTInh.Width = 87;
+            GioiTInh.Width = 80;
             // 
             // DiaChi
             // 
@@ -345,7 +345,7 @@
             MaLop.MinimumWidth = 6;
             MaLop.Name = "MaLop";
             MaLop.ReadOnly = true;
-            MaLop.Width = 80;
+            MaLop.Width = 74;
             // 
             // label4
             // 
