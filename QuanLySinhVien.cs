@@ -34,6 +34,7 @@ namespace Nhom1_WFA_QLSV
                 else timer.Stop();
             };
             timer.Start();
+            lbtMode.Text = "";
             //LoadThanhPho();
             LoadKhachHang();
             SetEnable(false);
@@ -78,6 +79,7 @@ namespace Nhom1_WFA_QLSV
         //}
         private void BtnThem_Click(object sender, EventArgs e)
         {
+            lbtMode.Text = "Bạn đang ở chế độ THÊM!";
             SetEnable(true);
             isEdit = false;
             //xóa giá trị đang nhập 
@@ -96,6 +98,7 @@ namespace Nhom1_WFA_QLSV
 
         private void BtnSua_Click(object sender, EventArgs e)
         {
+            lbtMode.Text = "Bạn đang ở chế độ SỬA!";
             SetEnable(true);
             isEdit = true;
             TxtMaSV.Enabled = false;
@@ -141,6 +144,7 @@ namespace Nhom1_WFA_QLSV
             {
                 isSearch = true;
                 BtnThem_Click(sender, e);
+                lbtMode.Text = "Bạn đang ở chế độ TÌM KIẾM!";
                 SetEnable(true);
                 TxtNgaySinh.Enabled = false;
                 BtnThem.Enabled = false;
@@ -234,6 +238,7 @@ namespace Nhom1_WFA_QLSV
 
         private void BtnHuy_Click(object sender, EventArgs e)
         {
+            lbtMode.Text = "";
             isEdit = true;
             isSearch = false;
             this.SetEnable(false); // Không cho phép sửa thông tin trên form
