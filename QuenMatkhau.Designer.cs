@@ -42,19 +42,20 @@
             // txtPass
             // 
             txtPass.BorderStyle = BorderStyle.FixedSingle;
-            txtPass.Location = new Point(98, 201);
+            txtPass.Location = new Point(112, 268);
+            txtPass.Margin = new Padding(3, 4, 3, 4);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(274, 23);
-            txtPass.TabIndex = 3;
+            txtPass.Size = new Size(313, 27);
+            txtPass.TabIndex = 2;
             // 
             // texWarm
             // 
             texWarm.AutoSize = true;
             texWarm.Font = new Font("Segoe UI", 10F);
             texWarm.ForeColor = Color.Red;
-            texWarm.Location = new Point(12, 241);
+            texWarm.Location = new Point(14, 321);
             texWarm.Name = "texWarm";
-            texWarm.Size = new Size(156, 19);
+            texWarm.Size = new Size(194, 23);
             texWarm.TabIndex = 1;
             texWarm.Text = "Vui lòng nhập thông tin";
             // 
@@ -62,45 +63,47 @@
             // 
             labelPass.AutoSize = true;
             labelPass.Font = new Font("Segoe UI", 10F);
-            labelPass.Location = new Point(60, 179);
+            labelPass.Location = new Point(69, 239);
             labelPass.Name = "labelPass";
-            labelPass.Size = new Size(101, 19);
+            labelPass.Size = new Size(123, 23);
             labelPass.TabIndex = 1;
             labelPass.Text = "New Password:";
             // 
             // txtToken
             // 
             txtToken.BorderStyle = BorderStyle.FixedSingle;
-            txtToken.Location = new Point(98, 148);
+            txtToken.Location = new Point(112, 197);
+            txtToken.Margin = new Padding(3, 4, 3, 4);
             txtToken.Name = "txtToken";
-            txtToken.Size = new Size(274, 23);
+            txtToken.Size = new Size(313, 27);
             txtToken.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(60, 126);
+            label1.Location = new Point(69, 168);
             label1.Name = "label1";
-            label1.Size = new Size(48, 19);
+            label1.Size = new Size(58, 23);
             label1.TabIndex = 1;
             label1.Text = "Token:";
             // 
             // txtUserName
             // 
             txtUserName.BorderStyle = BorderStyle.FixedSingle;
-            txtUserName.Location = new Point(98, 93);
+            txtUserName.Location = new Point(112, 124);
+            txtUserName.Margin = new Padding(3, 4, 3, 4);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(274, 23);
-            txtUserName.TabIndex = 1;
+            txtUserName.Size = new Size(313, 27);
+            txtUserName.TabIndex = 2;
             // 
             // labelTen
             // 
             labelTen.AutoSize = true;
             labelTen.Font = new Font("Segoe UI", 10F);
-            labelTen.Location = new Point(60, 71);
+            labelTen.Location = new Point(69, 95);
             labelTen.Name = "labelTen";
-            labelTen.Size = new Size(80, 19);
+            labelTen.Size = new Size(99, 23);
             labelTen.TabIndex = 1;
             labelTen.Text = "User Name:";
             // 
@@ -110,9 +113,9 @@
             title.AutoSize = true;
             title.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             title.ForeColor = SystemColors.HotTrack;
-            title.Location = new Point(131, 9);
+            title.Location = new Point(150, 12);
             title.Name = "title";
-            title.Size = new Size(199, 32);
+            title.Size = new Size(245, 41);
             title.TabIndex = 0;
             title.Text = "Quên Mật  Khẩu";
             title.TextAlign = ContentAlignment.MiddleCenter;
@@ -124,9 +127,10 @@
             button1.AutoSize = true;
             button1.BackColor = SystemColors.GradientActiveCaption;
             button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(98, 263);
+            button1.Location = new Point(112, 351);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(271, 39);
+            button1.Size = new Size(310, 52);
             button1.TabIndex = 4;
             button1.Text = "Đăng nhập";
             button1.UseVisualStyleBackColor = false;
@@ -134,9 +138,9 @@
             // 
             // QuenMatkhau
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(463, 315);
+            ClientSize = new Size(529, 420);
             Controls.Add(button1);
             Controls.Add(txtPass);
             Controls.Add(title);
@@ -146,6 +150,7 @@
             Controls.Add(txtUserName);
             Controls.Add(txtToken);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "QuenMatkhau";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
