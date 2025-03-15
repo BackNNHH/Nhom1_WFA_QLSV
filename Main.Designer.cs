@@ -225,11 +225,11 @@
             // 
             LblUserName.AutoSize = true;
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
-            LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            LblUserName.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
             LblUserName.Location = new Point(90, 82);
             LblUserName.Name = "LblUserName";
-            LblUserName.Size = new Size(36, 17);
+            LblUserName.Size = new Size(39, 18);
             LblUserName.TabIndex = 5;
             LblUserName.Text = "User";
             // 
@@ -424,12 +424,13 @@
             // 
             // label1
             // 
+            label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(242, 242, 242);
-            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(27, 82);
+            label1.Location = new Point(32, 118);
             label1.Name = "label1";
-            label1.Size = new Size(66, 14);
+            label1.Size = new Size(75, 18);
             label1.TabIndex = 5;
             label1.Text = "Welcome ";
             // 

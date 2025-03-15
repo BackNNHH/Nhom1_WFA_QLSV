@@ -109,7 +109,7 @@
             TxtTenSV.Margin = new Padding(3, 4, 3, 4);
             TxtTenSV.Name = "TxtTenSV";
             TxtTenSV.Size = new Size(457, 24);
-            TxtTenSV.TabIndex = 1;
+            TxtTenSV.TabIndex = 3;
             // 
             // label3
             // 
@@ -132,7 +132,7 @@
             TxtDiaChi.Margin = new Padding(3, 4, 3, 4);
             TxtDiaChi.Name = "TxtDiaChi";
             TxtDiaChi.Size = new Size(457, 24);
-            TxtDiaChi.TabIndex = 1;
+            TxtDiaChi.TabIndex = 5;
             // 
             // TxtDienThoai
             // 
@@ -146,7 +146,7 @@
             TxtDienThoai.MaxLength = 10;
             TxtDienThoai.Name = "TxtDienThoai";
             TxtDienThoai.Size = new Size(257, 24);
-            TxtDienThoai.TabIndex = 1;
+            TxtDienThoai.TabIndex = 6;
             // 
             // label5
             // 
@@ -173,7 +173,7 @@
             BtnThem.Margin = new Padding(3, 4, 3, 4);
             BtnThem.Name = "BtnThem";
             BtnThem.Size = new Size(114, 56);
-            BtnThem.TabIndex = 3;
+            BtnThem.TabIndex = 10;
             BtnThem.Text = "      Thêm";
             BtnThem.UseMnemonic = false;
             BtnThem.UseVisualStyleBackColor = false;
@@ -191,7 +191,7 @@
             BtnSua.Margin = new Padding(3, 4, 3, 4);
             BtnSua.Name = "BtnSua";
             BtnSua.Size = new Size(114, 56);
-            BtnSua.TabIndex = 3;
+            BtnSua.TabIndex = 11;
             BtnSua.Text = "       Sửa";
             BtnSua.UseVisualStyleBackColor = false;
             BtnSua.Click += BtnSua_Click;
@@ -208,7 +208,7 @@
             BtnLuu.Margin = new Padding(3, 4, 3, 4);
             BtnLuu.Name = "BtnLuu";
             BtnLuu.Size = new Size(114, 56);
-            BtnLuu.TabIndex = 3;
+            BtnLuu.TabIndex = 12;
             BtnLuu.Text = "      Lưu";
             BtnLuu.UseVisualStyleBackColor = false;
             BtnLuu.Click += BtnLuu_Click;
@@ -225,7 +225,7 @@
             BtnHuy.Margin = new Padding(3, 4, 3, 4);
             BtnHuy.Name = "BtnHuy";
             BtnHuy.Size = new Size(114, 56);
-            BtnHuy.TabIndex = 3;
+            BtnHuy.TabIndex = 13;
             BtnHuy.Text = "      Hủy";
             BtnHuy.UseVisualStyleBackColor = false;
             BtnHuy.Click += BtnHuy_Click;
@@ -242,7 +242,7 @@
             BtnXoa.Margin = new Padding(3, 4, 3, 4);
             BtnXoa.Name = "BtnXoa";
             BtnXoa.Size = new Size(114, 56);
-            BtnXoa.TabIndex = 3;
+            BtnXoa.TabIndex = 14;
             BtnXoa.Text = "        Xóa";
             BtnXoa.UseVisualStyleBackColor = false;
             BtnXoa.Click += BtnXoa_Click;
@@ -259,7 +259,7 @@
             BtnTaiLai.Margin = new Padding(3, 4, 3, 4);
             BtnTaiLai.Name = "BtnTaiLai";
             BtnTaiLai.Size = new Size(114, 56);
-            BtnTaiLai.TabIndex = 3;
+            BtnTaiLai.TabIndex = 16;
             BtnTaiLai.Text = "        Tải lại";
             BtnTaiLai.UseVisualStyleBackColor = false;
             BtnTaiLai.Click += BtnTaiLai_Click;
@@ -280,7 +280,7 @@
             DgvKhachHang.ReadOnly = true;
             DgvKhachHang.RowHeadersWidth = 51;
             DgvKhachHang.Size = new Size(887, 419);
-            DgvKhachHang.TabIndex = 4;
+            DgvKhachHang.TabIndex = 17;
             DgvKhachHang.CellContentClick += DgvKhachHang_CellContentClick;
             // 
             // MaSV
@@ -393,7 +393,7 @@
             TxtEmail.Margin = new Padding(3, 4, 3, 4);
             TxtEmail.Name = "TxtEmail";
             TxtEmail.Size = new Size(257, 24);
-            TxtEmail.TabIndex = 1;
+            TxtEmail.TabIndex = 4;
             // 
             // TxtNgaySinh
             // 
@@ -404,7 +404,7 @@
             TxtNgaySinh.Margin = new Padding(3, 4, 3, 4);
             TxtNgaySinh.Name = "TxtNgaySinh";
             TxtNgaySinh.Size = new Size(257, 24);
-            TxtNgaySinh.TabIndex = 5;
+            TxtNgaySinh.TabIndex = 2;
             // 
             // radNam
             // 
@@ -417,7 +417,7 @@
             radNam.Margin = new Padding(3, 4, 3, 4);
             radNam.Name = "radNam";
             radNam.Size = new Size(61, 22);
-            radNam.TabIndex = 6;
+            radNam.TabIndex = 7;
             radNam.TabStop = true;
             radNam.Tag = "";
             radNam.Text = "Nam";
@@ -433,7 +433,7 @@
             radNu.Margin = new Padding(3, 4, 3, 4);
             radNu.Name = "radNu";
             radNu.Size = new Size(49, 22);
-            radNu.TabIndex = 6;
+            radNu.TabIndex = 8;
             radNu.Tag = "";
             radNu.Text = "Nữ";
             radNu.UseVisualStyleBackColor = false;
@@ -460,7 +460,7 @@
             CboLop.Margin = new Padding(3, 4, 3, 4);
             CboLop.Name = "CboLop";
             CboLop.Size = new Size(257, 25);
-            CboLop.TabIndex = 7;
+            CboLop.TabIndex = 9;
             // 
             // label8
             // 
@@ -486,7 +486,7 @@
             btnSearch.Margin = new Padding(3, 4, 3, 4);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(114, 56);
-            btnSearch.TabIndex = 3;
+            btnSearch.TabIndex = 15;
             btnSearch.Text = "         Tìm kiếm";
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
