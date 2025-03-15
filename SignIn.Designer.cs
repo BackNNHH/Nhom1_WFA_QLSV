@@ -78,6 +78,7 @@
             txtPass.BorderStyle = BorderStyle.FixedSingle;
             txtPass.Location = new Point(86, 163);
             txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
             txtPass.Size = new Size(274, 23);
             txtPass.TabIndex = 2;
             // 

@@ -480,9 +480,8 @@
             lbtMode.ForeColor = Color.FromArgb(222, 0, 0, 0);
             lbtMode.Location = new Point(18, 517);
             lbtMode.Name = "lbtMode";
-            lbtMode.Size = new Size(412, 19);
+            lbtMode.Size = new Size(770, 19);
             lbtMode.TabIndex = 8;
-            lbtMode.Text = "you are";
             // 
             // QuanLySinhVien
             // 
