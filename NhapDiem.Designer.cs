@@ -45,6 +45,8 @@
             lbGK = new Label();
             lbCK = new Label();
             lbMSSV = new Label();
+            textName = new TextBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // txtDiemTX
@@ -53,7 +55,7 @@
             txtDiemTX.BorderStyle = BorderStyle.FixedSingle;
             txtDiemTX.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtDiemTX.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtDiemTX.Location = new Point(269, 154);
+            txtDiemTX.Location = new Point(269, 203);
             txtDiemTX.Name = "txtDiemTX";
             txtDiemTX.Size = new Size(405, 24);
             txtDiemTX.TabIndex = 3;
@@ -65,7 +67,7 @@
             label2.BackColor = Color.FromArgb(242, 242, 242);
             label2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label2.Location = new Point(87, 88);
+            label2.Location = new Point(194, 93);
             label2.Name = "label2";
             label2.Size = new Size(49, 18);
             label2.TabIndex = 3;
@@ -77,7 +79,7 @@
             label3.BackColor = Color.FromArgb(242, 242, 242);
             label3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label3.Location = new Point(473, 88);
+            label3.Location = new Point(194, 154);
             label3.Name = "label3";
             label3.Size = new Size(38, 18);
             label3.TabIndex = 4;
@@ -89,10 +91,10 @@
             cbMonHoc.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             cbMonHoc.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cbMonHoc.FormattingEnabled = true;
-            cbMonHoc.Location = new Point(531, 85);
+            cbMonHoc.Location = new Point(269, 151);
             cbMonHoc.Margin = new Padding(3, 4, 3, 4);
             cbMonHoc.Name = "cbMonHoc";
-            cbMonHoc.Size = new Size(191, 25);
+            cbMonHoc.Size = new Size(405, 25);
             cbMonHoc.TabIndex = 2;
             // 
             // txtMSSV
@@ -101,7 +103,7 @@
             txtMSSV.BorderStyle = BorderStyle.FixedSingle;
             txtMSSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtMSSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtMSSV.Location = new Point(162, 86);
+            txtMSSV.Location = new Point(269, 90);
             txtMSSV.Margin = new Padding(3, 4, 3, 4);
             txtMSSV.Name = "txtMSSV";
             txtMSSV.Size = new Size(134, 24);
@@ -114,7 +116,7 @@
             label4.BackColor = Color.FromArgb(242, 242, 242);
             label4.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label4.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label4.Location = new Point(99, 160);
+            label4.Location = new Point(99, 206);
             label4.Name = "label4";
             label4.Size = new Size(142, 18);
             label4.TabIndex = 7;
@@ -126,7 +128,7 @@
             label5.BackColor = Color.FromArgb(242, 242, 242);
             label5.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label5.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label5.Location = new Point(145, 219);
+            label5.Location = new Point(145, 261);
             label5.Name = "label5";
             label5.Size = new Size(95, 18);
             label5.TabIndex = 8;
@@ -138,7 +140,7 @@
             txtDiemGK.BorderStyle = BorderStyle.FixedSingle;
             txtDiemGK.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtDiemGK.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtDiemGK.Location = new Point(269, 217);
+            txtDiemGK.Location = new Point(269, 258);
             txtDiemGK.Name = "txtDiemGK";
             txtDiemGK.Size = new Size(405, 24);
             txtDiemGK.TabIndex = 4;
@@ -150,7 +152,7 @@
             label6.BackColor = Color.FromArgb(242, 242, 242);
             label6.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label6.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label6.Location = new Point(147, 289);
+            label6.Location = new Point(147, 328);
             label6.Name = "label6";
             label6.Size = new Size(94, 18);
             label6.TabIndex = 10;
@@ -162,7 +164,7 @@
             txtDiemCK.BorderStyle = BorderStyle.FixedSingle;
             txtDiemCK.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtDiemCK.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            txtDiemCK.Location = new Point(269, 283);
+            txtDiemCK.Location = new Point(269, 325);
             txtDiemCK.Name = "txtDiemCK";
             txtDiemCK.Size = new Size(405, 24);
             txtDiemCK.TabIndex = 5;
@@ -175,7 +177,7 @@
             btnLuu.ForeColor = Color.FromArgb(222, 0, 0, 0);
             btnLuu.Image = Properties.Resources.save;
             btnLuu.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLuu.Location = new Point(162, 412);
+            btnLuu.Location = new Point(269, 403);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(166, 61);
             btnLuu.TabIndex = 6;
@@ -190,7 +192,7 @@
             btnThoat.ForeColor = Color.FromArgb(222, 0, 0, 0);
             btnThoat.Image = Properties.Resources.cancel;
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThoat.Location = new Point(428, 412);
+            btnThoat.Location = new Point(508, 403);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(166, 61);
             btnThoat.TabIndex = 7;
@@ -215,7 +217,7 @@
             lbTX.BackColor = Color.FromArgb(242, 242, 242);
             lbTX.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbTX.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbTX.Location = new Point(269, 181);
+            lbTX.Location = new Point(269, 230);
             lbTX.Name = "lbTX";
             lbTX.Size = new Size(0, 18);
             lbTX.TabIndex = 14;
@@ -226,7 +228,7 @@
             lbGK.BackColor = Color.FromArgb(242, 242, 242);
             lbGK.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbGK.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbGK.Location = new Point(269, 244);
+            lbGK.Location = new Point(269, 285);
             lbGK.Name = "lbGK";
             lbGK.Size = new Size(0, 18);
             lbGK.TabIndex = 15;
@@ -237,7 +239,7 @@
             lbCK.BackColor = Color.FromArgb(242, 242, 242);
             lbCK.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbCK.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbCK.Location = new Point(269, 310);
+            lbCK.Location = new Point(269, 352);
             lbCK.Name = "lbCK";
             lbCK.Size = new Size(0, 18);
             lbCK.TabIndex = 16;
@@ -245,35 +247,62 @@
             // lbMSSV
             // 
             lbMSSV.AutoSize = true;
-            lbMSSV.BackColor = Color.FromArgb(242, 242, 242);
+            lbMSSV.BackColor = Color.Transparent;
             lbMSSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbMSSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbMSSV.Location = new Point(162, 114);
+            lbMSSV.Location = new Point(269, 118);
             lbMSSV.Name = "lbMSSV";
             lbMSSV.Size = new Size(0, 18);
             lbMSSV.TabIndex = 17;
+            // 
+            // textName
+            // 
+            textName.BackColor = Color.FromArgb(242, 242, 242);
+            textName.BorderStyle = BorderStyle.FixedSingle;
+            textName.Enabled = false;
+            textName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            textName.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            textName.Location = new Point(508, 91);
+            textName.Margin = new Padding(3, 4, 3, 4);
+            textName.Name = "textName";
+            textName.Size = new Size(166, 24);
+            textName.TabIndex = 18;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.FromArgb(242, 242, 242);
+            label7.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label7.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            label7.Location = new Point(465, 94);
+            label7.Name = "label7";
+            label7.Size = new Size(32, 18);
+            label7.TabIndex = 19;
+            label7.Text = "Tên";
             // 
             // NhapDiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 493);
+            Controls.Add(textName);
+            Controls.Add(label7);
+            Controls.Add(lbTX);
+            Controls.Add(label4);
+            Controls.Add(txtDiemTX);
             Controls.Add(lbMSSV);
             Controls.Add(lbCK);
             Controls.Add(lbGK);
-            Controls.Add(lbTX);
             Controls.Add(btnThoat);
             Controls.Add(btnLuu);
             Controls.Add(txtDiemCK);
             Controls.Add(label6);
             Controls.Add(txtDiemGK);
             Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(txtMSSV);
             Controls.Add(cbMonHoc);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(txtDiemTX);
             Name = "NhapDiem";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Nhập Điểm";
@@ -301,5 +330,7 @@
         private Label lbGK;
         private Label lbCK;
         private Label lbMSSV;
+        private TextBox textName;
+        private Label label7;
     }
 }

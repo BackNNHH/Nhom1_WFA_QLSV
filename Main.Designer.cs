@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             panel1 = new Panel();
             nav = new MenuStrip();
@@ -226,11 +226,11 @@
             // 
             LblUserName.AutoSize = true;
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
-            LblUserName.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
             LblUserName.Location = new Point(103, 102);
             LblUserName.Name = "LblUserName";
-            LblUserName.Size = new Size(40, 18);
+            LblUserName.Size = new Size(39, 18);
             LblUserName.TabIndex = 5;
             LblUserName.Text = "User";
             // 
@@ -279,16 +279,16 @@
             // chartScores
             // 
             chartScores.BackColor = Color.FromArgb(242, 242, 242);
-            chartArea1.Name = "ChartArea1";
-            chartScores.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chartScores.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            chartScores.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chartScores.Legends.Add(legend2);
             chartScores.Location = new Point(174, 391);
             chartScores.Name = "chartScores";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartScores.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chartScores.Series.Add(series2);
             chartScores.Size = new Size(717, 267);
             chartScores.TabIndex = 8;
             // 
@@ -422,11 +422,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(242, 242, 242);
-            label1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             label1.Location = new Point(31, 102);
             label1.Name = "label1";
-            label1.Size = new Size(76, 18);
+            label1.Size = new Size(75, 18);
             label1.TabIndex = 5;
             label1.Text = "Welcome ";
             // 
