@@ -339,7 +339,7 @@
             Padding = new Padding(3, 85, 3, 4);
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " ";
+            Text = " Cấu Hình Hệ Thống";
             Load += CauHinhSystem_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
