@@ -45,8 +45,9 @@
             lbGK = new Label();
             lbCK = new Label();
             lbMSSV = new Label();
-            textName = new TextBox();
+            txtName = new TextBox();
             label7 = new Label();
+            lbMon = new Label();
             SuspendLayout();
             // 
             // txtDiemTX
@@ -96,6 +97,7 @@
             cbMonHoc.Name = "cbMonHoc";
             cbMonHoc.Size = new Size(405, 25);
             cbMonHoc.TabIndex = 2;
+            cbMonHoc.SelectedValueChanged += cbMonHoc_SelectedValueChanged;
             // 
             // txtMSSV
             // 
@@ -247,7 +249,7 @@
             // lbMSSV
             // 
             lbMSSV.AutoSize = true;
-            lbMSSV.BackColor = Color.Transparent;
+            lbMSSV.BackColor = Color.FromArgb(242, 242, 242);
             lbMSSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbMSSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
             lbMSSV.Location = new Point(269, 118);
@@ -255,18 +257,18 @@
             lbMSSV.Size = new Size(0, 18);
             lbMSSV.TabIndex = 17;
             // 
-            // textName
+            // txtName
             // 
-            textName.BackColor = Color.FromArgb(242, 242, 242);
-            textName.BorderStyle = BorderStyle.FixedSingle;
-            textName.Enabled = false;
-            textName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            textName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            textName.Location = new Point(508, 91);
-            textName.Margin = new Padding(3, 4, 3, 4);
-            textName.Name = "textName";
-            textName.Size = new Size(166, 24);
-            textName.TabIndex = 18;
+            txtName.BackColor = Color.FromArgb(242, 242, 242);
+            txtName.BorderStyle = BorderStyle.FixedSingle;
+            txtName.Enabled = false;
+            txtName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtName.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            txtName.Location = new Point(508, 91);
+            txtName.Margin = new Padding(3, 4, 3, 4);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(166, 24);
+            txtName.TabIndex = 18;
             // 
             // label7
             // 
@@ -280,12 +282,24 @@
             label7.TabIndex = 19;
             label7.Text = "Tên";
             // 
+            // lbMon
+            // 
+            lbMon.AutoSize = true;
+            lbMon.BackColor = Color.FromArgb(242, 242, 242);
+            lbMon.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbMon.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lbMon.Location = new Point(268, 179);
+            lbMon.Name = "lbMon";
+            lbMon.Size = new Size(0, 18);
+            lbMon.TabIndex = 20;
+            // 
             // NhapDiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 493);
-            Controls.Add(textName);
+            Controls.Add(lbMon);
+            Controls.Add(txtName);
             Controls.Add(label7);
             Controls.Add(lbTX);
             Controls.Add(label4);
@@ -330,7 +344,8 @@
         private Label lbGK;
         private Label lbCK;
         private Label lbMSSV;
-        private TextBox textName;
+        private TextBox txtName;
         private Label label7;
+        private Label lbMon;
     }
 }

@@ -82,10 +82,11 @@ namespace Nhom1_WFA_QLSV
             }
 
             // Nếu bất kỳ giá trị nào không hợp lệ, dừng lại
-            if (DiemTXIsValid ||
-                DiemGKIsValid ||
-                DiemCKIsValid)
+            if (!DiemTXIsValid ||
+                !DiemGKIsValid ||
+                !DiemCKIsValid)
             {
+                MessageBox.Show("Có lỗi không thể lưu mời bạn xem lại!");
                 return;
             }
             else
@@ -110,6 +111,13 @@ namespace Nhom1_WFA_QLSV
                 }
 
                 MessageBox.Show("Lưu điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtDiemTX.Text = " ";
+                txtDiemGK.Text = " ";
+                txtDiemCK.Text = " ";
+                txtDiemTX.Enabled = false;
+                txtDiemGK.Enabled = false;
+                txtDiemCK.Enabled = false;
             }
         }
 
@@ -121,10 +129,8 @@ namespace Nhom1_WFA_QLSV
             {
                 if (IsDataExist(mssv))
                 {
-                    txtDiemTX.Enabled = true;
-                    txtDiemGK.Enabled = true;
-                    txtDiemCK.Enabled = true;
                     lbMSSV.Text = "";
+                    txtName.Text = GetStudentName(mssv);
                     LoadMonHocTheoSinhVien(mssv);
                 }
                 else
@@ -137,6 +143,27 @@ namespace Nhom1_WFA_QLSV
             {
 
             }
+        }
+
+        static string GetStudentName(string studentId)
+        {
+            string name = null;
+            string query = "SELECT HoTen FROM SinhVien WHERE MaSV = @StudentID";
+
+            using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@StudentID", studentId);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        name = result.ToString();
+                    }
+                }
+            }
+            return name;
         }
 
         private bool IsDataExist(string studentID)
@@ -153,19 +180,20 @@ namespace Nhom1_WFA_QLSV
             }
         }
 
-        private bool DiemIsCompleted(string studentID)
+        private bool DiemIsCompleted(string studentID, string monhoc)
         {
             using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
             {
-                string query = "SELECT COUNT(*) FROM SinhVien WHERE MaSV = @MaSV";
+                string query = "SELECT 1 FROM Diem WHERE MaSV = @MaSV AND TenMon = @MonHoc";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@MaSV", studentID);
+                cmd.Parameters.AddWithValue("@MonHoc", monhoc);
 
                 conn.Open();
-                int count = (int)cmd.ExecuteScalar();
-                return count > 0;
+                return cmd.ExecuteScalar() != null;
             }
         }
+
 
 
         private bool DiemIsValid(float diem, Label lb)
@@ -245,6 +273,32 @@ namespace Nhom1_WFA_QLSV
             }
         }
 
+        private void cbMonHoc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string id = txtMSSV.Text.Trim();
+            string monHoc = cbMonHoc.Text.Trim();
+
+            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(monHoc))
+            {
+                return;
+            }
+
+            if (!DiemIsCompleted(id, monHoc))
+            {
+                txtDiemTX.Enabled = true;
+                txtDiemGK.Enabled = true;
+                txtDiemCK.Enabled = true;
+                lbMon.Text = "Điểm môn này đã được nhập!";
+                lbMon.ForeColor = Color.Red;
+            }
+            else
+            {
+                txtDiemTX.Enabled = false;
+                txtDiemGK.Enabled = false;
+                txtDiemCK.Enabled = false;
+                lbMon.Text = "";
+            }
+        }
     }
 }
 

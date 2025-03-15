@@ -213,5 +213,9 @@ namespace Nhom1_WFA_QLSV
             timer.Start();
         }
 
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
