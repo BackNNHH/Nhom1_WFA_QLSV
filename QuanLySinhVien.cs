@@ -273,7 +273,7 @@ namespace Nhom1_WFA_QLSV
         private void BtnHuy_Click(object sender, EventArgs e)
         {
             lbtMode.Text = "";
-            isEdit = true;
+            isEdit = false;
             isSearch = false;
             this.SetEnable(false); // Không cho phép sửa thông tin trên form
         }
@@ -340,7 +340,7 @@ namespace Nhom1_WFA_QLSV
             }
             CboLop.SelectedValue = DgvKhachHang.Rows[e.RowIndex].Cells["MaLop"].Value;
             //TxtMaLop.Text = DgvKhachHang.Rows[e.RowIndex].Cells["MaLop"].Value.ToString();
-            if (!isSearch || isEdit)
+            //if (!isSearch)
                 this.SetEnable(false); // Không cho phép sửa thông tin trên form
         }
 
