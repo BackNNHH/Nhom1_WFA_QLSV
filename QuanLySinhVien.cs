@@ -193,7 +193,6 @@ namespace Nhom1_WFA_QLSV
             if (IsNOE(TxtMaSV) || IsNOE(TxtTenSV) || string.IsNullOrEmpty(TxtNgaySinh.Text) || IsNOE(TxtDiaChi) || IsNOE(TxtEmail) || IsNOE(TxtDienThoai))
             {
                 string war = "";
-
                 if (IsNOE(label1, TxtMaSV)) war += " Mã SV,";
                 if (IsNOE(label2, TxtTenSV)) war += " Tên SV,";
                 if (IsNOE(label3, TxtDiaChi)) war += " Địa chỉ,";
@@ -291,7 +290,7 @@ namespace Nhom1_WFA_QLSV
             if (traLoi == DialogResult.Yes)
             {
                 var sqlDelete = $"DELETE FROM SinhVien WHERE MaSV = '{TxtMaSV.Text}'";
-                if (DataBase.SetData(sqlDelete)) LoadKhachHang();
+                if (DataBase.SetData(sqlDelete)) { LoadKhachHang(); MessageBox.Show("Xóa thành công!"); }
                 else MessageBox.Show("Xóa không thành công!");
             }
         }
@@ -341,7 +340,7 @@ namespace Nhom1_WFA_QLSV
             }
             CboLop.SelectedValue = DgvKhachHang.Rows[e.RowIndex].Cells["MaLop"].Value;
             //TxtMaLop.Text = DgvKhachHang.Rows[e.RowIndex].Cells["MaLop"].Value.ToString();
-            if (!isSearch)
+            if (!isSearch || isEdit)
                 this.SetEnable(false); // Không cho phép sửa thông tin trên form
         }
 
