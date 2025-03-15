@@ -61,6 +61,7 @@
             CboLop = new ComboBox();
             label8 = new Label();
             btnSearch = new Button();
+            lbtMode = new Label();
             ((System.ComponentModel.ISupportInitialize)DgvKhachHang).BeginInit();
             SuspendLayout();
             // 
@@ -475,7 +476,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSearch.BackColor = Color.FromArgb(242, 242, 242);
             btnSearch.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             btnSearch.ForeColor = Color.FromArgb(222, 0, 0, 0);
@@ -490,11 +491,23 @@
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
+            // lbtMode
+            // 
+            lbtMode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lbtMode.BackColor = Color.White;
+            lbtMode.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbtMode.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lbtMode.Location = new Point(18, 517);
+            lbtMode.Name = "lbtMode";
+            lbtMode.Size = new Size(412, 19);
+            lbtMode.TabIndex = 8;
+            lbtMode.Text = "you are";
+            // 
             // QuanLySinhVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 791);
+            ClientSize = new Size(800, 593);
             Controls.Add(CboLop);
             Controls.Add(radNu);
             Controls.Add(radNam);
@@ -572,5 +585,6 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn SoDienThoai;
         private DataGridViewTextBoxColumn MaLop;
+        private Label lbtMode;
     }
 }
