@@ -88,6 +88,14 @@ namespace Nhom1_WFA_QLSV
             if (string.IsNullOrEmpty(cmb.Text)) return true;
             else return false;
         }
+        private static bool IsNOE(Label l, TextBox t)
+        {
+            if (IsNOE(t)) { l.ForeColor = Color.Red; return true; }
+            else
+            {
+                l.ForeColor = Color.Black; return false;
+            }
+        }
         private void BtnThem_Click(object sender, EventArgs e)
         {
             lbtMode.Text = "Bạn đang ở chế độ THÊM!";
@@ -177,14 +185,21 @@ namespace Nhom1_WFA_QLSV
         }
         private void BtnLuu_Click(object sender, EventArgs e)
         {
+            IsNOE(label1, TxtMaSV);
+            IsNOE(label2, TxtTenSV);
+            IsNOE(label3, TxtDiaChi);
+            IsNOE(label6, TxtEmail);
+            IsNOE(label5, TxtDienThoai);
             if (IsNOE(TxtMaSV) || IsNOE(TxtTenSV) || string.IsNullOrEmpty(TxtNgaySinh.Text) || IsNOE(TxtDiaChi) || IsNOE(TxtEmail) || IsNOE(TxtDienThoai))
             {
                 string war = "";
-                if (IsNOE(TxtMaSV)) { war += " Mã SV,"; }
-                if (IsNOE(TxtTenSV)) war += " Tên SV,";
-                if (IsNOE(TxtDiaChi)) war += " Địa chỉ,";
-                if (IsNOE(TxtEmail)) war += " Email,";
-                if (IsNOE(TxtDienThoai)) war += " Điện thoại,";
+
+                if (IsNOE(label1, TxtMaSV)) war += " Mã SV,";
+                if (IsNOE(label2, TxtTenSV)) war += " Tên SV,";
+                if (IsNOE(label3, TxtDiaChi)) war += " Địa chỉ,";
+                if (IsNOE(label6, TxtEmail)) war += " Email,";
+                if (IsNOE(label5, TxtDienThoai)) war += " Điện thoại,";
+                lbtMode.ForeColor = Color.Red;
                 lbtMode.Text = "Vui lòng điền đủ thông tin vào mục " + war;
                 MessageBox.Show("Vui lòng điền đủ thông tin tại:\n" + war, "Thiếu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -192,12 +207,14 @@ namespace Nhom1_WFA_QLSV
 
             if (!int.TryParse(TxtDienThoai.Text, out _))
             {
+                lbtMode.Text = "Vui lòng điền đủ thông tin vào mục Điện thoại";
                 MessageBox.Show("Số điện thoại không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (!TxtEmail.Text.Contains("@"))
             {
+                lbtMode.Text = "Vui lòng điền đủ thông tin vào mục Email";
                 MessageBox.Show("Email không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
