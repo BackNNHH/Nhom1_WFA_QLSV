@@ -12,7 +12,7 @@ namespace Nhom1_WFA_QLSV
         public QuanLySinhVien()
         {
             InitializeComponent();
-            CauHinhSystem.LoadMeme(this);
+            //CauHinhSystem.LoadMeme(this);
             if (ThemeManager.IsDarkMode)
             {
                 DgvKhachHang.DefaultCellStyle = new DataGridViewCellStyle() { BackColor = Color.FromArgb(255, 50, 50, 50) };
@@ -36,7 +36,6 @@ namespace Nhom1_WFA_QLSV
                 else timer.Stop();
             };
             timer.Start();
-            lbtMode.Text = "";
             //LoadThanhPho();
             LoadKhachHang();
             SetEnable(false);
@@ -79,6 +78,16 @@ namespace Nhom1_WFA_QLSV
         //{
         //    isSearch = !sear;
         //}
+        private static bool IsNOE(TextBox cmb)
+        {
+            if (string.IsNullOrEmpty(cmb.Text)) return true;
+            else return false;
+        }
+        private static bool IsNOE(ComboBox cmb)
+        {
+            if (string.IsNullOrEmpty(cmb.Text)) return true;
+            else return false;
+        }
         private void BtnThem_Click(object sender, EventArgs e)
         {
             lbtMode.Text = "Bạn đang ở chế độ THÊM!";
@@ -111,27 +120,27 @@ namespace Nhom1_WFA_QLSV
             {
                 string query = "SELECT * FROM SinhVien WHERE 1=1";
 
-                if (!string.IsNullOrEmpty(TxtMaSV.Text)) query += " AND MaSV LIKE @MaSV";
-                if (!string.IsNullOrEmpty(TxtTenSV.Text)) query += " AND HoTen LIKE @HoTen";
-                //if (!string.IsNullOrEmpty(TxtNgaySinh.Text)) query += " AND NgaySinh = @NgaySinh";
+                if (!IsNOE(TxtMaSV)) query += " AND MaSV LIKE @MaSV";
+                if (!IsNOE(TxtTenSV)) query += " AND HoTen LIKE @HoTen";
+                //if (!IsNOE(TxtNgaySinh)) query += " AND NgaySinh = @NgaySinh";
                 if (GetGioiTinh() != "N/A") query += " AND GioiTinh LIKE @GioiTinh";
-                if (!string.IsNullOrEmpty(TxtDiaChi.Text)) query += " AND DiaChi LIKE @DiaChi";
-                if (!string.IsNullOrEmpty(TxtEmail.Text)) query += " AND Email LIKE @Email";
-                if (!string.IsNullOrEmpty(TxtDienThoai.Text)) query += " AND SoDienThoai LIKE @DienThoai";
-                if (!string.IsNullOrEmpty(CboLop.Text)) query += " AND MaLop LIKE @MaLop";
+                if (!IsNOE(TxtDiaChi)) query += " AND DiaChi LIKE @DiaChi";
+                if (!IsNOE(TxtEmail)) query += " AND Email LIKE @Email";
+                if (!IsNOE(TxtDienThoai)) query += " AND SoDienThoai LIKE @DienThoai";
+                if (!IsNOE(CboLop)) query += " AND MaLop LIKE @MaLop";
                 try
                 {
                     using SqlConnection connection = new(DataBase.DbStr);
                     using SqlCommand command = new(query, connection);
 
-                    if (!string.IsNullOrEmpty(TxtMaSV.Text)) command.Parameters.AddWithValue("@MaSV", "%" + TxtMaSV.Text + "%");
-                    if (!string.IsNullOrEmpty(TxtTenSV.Text)) command.Parameters.AddWithValue("@HoTen", "%" + TxtTenSV.Text + "%");
-                    //if (!string.IsNullOrEmpty(TxtNgaySinh.Text)) command.Parameters.AddWithValue("@NgaySinh", TxtNgaySinh.Value.ToString("yyyy-MM-dd"));
+                    if (!IsNOE(TxtMaSV)) command.Parameters.AddWithValue("@MaSV", "%" + TxtMaSV.Text + "%");
+                    if (!IsNOE(TxtTenSV)) command.Parameters.AddWithValue("@HoTen", "%" + TxtTenSV.Text + "%");
+                    //if (!IsNOE(TxtNgaySinh    )) command.Parameters.AddWithValue("@NgaySinh", TxtNgaySinh.Value.ToString("yyyy-MM-dd"));
                     if (GetGioiTinh() != "N/A") command.Parameters.AddWithValue("@GioiTinh", GetGioiTinh());
-                    if (!string.IsNullOrEmpty(TxtDiaChi.Text)) command.Parameters.AddWithValue("@DiaChi", "%" + TxtDiaChi.Text + "%");
-                    if (!string.IsNullOrEmpty(TxtEmail.Text)) command.Parameters.AddWithValue("@Email", "%" + TxtEmail.Text + "%");
-                    if (!string.IsNullOrEmpty(TxtDienThoai.Text)) command.Parameters.AddWithValue("@DienThoai", "%" + TxtDienThoai.Text + "%");
-                    if (!string.IsNullOrEmpty(CboLop.Text)) command.Parameters.AddWithValue("@MaLop", CboLop.SelectedValue);
+                    if (!IsNOE(TxtDiaChi)) command.Parameters.AddWithValue("@DiaChi", "%" + TxtDiaChi.Text + "%");
+                    if (!IsNOE(TxtEmail)) command.Parameters.AddWithValue("@Email", "%" + TxtEmail.Text + "%");
+                    if (!IsNOE(TxtDienThoai)) command.Parameters.AddWithValue("@DienThoai", "%" + TxtDienThoai.Text + "%");
+                    if (!IsNOE(CboLop)) command.Parameters.AddWithValue("@MaLop", CboLop.SelectedValue);
 
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
@@ -168,9 +177,16 @@ namespace Nhom1_WFA_QLSV
         }
         private void BtnLuu_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtMaSV.Text) || string.IsNullOrEmpty(TxtTenSV.Text) || string.IsNullOrEmpty(TxtNgaySinh.Text) || string.IsNullOrEmpty(TxtDiaChi.Text) || string.IsNullOrEmpty(TxtEmail.Text) || string.IsNullOrEmpty(TxtDienThoai.Text))
+            if (IsNOE(TxtMaSV) || IsNOE(TxtTenSV) || string.IsNullOrEmpty(TxtNgaySinh.Text) || IsNOE(TxtDiaChi) || IsNOE(TxtEmail) || IsNOE(TxtDienThoai))
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin", "Thiếu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string war = "";
+                if (IsNOE(TxtMaSV)) { war += " Mã SV,"; }
+                if (IsNOE(TxtTenSV)) war += " Tên SV,";
+                if (IsNOE(TxtDiaChi)) war += " Địa chỉ,";
+                if (IsNOE(TxtEmail)) war += " Email,";
+                if (IsNOE(TxtDienThoai)) war += " Điện thoại,";
+                lbtMode.Text = "Vui lòng điền đủ thông tin vào mục " + war;
+                MessageBox.Show("Vui lòng điền đủ thông tin tại:\n" + war, "Thiếu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
