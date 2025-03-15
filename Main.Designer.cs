@@ -145,34 +145,35 @@
             // 
             cấuHìnhHệThôgsToolStripMenuItem.Image = Properties.Resources.setting;
             cấuHìnhHệThôgsToolStripMenuItem.Name = "cấuHìnhHệThôgsToolStripMenuItem";
-            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(209, 26);
+            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(224, 26);
             cấuHìnhHệThôgsToolStripMenuItem.Text = "Cấu hình hệ thống";
             cấuHìnhHệThôgsToolStripMenuItem.Click += cấuHìnhHệThôgsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(206, 6);
+            toolStripSeparator1.Size = new Size(221, 6);
             // 
             // MnuDangXuat
             // 
             MnuDangXuat.Image = Properties.Resources.signout;
             MnuDangXuat.Name = "MnuDangXuat";
-            MnuDangXuat.Size = new Size(209, 26);
+            MnuDangXuat.Size = new Size(224, 26);
             MnuDangXuat.Text = "Đăng xuất";
             MnuDangXuat.Click += MnuDangXuat_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(206, 6);
+            toolStripSeparator2.Size = new Size(221, 6);
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Image = Properties.Resources.exit;
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(209, 26);
+            thoátToolStripMenuItem.Size = new Size(224, 26);
             thoátToolStripMenuItem.Text = "Thoát";
+            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 
             // texSLSV
             // 
@@ -271,7 +272,7 @@
             materialFloatingActionButton1.Location = new Point(405, 153);
             materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton1.Name = "materialFloatingActionButton1";
-            materialFloatingActionButton1.Size = new Size(72, 84);
+            materialFloatingActionButton1.Size = new Size(61, 70);
             materialFloatingActionButton1.TabIndex = 7;
             materialFloatingActionButton1.Text = "materialFloatingActionButton1";
             materialFloatingActionButton1.UseVisualStyleBackColor = false;
@@ -303,7 +304,7 @@
             materialFloatingActionButton2.Location = new Point(735, 153);
             materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton2.Name = "materialFloatingActionButton2";
-            materialFloatingActionButton2.Size = new Size(72, 84);
+            materialFloatingActionButton2.Size = new Size(58, 56);
             materialFloatingActionButton2.TabIndex = 10;
             materialFloatingActionButton2.Text = "materialFloatingActionButton2";
             materialFloatingActionButton2.UseVisualStyleBackColor = false;
@@ -345,7 +346,7 @@
             materialFloatingActionButton3.Location = new Point(405, 289);
             materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton3.Name = "materialFloatingActionButton3";
-            materialFloatingActionButton3.Size = new Size(72, 83);
+            materialFloatingActionButton3.Size = new Size(61, 70);
             materialFloatingActionButton3.TabIndex = 9;
             materialFloatingActionButton3.Text = "materialFloatingActionButton3";
             materialFloatingActionButton3.UseVisualStyleBackColor = false;
@@ -387,7 +388,7 @@
             materialFloatingActionButton4.Location = new Point(735, 289);
             materialFloatingActionButton4.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton4.Name = "materialFloatingActionButton4";
-            materialFloatingActionButton4.Size = new Size(72, 83);
+            materialFloatingActionButton4.Size = new Size(58, 56);
             materialFloatingActionButton4.TabIndex = 11;
             materialFloatingActionButton4.Text = "materialFloatingActionButton4";
             materialFloatingActionButton4.UseVisualStyleBackColor = false;
