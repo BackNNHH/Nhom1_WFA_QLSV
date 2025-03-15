@@ -77,10 +77,9 @@
             panel1.Controls.Add(nav);
             panel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             panel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            panel1.Location = new Point(6, 136);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(5, 102);
             panel1.Name = "panel1";
-            panel1.Size = new Size(162, 456);
+            panel1.Size = new Size(142, 342);
             panel1.TabIndex = 2;
             // 
             // nav
@@ -95,9 +94,9 @@
             nav.Items.AddRange(new ToolStripItem[] { navQLSV, navNhapDiem, navXemDiem, navSystem });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
-            nav.Padding = new Padding(7, 3, 0, 3);
+            nav.Padding = new Padding(6, 2, 0, 2);
             nav.RenderMode = ToolStripRenderMode.Professional;
-            nav.Size = new Size(162, 456);
+            nav.Size = new Size(142, 342);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
@@ -145,33 +144,33 @@
             // 
             cấuHìnhHệThôgsToolStripMenuItem.Image = Properties.Resources.setting;
             cấuHìnhHệThôgsToolStripMenuItem.Name = "cấuHìnhHệThôgsToolStripMenuItem";
-            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(209, 26);
+            cấuHìnhHệThôgsToolStripMenuItem.Size = new Size(195, 22);
             cấuHìnhHệThôgsToolStripMenuItem.Text = "Cấu hình hệ thống";
             cấuHìnhHệThôgsToolStripMenuItem.Click += cấuHìnhHệThôgsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(206, 6);
+            toolStripSeparator1.Size = new Size(192, 6);
             // 
             // MnuDangXuat
             // 
             MnuDangXuat.Image = Properties.Resources.signout;
             MnuDangXuat.Name = "MnuDangXuat";
-            MnuDangXuat.Size = new Size(209, 26);
+            MnuDangXuat.Size = new Size(195, 22);
             MnuDangXuat.Text = "Đăng xuất";
             MnuDangXuat.Click += MnuDangXuat_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(206, 6);
+            toolStripSeparator2.Size = new Size(192, 6);
             // 
             // thoátToolStripMenuItem
             // 
             thoátToolStripMenuItem.Image = Properties.Resources.exit;
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(209, 26);
+            thoátToolStripMenuItem.Size = new Size(195, 22);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // texSLSV
@@ -180,9 +179,9 @@
             texSLSV.BackColor = Color.FromArgb(255, 255, 255);
             texSLSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texSLSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texSLSV.Location = new Point(17, 13);
+            texSLSV.Location = new Point(15, 10);
             texSLSV.Name = "texSLSV";
-            texSLSV.Size = new Size(139, 18);
+            texSLSV.Size = new Size(128, 17);
             texSLSV.TabIndex = 3;
             texSLSV.Text = "Số Lượng Sinh Viên";
             // 
@@ -192,9 +191,9 @@
             texMVP.BackColor = Color.FromArgb(255, 255, 255);
             texMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texMVP.Location = new Point(19, 17);
+            texMVP.Location = new Point(17, 13);
             texMVP.Name = "texMVP";
-            texMVP.Size = new Size(137, 18);
+            texMVP.Size = new Size(124, 17);
             texMVP.TabIndex = 3;
             texMVP.Text = "Sinh Viên Tiêu Biểu";
             // 
@@ -204,9 +203,9 @@
             texLop.BackColor = Color.FromArgb(255, 255, 255);
             texLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texLop.Location = new Point(17, 17);
+            texLop.Location = new Point(15, 13);
             texLop.Name = "texLop";
-            texLop.Size = new Size(101, 18);
+            texLop.Size = new Size(95, 17);
             texLop.TabIndex = 3;
             texLop.Text = "Số Lượng Lớp";
             // 
@@ -216,20 +215,21 @@
             texKhoa.BackColor = Color.FromArgb(255, 255, 255);
             texKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             texKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            texKhoa.Location = new Point(17, 13);
+            texKhoa.Location = new Point(15, 10);
             texKhoa.Name = "texKhoa";
-            texKhoa.Size = new Size(110, 18);
+            texKhoa.Size = new Size(104, 17);
             texKhoa.TabIndex = 3;
             texKhoa.Text = "Số Lượng Khoa";
             // 
             // LblUserName
             // 
+            LblUserName.AutoSize = true;
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
             LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            LblUserName.Location = new Point(104, 118);
+            LblUserName.Location = new Point(90, 82);
             LblUserName.Name = "LblUserName";
-            LblUserName.Size = new Size(39, 18);
+            LblUserName.Size = new Size(36, 17);
             LblUserName.TabIndex = 5;
             LblUserName.Text = "User";
             // 
@@ -240,12 +240,12 @@
             CrdSv.Controls.Add(texSLSV);
             CrdSv.Depth = 0;
             CrdSv.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            CrdSv.Location = new Point(219, 136);
-            CrdSv.Margin = new Padding(14, 13, 14, 13);
+            CrdSv.Location = new Point(192, 102);
+            CrdSv.Margin = new Padding(12, 10, 12, 10);
             CrdSv.MouseState = MaterialSkin.MouseState.HOVER;
             CrdSv.Name = "CrdSv";
-            CrdSv.Padding = new Padding(14, 13, 14, 13);
-            CrdSv.Size = new Size(213, 87);
+            CrdSv.Padding = new Padding(12, 10, 12, 10);
+            CrdSv.Size = new Size(186, 65);
             CrdSv.TabIndex = 6;
             // 
             // lbSV
@@ -254,9 +254,9 @@
             lbSV.BackColor = Color.FromArgb(255, 255, 255);
             lbSV.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbSV.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbSV.Location = new Point(19, 55);
+            lbSV.Location = new Point(17, 41);
             lbSV.Name = "lbSV";
-            lbSV.Size = new Size(35, 18);
+            lbSV.Size = new Size(33, 17);
             lbSV.TabIndex = 4;
             lbSV.Text = "N/A";
             // 
@@ -267,10 +267,11 @@
             materialFloatingActionButton1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialFloatingActionButton1.Icon = Properties.Resources.group;
             materialFloatingActionButton1.Image = Properties.Resources.group;
-            materialFloatingActionButton1.Location = new Point(405, 153);
+            materialFloatingActionButton1.Location = new Point(354, 115);
+            materialFloatingActionButton1.Margin = new Padding(3, 2, 3, 2);
             materialFloatingActionButton1.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton1.Name = "materialFloatingActionButton1";
-            materialFloatingActionButton1.Size = new Size(72, 84);
+            materialFloatingActionButton1.Size = new Size(63, 63);
             materialFloatingActionButton1.TabIndex = 7;
             materialFloatingActionButton1.Text = "materialFloatingActionButton1";
             materialFloatingActionButton1.UseVisualStyleBackColor = false;
@@ -282,13 +283,14 @@
             chartScores.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chartScores.Legends.Add(legend1);
-            chartScores.Location = new Point(174, 391);
+            chartScores.Location = new Point(152, 293);
+            chartScores.Margin = new Padding(3, 2, 3, 2);
             chartScores.Name = "chartScores";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartScores.Series.Add(series1);
-            chartScores.Size = new Size(717, 267);
+            chartScores.Size = new Size(627, 200);
             chartScores.TabIndex = 8;
             // 
             // materialFloatingActionButton2
@@ -298,10 +300,11 @@
             materialFloatingActionButton2.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialFloatingActionButton2.Icon = Properties.Resources.graphic_board;
             materialFloatingActionButton2.Image = Properties.Resources.graphic_board;
-            materialFloatingActionButton2.Location = new Point(735, 153);
+            materialFloatingActionButton2.Location = new Point(643, 115);
+            materialFloatingActionButton2.Margin = new Padding(3, 2, 3, 2);
             materialFloatingActionButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton2.Name = "materialFloatingActionButton2";
-            materialFloatingActionButton2.Size = new Size(72, 84);
+            materialFloatingActionButton2.Size = new Size(63, 63);
             materialFloatingActionButton2.TabIndex = 10;
             materialFloatingActionButton2.Text = "materialFloatingActionButton2";
             materialFloatingActionButton2.UseVisualStyleBackColor = false;
@@ -313,12 +316,12 @@
             CrdLop.Controls.Add(texLop);
             CrdLop.Depth = 0;
             CrdLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            CrdLop.Location = new Point(551, 136);
-            CrdLop.Margin = new Padding(14, 13, 14, 13);
+            CrdLop.Location = new Point(482, 102);
+            CrdLop.Margin = new Padding(12, 10, 12, 10);
             CrdLop.MouseState = MaterialSkin.MouseState.HOVER;
             CrdLop.Name = "CrdLop";
-            CrdLop.Padding = new Padding(14, 13, 14, 13);
-            CrdLop.Size = new Size(213, 87);
+            CrdLop.Padding = new Padding(12, 10, 12, 10);
+            CrdLop.Size = new Size(186, 65);
             CrdLop.TabIndex = 9;
             // 
             // lbLop
@@ -327,9 +330,9 @@
             lbLop.BackColor = Color.FromArgb(255, 255, 255);
             lbLop.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbLop.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbLop.Location = new Point(17, 55);
+            lbLop.Location = new Point(15, 41);
             lbLop.Name = "lbLop";
-            lbLop.Size = new Size(35, 18);
+            lbLop.Size = new Size(33, 17);
             lbLop.TabIndex = 4;
             lbLop.Text = "N/A";
             // 
@@ -340,10 +343,11 @@
             materialFloatingActionButton3.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialFloatingActionButton3.Icon = Properties.Resources.mvp;
             materialFloatingActionButton3.Image = Properties.Resources.mvp;
-            materialFloatingActionButton3.Location = new Point(405, 289);
+            materialFloatingActionButton3.Location = new Point(354, 217);
+            materialFloatingActionButton3.Margin = new Padding(3, 2, 3, 2);
             materialFloatingActionButton3.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton3.Name = "materialFloatingActionButton3";
-            materialFloatingActionButton3.Size = new Size(72, 83);
+            materialFloatingActionButton3.Size = new Size(63, 62);
             materialFloatingActionButton3.TabIndex = 9;
             materialFloatingActionButton3.Text = "materialFloatingActionButton3";
             materialFloatingActionButton3.UseVisualStyleBackColor = false;
@@ -355,12 +359,12 @@
             CrdMVP.Controls.Add(texMVP);
             CrdMVP.Depth = 0;
             CrdMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            CrdMVP.Location = new Point(219, 272);
-            CrdMVP.Margin = new Padding(14, 13, 14, 13);
+            CrdMVP.Location = new Point(192, 204);
+            CrdMVP.Margin = new Padding(12, 10, 12, 10);
             CrdMVP.MouseState = MaterialSkin.MouseState.HOVER;
             CrdMVP.Name = "CrdMVP";
-            CrdMVP.Padding = new Padding(14, 13, 14, 13);
-            CrdMVP.Size = new Size(213, 87);
+            CrdMVP.Padding = new Padding(12, 10, 12, 10);
+            CrdMVP.Size = new Size(186, 65);
             CrdMVP.TabIndex = 8;
             // 
             // lbMVP
@@ -369,9 +373,9 @@
             lbMVP.BackColor = Color.FromArgb(255, 255, 255);
             lbMVP.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbMVP.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbMVP.Location = new Point(19, 55);
+            lbMVP.Location = new Point(17, 41);
             lbMVP.Name = "lbMVP";
-            lbMVP.Size = new Size(35, 18);
+            lbMVP.Size = new Size(33, 17);
             lbMVP.TabIndex = 4;
             lbMVP.Text = "N/A";
             // 
@@ -382,10 +386,11 @@
             materialFloatingActionButton4.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialFloatingActionButton4.Icon = Properties.Resources.department;
             materialFloatingActionButton4.Image = Properties.Resources.department;
-            materialFloatingActionButton4.Location = new Point(735, 289);
+            materialFloatingActionButton4.Location = new Point(643, 217);
+            materialFloatingActionButton4.Margin = new Padding(3, 2, 3, 2);
             materialFloatingActionButton4.MouseState = MaterialSkin.MouseState.HOVER;
             materialFloatingActionButton4.Name = "materialFloatingActionButton4";
-            materialFloatingActionButton4.Size = new Size(72, 83);
+            materialFloatingActionButton4.Size = new Size(63, 62);
             materialFloatingActionButton4.TabIndex = 11;
             materialFloatingActionButton4.Text = "materialFloatingActionButton4";
             materialFloatingActionButton4.UseVisualStyleBackColor = false;
@@ -397,12 +402,12 @@
             CrdKhoa.Controls.Add(texKhoa);
             CrdKhoa.Depth = 0;
             CrdKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            CrdKhoa.Location = new Point(551, 272);
-            CrdKhoa.Margin = new Padding(14, 13, 14, 13);
+            CrdKhoa.Location = new Point(482, 204);
+            CrdKhoa.Margin = new Padding(12, 10, 12, 10);
             CrdKhoa.MouseState = MaterialSkin.MouseState.HOVER;
             CrdKhoa.Name = "CrdKhoa";
-            CrdKhoa.Padding = new Padding(14, 13, 14, 13);
-            CrdKhoa.Size = new Size(213, 87);
+            CrdKhoa.Padding = new Padding(12, 10, 12, 10);
+            CrdKhoa.Size = new Size(186, 65);
             CrdKhoa.TabIndex = 10;
             // 
             // lbKhoa
@@ -411,9 +416,9 @@
             lbKhoa.BackColor = Color.FromArgb(255, 255, 255);
             lbKhoa.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbKhoa.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lbKhoa.Location = new Point(17, 55);
+            lbKhoa.Location = new Point(15, 41);
             lbKhoa.Name = "lbKhoa";
-            lbKhoa.Size = new Size(35, 18);
+            lbKhoa.Size = new Size(33, 17);
             lbKhoa.TabIndex = 4;
             lbKhoa.Text = "N/A";
             // 
@@ -422,17 +427,17 @@
             label1.BackColor = Color.FromArgb(242, 242, 242);
             label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(32, 118);
+            label1.Location = new Point(27, 82);
             label1.Name = "label1";
-            label1.Size = new Size(75, 18);
+            label1.Size = new Size(66, 14);
             label1.TabIndex = 5;
             label1.Text = "Welcome ";
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 663);
+            ClientSize = new Size(800, 497);
             Controls.Add(materialFloatingActionButton4);
             Controls.Add(materialFloatingActionButton3);
             Controls.Add(CrdKhoa);
@@ -446,9 +451,7 @@
             Controls.Add(LblUserName);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Main";
-            Padding = new Padding(3, 85, 3, 4);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Trang Chủ";
             FormClosing += Main_FormClosing;
@@ -466,6 +469,7 @@
             CrdKhoa.ResumeLayout(false);
             CrdKhoa.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
