@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
+using Syncfusion.WinForms.ListView;
 using Timer = System.Windows.Forms.Timer;
 
 namespace Nhom1_WFA_QLSV
@@ -9,12 +10,12 @@ namespace Nhom1_WFA_QLSV
         private bool DiemTXIsValid = false;
         private bool DiemGKIsValid = false;
         private bool DiemCKIsValid = false;
+
         public NhapDiem()
         {
             InitializeComponent();
             //CauHinhSystem.LoadMeme(this);
         }
-
 
 
         private void LoadMonHocTheoSinhVien(string mssv)
@@ -134,9 +135,7 @@ namespace Nhom1_WFA_QLSV
             }
             else
             {
-                txtDiemTX.Enabled = false;
-                txtDiemGK.Enabled = false;
-                txtDiemCK.Enabled = false;
+
             }
         }
 
@@ -186,6 +185,11 @@ namespace Nhom1_WFA_QLSV
 
         private void NhapDiem_Load_1(object sender, EventArgs e)
         {
+            txtDiemTX.Enabled = false;
+            txtDiemGK.Enabled = false;
+            txtDiemCK.Enabled = false;
+            cbMonHoc.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbMonHoc.AutoCompleteSource = AutoCompleteSource.ListItems;
             this.Opacity = 0;
             Timer timer = new Timer();
             timer.Interval = 30;
@@ -226,7 +230,7 @@ namespace Nhom1_WFA_QLSV
                 DiemCKIsValid = true;
             }
         }
+
     }
-
-
 }
+

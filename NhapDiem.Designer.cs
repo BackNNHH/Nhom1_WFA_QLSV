@@ -56,7 +56,7 @@
             txtDiemTX.Location = new Point(269, 154);
             txtDiemTX.Name = "txtDiemTX";
             txtDiemTX.Size = new Size(405, 24);
-            txtDiemTX.TabIndex = 2;
+            txtDiemTX.TabIndex = 3;
             txtDiemTX.TextChanged += txtDiemTX_TextChanged;
             // 
             // label2
@@ -93,7 +93,7 @@
             cbMonHoc.Margin = new Padding(3, 4, 3, 4);
             cbMonHoc.Name = "cbMonHoc";
             cbMonHoc.Size = new Size(191, 25);
-            cbMonHoc.TabIndex = 5;
+            cbMonHoc.TabIndex = 2;
             // 
             // txtMSSV
             // 
@@ -105,7 +105,7 @@
             txtMSSV.Margin = new Padding(3, 4, 3, 4);
             txtMSSV.Name = "txtMSSV";
             txtMSSV.Size = new Size(134, 24);
-            txtMSSV.TabIndex = 6;
+            txtMSSV.TabIndex = 1;
             txtMSSV.TextChanged += txtMSSV_TextChanged_1;
             // 
             // label4
@@ -141,7 +141,7 @@
             txtDiemGK.Location = new Point(269, 217);
             txtDiemGK.Name = "txtDiemGK";
             txtDiemGK.Size = new Size(405, 24);
-            txtDiemGK.TabIndex = 9;
+            txtDiemGK.TabIndex = 4;
             txtDiemGK.TextChanged += txtDiemGK_TextChanged;
             // 
             // label6
@@ -165,7 +165,7 @@
             txtDiemCK.Location = new Point(269, 283);
             txtDiemCK.Name = "txtDiemCK";
             txtDiemCK.Size = new Size(405, 24);
-            txtDiemCK.TabIndex = 11;
+            txtDiemCK.TabIndex = 5;
             txtDiemCK.TextChanged += txtDiemCK_TextChanged;
             // 
             // btnLuu
@@ -175,10 +175,10 @@
             btnLuu.ForeColor = Color.FromArgb(222, 0, 0, 0);
             btnLuu.Image = Properties.Resources.save;
             btnLuu.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLuu.Location = new Point(162, 499);
+            btnLuu.Location = new Point(162, 412);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(166, 61);
-            btnLuu.TabIndex = 12;
+            btnLuu.TabIndex = 6;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
             btnLuu.Click += btnLuu_Click_1;
@@ -190,10 +190,10 @@
             btnThoat.ForeColor = Color.FromArgb(222, 0, 0, 0);
             btnThoat.Image = Properties.Resources.cancel;
             btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThoat.Location = new Point(424, 499);
+            btnThoat.Location = new Point(428, 412);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(166, 61);
-            btnThoat.TabIndex = 13;
+            btnThoat.TabIndex = 7;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = false;
             btnThoat.Click += btnThoat_Click_1;
@@ -257,7 +257,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 601);
+            ClientSize = new Size(914, 493);
             Controls.Add(lbMSSV);
             Controls.Add(lbCK);
             Controls.Add(lbGK);
