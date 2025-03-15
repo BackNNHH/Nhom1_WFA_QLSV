@@ -30,7 +30,6 @@
         {
             coloDiag = new ColorDialog();
             fontDiag = new FontDialog();
-            cboFont = new ComboBox();
             groupBox1 = new GroupBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
@@ -46,6 +45,7 @@
             pictureBox3 = new PictureBox();
             label3 = new Label();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            cboFont = new ComboBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox2.SuspendLayout();
@@ -53,21 +53,6 @@
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // cboFont
-            // 
-            cboFont.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            cboFont.BackColor = Color.FromArgb(242, 242, 242);
-            cboFont.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            cboFont.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            cboFont.FormattingEnabled = true;
-            cboFont.ItemHeight = 17;
-            cboFont.Location = new Point(557, 44);
-            cboFont.Margin = new Padding(3, 4, 3, 4);
-            cboFont.Name = "cboFont";
-            cboFont.Size = new Size(229, 25);
-            cboFont.TabIndex = 2;
-            cboFont.SelectedIndexChanged += cboFont_SelectedIndexChanged;
             // 
             // groupBox1
             // 
@@ -142,7 +127,7 @@
             tggbtn.OnBackColor = SystemColors.ActiveCaptionText;
             tggbtn.OnToggleColor = Color.White;
             tggbtn.Size = new Size(114, 48);
-            tggbtn.TabIndex = 5;
+            tggbtn.TabIndex = 1;
             tggbtn.UseVisualStyleBackColor = false;
             tggbtn.CheckedChanged += rjToggleButton1_CheckedChanged;
             // 
@@ -208,7 +193,7 @@
             mtrbtnNewPassword.Multiline = false;
             mtrbtnNewPassword.Name = "mtrbtnNewPassword";
             mtrbtnNewPassword.Size = new Size(181, 36);
-            mtrbtnNewPassword.TabIndex = 11;
+            mtrbtnNewPassword.TabIndex = 6;
             mtrbtnNewPassword.Text = "";
             mtrbtnNewPassword.TrailingIcon = null;
             mtrbtnNewPassword.UseTallSize = false;
@@ -229,7 +214,7 @@
             mtrbtnPassword.Multiline = false;
             mtrbtnPassword.Name = "mtrbtnPassword";
             mtrbtnPassword.Size = new Size(181, 36);
-            mtrbtnPassword.TabIndex = 10;
+            mtrbtnPassword.TabIndex = 5;
             mtrbtnPassword.Text = "";
             mtrbtnPassword.TrailingIcon = null;
             mtrbtnPassword.UseTallSize = false;
@@ -257,7 +242,7 @@
             customMaterialButton2.Name = "customMaterialButton2";
             customMaterialButton2.NoAccentTextColor = Color.Empty;
             customMaterialButton2.Size = new Size(149, 45);
-            customMaterialButton2.TabIndex = 9;
+            customMaterialButton2.TabIndex = 4;
             customMaterialButton2.Text = "customMaterialButton2";
             customMaterialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             customMaterialButton2.UseAccentColor = false;
@@ -288,7 +273,7 @@
             customMaterialButton1.Name = "customMaterialButton1";
             customMaterialButton1.NoAccentTextColor = Color.Empty;
             customMaterialButton1.Size = new Size(149, 45);
-            customMaterialButton1.TabIndex = 8;
+            customMaterialButton1.TabIndex = 3;
             customMaterialButton1.Text = "customMaterialButton1";
             customMaterialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             customMaterialButton1.UseAccentColor = false;
@@ -326,6 +311,21 @@
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
+            // cboFont
+            // 
+            cboFont.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cboFont.BackColor = Color.FromArgb(242, 242, 242);
+            cboFont.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cboFont.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboFont.FormattingEnabled = true;
+            cboFont.ItemHeight = 17;
+            cboFont.Location = new Point(557, 44);
+            cboFont.Margin = new Padding(3, 4, 3, 4);
+            cboFont.Name = "cboFont";
+            cboFont.Size = new Size(229, 25);
+            cboFont.TabIndex = 2;
+            cboFont.SelectedIndexChanged += cboFont_SelectedIndexChanged;
+            // 
             // CauHinhSystem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -357,7 +357,6 @@
 
         private ColorDialog coloDiag;
         private FontDialog fontDiag;
-        private ComboBox cboFont;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Label label1;
@@ -373,5 +372,6 @@
         private MaterialSkin.Controls.MaterialTextBox mtrbtnNewPassword;
         private MaterialSkin.Controls.MaterialTextBox mtrbtnPassword;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private ComboBox cboFont;
     }
 }

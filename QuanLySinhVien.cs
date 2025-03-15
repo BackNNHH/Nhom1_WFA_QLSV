@@ -25,6 +25,8 @@ namespace Nhom1_WFA_QLSV
 
         private void QuanLySinhVien_Load(object sender, EventArgs e)
         {
+            CboLop.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CboLop.AutoCompleteSource = AutoCompleteSource.ListItems;
             this.Opacity = 0;
             Timer timer = new Timer();
             timer.Interval = 30;

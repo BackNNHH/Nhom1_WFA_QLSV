@@ -90,13 +90,14 @@
             nav.Dock = DockStyle.Left;
             nav.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             nav.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            nav.GripStyle = ToolStripGripStyle.Visible;
             nav.ImageScalingSize = new Size(20, 20);
             nav.Items.AddRange(new ToolStripItem[] { navQLSV, navNhapDiem, navXemDiem, navSystem });
             nav.Location = new Point(0, 0);
             nav.Name = "nav";
             nav.Padding = new Padding(7, 3, 0, 3);
             nav.RenderMode = ToolStripRenderMode.Professional;
-            nav.Size = new Size(169, 456);
+            nav.Size = new Size(162, 456);
             nav.TabIndex = 2;
             nav.Text = "menuStrip1";
             // 
@@ -223,11 +224,10 @@
             // 
             // LblUserName
             // 
-            LblUserName.AutoSize = true;
             LblUserName.BackColor = Color.FromArgb(242, 242, 242);
             LblUserName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             LblUserName.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            LblUserName.Location = new Point(79, 85);
+            LblUserName.Location = new Point(104, 118);
             LblUserName.Name = "LblUserName";
             LblUserName.Size = new Size(39, 18);
             LblUserName.TabIndex = 5;
@@ -419,11 +419,10 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(242, 242, 242);
             label1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             label1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            label1.Location = new Point(7, 85);
+            label1.Location = new Point(32, 118);
             label1.Name = "label1";
             label1.Size = new Size(75, 18);
             label1.TabIndex = 5;
@@ -433,7 +432,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 661);
+            ClientSize = new Size(914, 663);
             Controls.Add(materialFloatingActionButton4);
             Controls.Add(materialFloatingActionButton3);
             Controls.Add(CrdKhoa);
@@ -467,7 +466,6 @@
             CrdKhoa.ResumeLayout(false);
             CrdKhoa.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

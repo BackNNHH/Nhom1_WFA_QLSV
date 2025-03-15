@@ -153,6 +153,20 @@ namespace Nhom1_WFA_QLSV
             }
         }
 
+        private bool DiemIsCompleted(string studentID)
+        {
+            using (SqlConnection conn = new SqlConnection(DataBase.DbStr))
+            {
+                string query = "SELECT COUNT(*) FROM SinhVien WHERE MaSV = @MaSV";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaSV", studentID);
+
+                conn.Open();
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
 
         private bool DiemIsValid(float diem, Label lb)
         {

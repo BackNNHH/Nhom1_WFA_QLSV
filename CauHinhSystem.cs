@@ -80,6 +80,8 @@ namespace Nhom1_WFA_QLSV
 
         private void CauHinhSystem_Load(object sender, EventArgs e)
         {
+            cboFont.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cboFont.AutoCompleteSource = AutoCompleteSource.ListItems;
             this.Opacity = 0;
             Timer timer = new Timer();
             timer.Interval = 30;
